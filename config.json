@@ -1,0 +1,8 @@
+{
+  "locals": {
+    "owner": "excellenteasy GbR, Stephan Bönnemann und David Pfahler"
+  },
+  "plugins": [
+    "./node_modules/wintersmith-less/"
+  ]
+}

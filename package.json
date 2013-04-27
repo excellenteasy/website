@@ -1,0 +1,9 @@
+{
+  "name": "excellenteasy-website",
+  "version": "0.0.0",
+  "description": "wintersmith generated static website",
+  "main": "config.json",
+  "dependencies": {
+    "wintersmith-less": "git://github.com/excellenteasy/wintersmith-less.git"
+  }
+}
