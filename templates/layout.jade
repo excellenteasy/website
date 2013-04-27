@@ -1,0 +1,28 @@
+!!! 5
+include ie-comments.jade
+head
+  block head
+    title
+      block title
+        = locals.name
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='css/main.css', rel='stylesheet', type='text/css')
+body
+  header
+    block header
+      include header.jade
+
+  block content
+    #content
+      .container
+        .row
+          article.span8
+            block article
+          aside.span4
+            block sidebar
+
+  footer
+    block footer
+      include footer.jade
+</html>
