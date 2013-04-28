@@ -1,5 +1,6 @@
 {
   "locals": {
+    "name" : "excellenteasy – iOS to Android conversion",
     "owner": "excellenteasy GbR, Stephan Bönnemann und David Pfahler"
   },
   "plugins": [
