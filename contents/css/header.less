@@ -93,11 +93,96 @@ body > header {
       text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
     }
   }
-  .featured {
-    background-image: url(../img/featured.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center bottom;
+  .slider {
+    background: #347093;
+    width: 100%;
     height: 295px;
+    position: relative;
+    overflow: hidden;
+    .featured {
+      pointer-events: none;
+      width: 100%;
+      height: 590px;
+      position: absolute;
+      top: -295px;
+      left: 0;
+      background-size: 200px 295px;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      &.iphone-frame {
+        @-webkit-keyframes iphonerotate {
+          0% {
+            opacity: 1;
+            -webkit-transform: rotate(0deg);
+          }
+          40% {
+            opacity: 0;
+            -webkit-transform: rotate(90deg);
+          }
+          60% {
+            opacity: 0;
+            -webkit-transform: rotate(90deg);
+          }
+          61% {
+            opacity: 0;
+            -webkit-transform: rotate(-90deg);
+          }
+          100% {
+            opacity: 1;
+            -webkit-transform: rotate(0deg);
+          }
+        }
+        -webkit-animation: iphonerotate 6s infinite;
+        -webkit-transform-origin: top right;
+        -webkit-transform: rotate(0deg);
+        background-image: url(../img/phones/iphone_frame.png);
+      }
+      &.iphone-screen {
+        // @-webkit-keyframes iphonefade {
+        //   0% { opacity: 1; }
+        //   40% { opacity: 0; }
+        //   60% { opacity: 0; }
+        //   100% { opacity: 1; }
+        // }
+        // -webkit-animation: iphonefade 6s infinite;
+        opacity: 1;
+        background-image: url(../img/phones/iphone_screen.png);
+      }
+      &.nexus-frame {
+        @-webkit-keyframes nexusrotate {
+          0% {
+            opacity: 0;
+            -webkit-transform: rotate(90deg);
+          }
+          40% {
+            opacity: 1;
+            -webkit-transform: rotate(0deg);
+          }
+          60% {
+            opacity: 1;
+            -webkit-transform: rotate(0deg);
+          }
+          100% {
+            opacity: 0;
+            -webkit-transform: rotate(-90deg);
+          }
+        }
+        -webkit-animation: nexusrotate 6s infinite;
+        -webkit-transform-origin: bottom left;
+        -webkit-transform: rotate(-90deg);
+        background-image: url(../img/phones/nexus_frame.png);
+      }
+      &.nexus-screen {
+        @-webkit-keyframes nexusfade {
+          0% { opacity: 0; }
+          40% { opacity: 1; }
+          60% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+        -webkit-animation: nexusfade 6s infinite;
+        opacity: 0;
+        background-image: url(../img/phones/nexus_screen.png);
+      }
+    }
   }
 }
