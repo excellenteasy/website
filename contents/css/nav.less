@@ -1,0 +1,45 @@
+body > header nav {
+  height: 80px;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      text-align: center;
+      display: inline-block;
+      float: left;
+      width: 33%;
+      font-weight: 300;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+      a {
+        height: 80px;
+        line-height: 80px;
+        display: block;
+      }
+      a, a:active, a:focus, a:hover {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        text-shadow: 1px 1px 0 rgba(0,0,0,0.7);
+      }
+    }
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  body > header nav {
+    height: 40px;
+    ul {
+      margin: 20px 0;
+      li {
+        a {
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+}
+

@@ -5,6 +5,7 @@ body > header {
 
   div.span6 {
     position: relative;
+    height: 80px;
     #logo {
       position: absolute;
       left: 50%;
@@ -51,35 +52,6 @@ body > header {
         opacity: 1;
       }
     }
-    height: 80px;
-  }
-  nav {
-    height: 80px;
-    ul {
-      margin: 0;
-      padding: 0;
-      li {
-        list-style: none;
-        text-align: center;
-        display: inline-block;
-        float: left;
-        width: 33%;
-        font-weight: 300;
-        text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
-        a {
-          height: 80px;
-          line-height: 80px;
-          display: block;
-        }
-        a, a:active, a:focus, a:hover {
-          color: white;
-          text-decoration: none;
-        }
-        a:hover {
-          text-shadow: 1px 1px 0 rgba(0,0,0,0.7);
-        }
-      }
-    }
   }
   .slogan {
     font-size: 72px;
@@ -91,6 +63,42 @@ body > header {
     strong {
       display: block;
       text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+    }
+  }
+}
+
+@import "nav";
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 1199px) {
+  body > header {
+    padding-top: 20px;
+    div.span6 {
+      h1 {
+        margin-top: 0.2em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body > header {
+    div.span6 {
+      height: 60px;
+      #logo {
+        margin-left: -30px;
+        width: 60px;
+        height: 60px;
+      }
+      h1 {
+        background-position: center center;
+      }
+    }
+    .slogan {
+      font-size: 48px;
+      line-height: 72px;
     }
   }
 }
