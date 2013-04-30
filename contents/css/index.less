@@ -1,92 +1,68 @@
 #conversion {
   background: #347093;
-  .container {
-    width: 100%;
-    padding: 0;
-  }
+  position: relative;
+  min-height: (295px + 2 * 40px);
   .slider {
+    top: 0;
+    left: 0;
     pointer-events: none;
     width: 100%;
-    height: (295px + 80px);
-    position: relative;
+    height: 100%;
+    position: absolute;
     overflow: hidden;
     .featured {
-      pointer-events: none;
-      width: 100%;
-      height: 590px;
       position: absolute;
-      top: (-295px + 40px);
+      top: 40px;
+      pointer-events: none;
+      width: 50%;
+      height: (295px + 40px);
       left: 0;
-      background-size: 200px 295px;
-      background-repeat: no-repeat;
-      background-position: center bottom;
       &.iphone-frame {
-        @-webkit-keyframes iphonerotate {
-          0% {
-            opacity: 1;
-            -webkit-transform: rotate(0deg);
-          }
-          40% {
-            opacity: 0;
-            -webkit-transform: rotate(90deg);
-          }
-          60% {
-            opacity: 0;
-            -webkit-transform: rotate(90deg);
-          }
-          61% {
-            opacity: 0;
-            -webkit-transform: rotate(-90deg);
-          }
-          100% {
-            opacity: 1;
-            -webkit-transform: rotate(0deg);
-          }
-        }
         -webkit-animation: iphonerotate 6s infinite;
         -webkit-transform-origin: top right;
         -webkit-transform: rotate(0deg);
-        background-image: url(../img/phones/iphone_frame.png);
+        .image {
+          background-image: url(../img/phones/iphone_frame.png);
+        }
       }
       &.iphone-screen {
         opacity: 1;
-        background-image: url(../img/phones/iphone_screen.png);
+        .image {
+          background-image: url(../img/phones/iphone_screen.png);
+        }
       }
       &.nexus-frame {
-        @-webkit-keyframes nexusrotate {
-          0% {
-            opacity: 0;
-            -webkit-transform: rotate(90deg);
-          }
-          40% {
-            opacity: 1;
-            -webkit-transform: rotate(0deg);
-          }
-          60% {
-            opacity: 1;
-            -webkit-transform: rotate(0deg);
-          }
-          100% {
-            opacity: 0;
-            -webkit-transform: rotate(-90deg);
-          }
-        }
         -webkit-animation: nexusrotate 6s infinite;
         -webkit-transform-origin: bottom left;
         -webkit-transform: rotate(-90deg);
-        background-image: url(../img/phones/nexus_frame.png);
+        .image {
+          background-image: url(../img/phones/nexus_frame.png);
+        }
       }
       &.nexus-screen {
-        @-webkit-keyframes nexusfade {
-          0% { opacity: 0; }
-          40% { opacity: 1; }
-          60% { opacity: 1; }
-          100% { opacity: 0; }
-        }
         -webkit-animation: nexusfade 6s infinite;
         opacity: 0;
-        background-image: url(../img/phones/nexus_screen.png);
+        .image {
+          background-image: url(../img/phones/nexus_screen.png);
+        }
       }
+      .image {
+        background-size: 200px 295px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 295px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .copy {
+    color: white;
+    padding: 40px 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    h1 {
+      font-size: 2.0em;
+      line-height: 1em;
     }
   }
 }
@@ -145,14 +121,14 @@
 
 /* Large desktop */
 @media (min-width: 1200px) {
-  #conversion {
-    .slider {
-      height: (295px + 120px);
-      .featured {
-        top: (-295px + 60px);
-      }
-    }
-  }
+  // #conversion {
+  //   .slider {
+  //     height: (295px + 120px);
+  //     .featured {
+  //       top: (-295px + 60px);
+  //     }
+  //   }
+  // }
   #testimonials, #pricing {
     padding-top: 20px;
     padding-bottom: 60px;
