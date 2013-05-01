@@ -1,53 +1,101 @@
-@-webkit-keyframes iphonerotate {
+.transform (@argument) {
+  -webkit-transform: @argument;
+  -moz-transform   : @argument;
+  -ms-transform    : @argument;
+  -o-transform     : @argument;
+  transform        : @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "webkit") {
+  -webkit-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "moz") {
+  -moz-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "ms") {
+  -ms-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "o") {
+  -o-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "none") {
+  transform: @argument;
+}
+
+.iphonerotate(@vendor) {
   0% {
     opacity: 1;
-    -webkit-transform: rotate(0deg);
+    .transform(rotate(0deg), @vendor);
   }
   30% {
     opacity: 0;
   }
   40% {
-    -webkit-transform: rotate(80deg);
+    .transform(rotate(80deg), @vendor);
   }
   60% {
-    -webkit-transform: rotate(80deg);
+    .transform(rotate(80deg), @vendor);
   }
   61% {
-    -webkit-transform: rotate(-80deg);
+    .transform(rotate(-80deg), @vendor);
   }
   70% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-    -webkit-transform: rotate(0deg);
+    .transform(rotate(0deg), @vendor);
   }
 }
-@-webkit-keyframes nexusrotate {
+
+.nexusrotate(@vendor) {
   0% {
     opacity: 0;
-    -webkit-transform: rotate(70deg);
+    .transform(rotate(70deg), @vendor);
   }
   30% {
     opacity: 1;
   }
   40% {
-    -webkit-transform: rotate(0deg);
+    .transform(rotate(0deg), @vendor);
   }
   60% {
-    -webkit-transform: rotate(0deg);
+    .transform(rotate(0deg), @vendor);
   }
   70% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    -webkit-transform: rotate(-70deg);
+    .transform(rotate(-70deg), @vendor);
   }
 }
-@-webkit-keyframes nexusfade {
+
+.nexusfade(@vendor) {
   0% { opacity: 0; }
   40% { opacity: 1; }
   60% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+@-webkit-keyframes iphonerotate { .iphonerotate("webkit"); }
+@-moz-keyframes    iphonerotate { .iphonerotate("moz"); }
+@-ms-keyframes     iphonerotate { .iphonerotate("ms"); }
+@-o-keyframes      iphonerotate { .iphonerotate("o"); }
+@keyframes         iphonerotate { .iphonerotate("none"); }
+
+@-webkit-keyframes nexusrotate { .nexusrotate("webkit"); }
+@-moz-keyframes    nexusrotate { .nexusrotate("moz"); }
+@-ms-keyframes     nexusrotate { .nexusrotate("ms"); }
+@-o-keyframes      nexusrotate { .nexusrotate("o"); }
+@keyframes         nexusrotate { .nexusrotate("none"); }
+
+@-webkit-keyframes nexusfade { .nexusfade("webkit"); }
+@-moz-keyframes    nexusfade { .nexusfade("moz"); }
+@-ms-keyframes     nexusfade { .nexusfade("ms"); }
+@-o-keyframes      nexusfade { .nexusfade("o"); }
+@keyframes         nexusfade { .nexusfade("none"); }
