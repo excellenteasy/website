@@ -1,0 +1,43 @@
+.transform (@argument) {
+  -webkit-transform: @argument;
+  -moz-transform   : @argument;
+  -ms-transform    : @argument;
+  -o-transform     : @argument;
+  transform        : @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "webkit") {
+  -webkit-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "moz") {
+  -moz-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "ms") {
+  -ms-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "o") {
+  -o-transform: @argument;
+}
+
+.transform (@argument, @vendor) when (@vendor = "none") {
+  transform: @argument;
+}
+
+.animation (@a) {
+  -webkit-animation: @arguments;
+  -moz-animation   : @arguments;
+  -ms-animation    : @arguments;
+  -o-animation     : @arguments;
+  animation        : @arguments;
+}
+
+.transform-origin (@a) {
+  -webkit-transform-origin: @arguments;
+  -moz-transform-origin   : @arguments;
+  -ms-transform-origin    : @arguments;
+  -o-transform-origin     : @arguments;
+  transform-origin        : @arguments;
+}

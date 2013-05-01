@@ -1,31 +1,3 @@
-.transform (@argument) {
-  -webkit-transform: @argument;
-  -moz-transform   : @argument;
-  -ms-transform    : @argument;
-  -o-transform     : @argument;
-  transform        : @argument;
-}
-
-.transform (@argument, @vendor) when (@vendor = "webkit") {
-  -webkit-transform: @argument;
-}
-
-.transform (@argument, @vendor) when (@vendor = "moz") {
-  -moz-transform: @argument;
-}
-
-.transform (@argument, @vendor) when (@vendor = "ms") {
-  -ms-transform: @argument;
-}
-
-.transform (@argument, @vendor) when (@vendor = "o") {
-  -o-transform: @argument;
-}
-
-.transform (@argument, @vendor) when (@vendor = "none") {
-  transform: @argument;
-}
-
 .iphonerotate(@vendor) {
   0% {
     opacity: 1;
