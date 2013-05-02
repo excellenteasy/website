@@ -31,8 +31,8 @@ module.exports = (grunt) ->
       build:
         files: [
           'build/index.html': 'src/jade/index.jade'
-          'build/contact.html': 'src/jade/contact.jade'
-          'build/legal.html': 'src/jade/legal.jade'
+          'build/contact/index.html': 'src/jade/contact/index.jade'
+          'build/legal/index.html': 'src/jade/legal/index.jade'
         ]
 
     compress:
