@@ -1,3 +1,5 @@
+@import 'sprite';
+
 #conversion {
   background: #347093;
   position: relative;
@@ -22,13 +24,13 @@
         .transform-origin(bottom right);
         .transform(rotate(0deg));
         .image {
-          background-image: url(../img/phones/iphone_frame.png);
+          .image("iphone_frame");
         }
       }
       &.iphone-screen {
         opacity: 1;
         .image {
-          background-image: url(../img/phones/iphone_screen.png);
+          .image("iphone_screen");
         }
       }
       &.nexus-frame {
@@ -36,23 +38,18 @@
         .transform-origin(top left);
         .transform(rotate(-90deg));
         .image {
-          background-image: url(../img/phones/nexus_frame.png);
+          .image("nexus_frame");
         }
       }
       &.nexus-screen {
         .animation(nexusfade 6s infinite);
         opacity: 0;
         .image {
-          background-image: url(../img/phones/nexus_screen.png);
+          .image("nexus_screen");
         }
       }
       .image {
-        background-size: 200px 295px;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 200px;
-        height: 295px;
-        margin: 0 auto;
+        margin: (40px/2) auto;
       }
     }
   }

@@ -1,0 +1,58 @@
+.sprite {
+  background-image: url(../img/sprites.png);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url(../img/sprites@2x.png);
+    background-size: 401px 672px;
+  }
+}
+
+
+.image (@image) when (@image = "logo_standalone") {
+  .sprite;
+  background-position: 0 0;
+  width: 80px;
+  height: 80px;
+}
+
+.image (@image) when (@image = "logo_text") {
+  .sprite;
+  background-position: -81px 0;
+  width: 295px;
+  height: 80px;
+}
+
+.image (@image) when (@image = "iphone_frame") {
+  .sprite;
+  background-position: 0 -81px;
+  width: 200px;
+  height: 295px;
+}
+
+.image (@image) when (@image = "iphone_screen") {
+  .sprite;
+  background-position: -201px -81px;
+  width: 200px;
+  height: 295px;
+}
+
+.image (@image) when (@image = "nexus_frame") {
+  .sprite;
+  background-position: 0 -377px;
+  width: 200px;
+  height: 295px;
+}
+
+.image (@image) when (@image = "nexus_screen") {
+  .sprite;
+  background-position: -201px -377px;
+  width: 200px;
+  height: 295px;
+}
