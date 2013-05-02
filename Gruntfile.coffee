@@ -1,6 +1,7 @@
 module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-contrib-compress'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-jade'
@@ -34,6 +35,14 @@ module.exports = (grunt) ->
           'build/legal.html': 'src/jade/legal.jade'
         ]
 
+    compress:
+      build:
+        options: mode: 'gzip'
+        files: [
+          { expand: on, cwd: 'build/', src: ['**/*.html','**/*.css'], dest: 'build' }
+        ]
+
+
     watch:
       img:
         files: ['src/img/**/*']
@@ -50,6 +59,7 @@ module.exports = (grunt) ->
     'copy:build'
     'less:build'
     'jade:build'
+    'compress:build'
   ]
   grunt.registerTask 'default', [
     'build'
