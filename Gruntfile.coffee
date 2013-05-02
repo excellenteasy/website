@@ -1,0 +1,57 @@
+module.exports = (grunt) ->
+
+  grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-less'
+  grunt.loadNpmTasks 'grunt-contrib-jade'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+
+  grunt.initConfig
+    clean:
+      build: ['build']
+
+    copy:
+      build:
+        files: [
+          { expand: on, cwd: 'src/img/', src: ['sprites.png', 'sprites@2x.png'], dest: 'build/img' }
+          { expand: on, cwd: 'src/img/', src: ['favicon.ico'], dest: 'build' }
+        ]
+
+    less:
+      build:
+        options:
+          yuicompress: on
+          optimization: 1
+        files: [
+          'build/css/main.css': 'src/less/main.less'
+        ]
+
+    jade:
+      build:
+        files: [
+          'build/index.html': 'src/jade/index.jade'
+          'build/contact.html': 'src/jade/contact.jade'
+          'build/legal.html': 'src/jade/legal.jade'
+        ]
+
+    watch:
+      img:
+        files: ['src/img/**/*']
+        tasks: ['copy:build']
+      less:
+        files: ['src/less/**/*']
+        tasks: ['less:build']
+      jade:
+        files: ['src/jade/**/*']
+        tasks: ['jade:build']
+
+  grunt.registerTask 'build', [
+    'clean:build'
+    'copy:build'
+    'less:build'
+    'jade:build'
+  ]
+  grunt.registerTask 'default', [
+    'build'
+    'watch'
+  ]

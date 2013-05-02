@@ -1,18 +1,18 @@
 # excellenteasy-website
 
-> wintersmith generated static website
+> generated static website
 
 ## Installation
 
-You need wintersmith installed globally
+You need  grunt-cli installed globally
 
 ```bash
-npm install -g wintersmith
+npm install -g grunt-cli
 npm install
 ```
 
 ## Build
 
 ```bash
-wintersmith build
+grunt build
 ```

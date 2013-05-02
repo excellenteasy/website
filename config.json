@@ -1,9 +1,0 @@
-{
-  "locals": {
-    "name" : "excellenteasy – iOS to Android conversion",
-    "owner": "excellenteasy GbR, Stephan Bönnemann und David Pfahler"
-  },
-  "plugins": [
-    "./node_modules/wintersmith-less/"
-  ]
-}
