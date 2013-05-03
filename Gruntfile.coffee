@@ -17,6 +17,7 @@ module.exports = (grunt) ->
           { expand: on, cwd: 'src/img/', src: ['sprites.png', 'sprites@2x.png'], dest: 'build/img' }
           { expand: on, cwd: 'src/img/', src: ['favicon.ico'], dest: 'build' }
           'build/robots.txt': 'src/robots.txt'
+          'build/sitemap.xml': 'src/sitemap.xml'
         ]
 
     less:
