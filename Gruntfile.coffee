@@ -3,9 +3,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-compress'
   grunt.loadNpmTasks 'grunt-contrib-copy'
-  grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-jade'
+  grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-shell'
 
   grunt.initConfig
     clean:
@@ -44,6 +45,12 @@ module.exports = (grunt) ->
           { expand: on, cwd: 'build/', src: ['**/*.html','**/*.css'], dest: 'build' }
         ]
 
+    shell:
+      jekyll:
+        command: 'jekyll build/blog src/blog'
+        stdout: on
+        stderr: on
+        failOnError: on
 
     watch:
       img:
@@ -55,12 +62,16 @@ module.exports = (grunt) ->
       jade:
         files: ['src/jade/**/*']
         tasks: ['jade:build']
+      jekyll:
+        files: ['src/blog/**/*']
+        tasks: ['shell:jekyll']
 
   grunt.registerTask 'build', [
     'clean:build'
     'copy:build'
     'less:build'
     'jade:build'
+    'shell:jekyll'
     'compress:build'
   ]
   grunt.registerTask 'default', [
