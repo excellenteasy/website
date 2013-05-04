@@ -1,0 +1,33 @@
+---
+layout: page
+title: excellenteasy blog
+---
+{% include JB/setup %}
+
+{% for post in site.posts %}
+  {% assign author = site.authors[post.author] %}
+
+  {% if post.title %}
+  {% if forloop.index < 5%}
+    <header class="row">
+      <span class="span6 offset3">
+        <h1><a href="{{ BASE_PATH }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+      </span>
+      {% if author.name %}
+      <span class="span6 offset3">
+        <small>by {{ author.name }}</small>
+      </span>
+      {% endif %}
+    </header>
+  {% endif %}
+  {% endif %}
+  <article class="row">
+    <div class="span6 offset3">
+      {{ post | only_first_p }}
+      <a href="{{ BASE_PATH }}{{ post.url }}" title="Read more">Read more</a>
+      {% unless forloop.last %}
+      <hr />
+      {% endunless %}
+    </div>
+  </article>
+{% endfor %}

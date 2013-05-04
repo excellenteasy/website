@@ -1,14 +1,18 @@
 {% assign author = site.authors[page.author] %}
 <div class="introduction">You're reading an <a href="http://excellenteasy.com" title="excellenteasy home">excellenteasy</a> publication about the mobile web.</div>
 <section class="container post">
-  <header class="row">
-    <span class="span6 offset3">
-      <h1>{{ page.title }}</h1>
-    </span>
-    <span class="span6 offset3">
-      <small>by {{ author.name }}</small>
-    </span>
-  </header>
+  {% if page.title %}
+    <header class="row">
+      <span class="span6 offset3">
+        <h1>{{ page.title }}</h1>
+      </span>
+      {% if author.name %}
+      <span class="span6 offset3">
+        <small>by {{ author.name }}</small>
+      </span>
+      {% endif %}
+    </header>
+  {% endif %}
   <article class="row">
     <div class="span6 offset3">
       {{ content }}
@@ -24,7 +28,7 @@
         {% endif %}
       </li>
       <li>
-        <a href="/blog/" title="excellenteasy blog">home</a>
+        <a href="{{ BASE_PATH }}/" title="excellenteasy blog">home</a>
       </li>
       <li>
       {% if page.next %}
@@ -35,14 +39,20 @@
       </li>
     </ul>
   </nav>
-  <div class="row author hidden-print">
-    <div class="span6 offset3">
-      written by <strong>{{ author.name}}</strong><br />
-      follow the author on <em><a href="http://twitter.com/{{ author.twitter }}" title="{{ author.name}} on Twitter">Twitter</a></em><br />
+  {% if author.name  %}
+    <div class="row author hidden-print">
+      <div class="span6 offset3">
+        written by <strong>{{ author.name}}</strong><br />
+        {% if author.twitter %}
+          follow the author on <em><a href="http://twitter.com/{{ author.twitter }}" title="{{ author.name}} on Twitter">Twitter</a></em><br />
+        {% endif %}
+      </div>
+      {% if author.gravatar %}
+        <div class="span6 offset3">
+          <img src="https://secure.gravatar.com/avatar/{{ author.gravatar }}?s=80" alt="Image of {{ author.name }}" />
+        </div>
+      {% endif %}
     </div>
-    <div class="span6 offset3">
-      <img src="https://secure.gravatar.com/avatar/{{ author.gravatar }}?s=80" />
-    </div>
-  </div>
+  {% endif %}
   {% include JB/comments %}
 </section>

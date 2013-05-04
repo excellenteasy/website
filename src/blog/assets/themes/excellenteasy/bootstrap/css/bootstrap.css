@@ -433,6 +433,7 @@ h6 {
   font-family: inherit;
   font-weight: normal;
   line-height: 1.52381em;
+  font-style: italic;
   color: inherit;
   text-rendering: optimizelegibility;
 }
@@ -455,19 +456,19 @@ h1 {
   font-size: 1.5em;
 }
 h2 {
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 h3 {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 h4 {
   font-size: 1.2em;
 }
 h5 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 h6 {
-  font-size: 1.2em;
+  font-size: 1em;
 }
 ul,
 ol {

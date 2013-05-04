@@ -1,12 +1,15 @@
-<section class="container">
-  <header class="row">
-    <span class="span8 offset2">
-      <h1>{{ page.title }}</h1>
-    </span>
-  </header>
+{% assign author = site.authors[page.author] %}
+<div class="introduction">You're reading an <a href="http://excellenteasy.com" title="excellenteasy home">excellenteasy</a> publication about the mobile web.</div>
+<section class="container post">
+  {% if page.headline %}
+    <header class="row">
+      <span class="span6 offset3">
+        <h1>{{ page.headline }}</h1>
+      </span>
+    </header>
+  {% endif %}
   <article class="row">
-    <div class="span8 offset2">
-      {{ content }}
-    </div>
+    {{ content }}
   </article>
+  {% include JB/comments %}
 </section>
