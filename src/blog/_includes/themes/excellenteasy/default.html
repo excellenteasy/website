@@ -3,29 +3,21 @@
   <head>
     <title>{{ page.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta charset="utf-8">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
   </head>
 
   <body>
-    <div class="container">
-      <div class="content">
-        {{ content }}
-      </div>
-      <hr>
-      <footer>
-        <p>&copy; {{ site.time | date: '%Y' }}
-          excellenteasy GbR, Stephan Bönnemann und David Pfahler
-          &nbsp;|&nbsp;
-          <a href="/legal/" title="German law demands this">Legal</a>
-        </p>
-      </footer>
-    </div>
+    {{ content }}
+    <footer>
+      <a href="/legal/" title="German law demands this">legal</a>
+    </footer>
     {% include JB/analytics %}
   </body>
 </html>

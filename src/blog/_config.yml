@@ -17,14 +17,17 @@ authors:
     name: Stephan Bönnemann
     email: stephan@excellenteasy.com
     twitter: boennemann
+    gravatar: 29e45e7e0bf9561770aae5818f139c80
   david:
     name: David Pfahler
     email: david@excellenteasy.com
     twitter: davidpfahler
+    gravatar: bd6985f75d8c77a4847ce288adebeb82
   cam:
     name: Cam Collins
     email: cam@excellenteasy.com
     twitter: camcollins
+    gravatar: 7283a5ec9a50537462a7ac86893a14b7
 
 
 # The production_url is only used when full-domain names are needed
