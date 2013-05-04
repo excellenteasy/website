@@ -20,6 +20,10 @@ module.exports = (grunt) ->
           'build/robots.txt': 'src/robots.txt'
           'build/sitemap.xml': 'src/sitemap.xml'
         ]
+      blog:
+        files: [
+          { expand: on, cwd: 'src/blog/_site/', src: ['**'], dest: 'build/blog'}
+        ]
 
     less:
       build:
@@ -47,7 +51,7 @@ module.exports = (grunt) ->
 
     shell:
       jekyll:
-        command: 'jekyll src/blog build/blog --no-auto'
+        command: 'cd src/blog; jekyll;'
         stdout: on
         stderr: on
         failOnError: on
@@ -73,6 +77,7 @@ module.exports = (grunt) ->
     'jade:build'
     'shell:jekyll'
     'compress:build'
+    'copy:blog'
   ]
   grunt.registerTask 'default', [
     'build'
