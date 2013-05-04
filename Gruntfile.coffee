@@ -3,6 +3,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-compress'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-cssmin'
+  grunt.loadNpmTasks 'grunt-contrib-htmlmin'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -24,6 +26,22 @@ module.exports = (grunt) ->
         files: [
           { expand: on, cwd: 'src/blog/_site/', src: ['**'], dest: 'build/blog'}
         ]
+
+    cssmin:
+      blog:
+        files: [
+          'build/blog/assets/css/style.css': 'build/blog/assets/css/style.css'
+        ]
+
+    htmlmin:
+      blog:
+        options:
+          removeComments: on
+          collapseWhitespace: on
+        files: [
+          { expand: on, cwd: 'build/blog/', src: ['**/*.html'], dest: 'build/blog'}
+        ]
+
 
     less:
       build:
@@ -76,8 +94,10 @@ module.exports = (grunt) ->
     'less:build'
     'jade:build'
     'shell:jekyll'
-    'compress:build'
     'copy:blog'
+    'cssmin:blog'
+    'htmlmin:blog'
+    'compress:build'
   ]
   grunt.registerTask 'default', [
     'build'
