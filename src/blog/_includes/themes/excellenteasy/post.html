@@ -21,7 +21,7 @@
     <ul class="span6 offset3">
       <li>
         {% if page.previous %}
-          <a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; older</a>
+          <a href="{{ BASE_PATH }}{{ page.previous.url }}/" title="{{ page.previous.title }}">&larr; older</a>
         {% else %}
           &larr; older
         {% endif %}
@@ -31,7 +31,7 @@
       </li>
       <li>
       {% if page.next %}
-        <a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">newer &rarr;</a>
+        <a href="{{ BASE_PATH }}{{ page.next.url }}/" title="{{ page.next.title }}">newer &rarr;</a>
       {% else %}
         newer &rarr;
       {% endif %}
