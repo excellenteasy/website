@@ -1,5 +1,4 @@
 {% assign author = site.authors[page.author] %}
-<div class="introduction">You're reading an <a href="http://excellenteasy.com" title="excellenteasy home">excellenteasy</a> publication about the mobile web.</div>
 <section class="container post">
   {% if page.headline %}
     <header class="row">
@@ -8,8 +7,6 @@
       </span>
     </header>
   {% endif %}
-  <article class="row">
-    {{ content }}
-  </article>
+  {{ content }}
   {% include JB/comments %}
 </section>

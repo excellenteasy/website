@@ -1,3 +1,5 @@
+@import '../../_lib/bootstrap';
+
 @font-face {
   font-family: 'Alegreya';
   font-style: normal;
@@ -33,8 +35,12 @@
   width: 100%;
   font-size: 0.8em;
   line-height: 1em;
-  margin-top: 0.5em;
+  margin-top: 1em;
   text-align: center;
+}
+
+body > footer {
+  margin-bottom: 1em;
 }
 
 body > footer {
@@ -91,10 +97,40 @@ article, .post nav, .post .author {
   text-align: center;
 }
 
-.post .author img {
+.post .author .avatar {
+  width: 80px;
+  height: 80px;
   display: block;
+  background-size: 80px 80px;
+  background-repeat: no-repeat;
   margin: 1em auto 0 auto;
   border-radius: 100%;
+  &[data-img="Stephan Bönnemann"] {
+    background-image: url(../img/stephan.jpeg);
+  }
+  &[data-img="Cam Collins"] {
+    background-image: url(../img/cam.jpeg);
+  }
+  &[data-img="David Pfahler"] {
+    background-image: url(../img/david.jpeg);
+  }
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    &[data-img="Stephan Bönnemann"] {
+      background-image: url(../img/stephan@2x.jpeg);
+    }
+    &[data-img="Cam Collins"] {
+      background-image: url(../img/cam@2x.jpeg);
+    }
+    &[data-img="David Pfahler"] {
+      background-image: url(../img/david@2x.jpeg);
+    }
+  }
 }
 
 @media (max-width: 480px) {

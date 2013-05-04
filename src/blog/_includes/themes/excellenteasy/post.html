@@ -1,5 +1,4 @@
 {% assign author = site.authors[page.author] %}
-<div class="introduction">You're reading an <a href="http://excellenteasy.com" title="excellenteasy home">excellenteasy</a> publication about the mobile web.</div>
 <section class="container post">
   {% if page.title %}
     <header class="row">
@@ -44,14 +43,12 @@
       <div class="span6 offset3">
         written by <strong>{{ author.name}}</strong><br />
         {% if author.twitter %}
-          follow the author on <em><a href="http://twitter.com/{{ author.twitter }}" title="{{ author.name}} on Twitter">Twitter</a></em><br />
+          <a href="http://twitter.com/{{ author.twitter }}" title="{{ author.name}} on Twitter">follow the author</a>
         {% endif %}
       </div>
-      {% if author.gravatar %}
-        <div class="span6 offset3">
-          <img src="https://secure.gravatar.com/avatar/{{ author.gravatar }}?s=80" alt="Image of {{ author.name }}" />
-        </div>
-      {% endif %}
+      <div class="span6 offset3">
+        <div class="avatar" data-img="{{ author.name }}" alt="Image of {{ author.name }}" />
+      </div>
     </div>
   {% endif %}
   {% include JB/comments %}
