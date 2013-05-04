@@ -96,3 +96,20 @@ article, .post nav, .post .author {
   margin: 1em auto 0 auto;
   border-radius: 100%;
 }
+
+@media (max-width: 480px) {
+  header h1 {
+    font-style: italic;
+    font-size: 1.5em;
+  }
+  header small {
+    display: block;
+    font-family: Alegreya SC, Georgia, serif;
+    font-size: 0.8em;
+    line-height: 1em;
+  }
+  article {
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+}

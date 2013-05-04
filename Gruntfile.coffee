@@ -47,7 +47,7 @@ module.exports = (grunt) ->
 
     shell:
       jekyll:
-        command: 'jekyll build/blog src/blog'
+        command: 'jekyll build/blog src/blog --no-auto'
         stdout: on
         stderr: on
         failOnError: on

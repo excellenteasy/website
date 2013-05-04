@@ -1,5 +1,5 @@
 {% assign author = site.authors[page.author] %}
-<div class="introduction">You're reading an <a href="/" title="excellenteasy home">excellenteasy</a> publication about the mobile web.</div>
+<div class="introduction">You're reading an <a href="http://excellenteasy.com" title="excellenteasy home">excellenteasy</a> publication about the mobile web.</div>
 <section class="container post">
   <header class="row">
     <span class="span6 offset3">
@@ -14,7 +14,7 @@
       {{ content }}
     </div>
   </article>
-  <nav class="row">
+  <nav class="row hidden-print">
     <ul class="span6 offset3">
       <li>
         {% if page.previous %}
@@ -35,11 +35,10 @@
       </li>
     </ul>
   </nav>
-  <div class="row author">
+  <div class="row author hidden-print">
     <div class="span6 offset3">
       written by <strong>{{ author.name}}</strong><br />
       follow the author on <em><a href="http://twitter.com/{{ author.twitter }}" title="{{ author.name}} on Twitter">Twitter</a></em><br />
-      visit his <em><a href="{{ author.website }}" title="{{ author.name}}'s website">website</a></em>
     </div>
     <div class="span6 offset3">
       <img src="https://secure.gravatar.com/avatar/{{ author.gravatar }}?s=80" />
