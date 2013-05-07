@@ -1,0 +1,12 @@
+{% assign author = site.authors[page.author] %}
+<section class="container post">
+  {% if page.headline %}
+    <header class="row">
+      <span class="span6 offset3">
+        <h1>{{ page.headline }}</h1>
+      </span>
+    </header>
+  {% endif %}
+  {{ content }}
+  {% include JB/comments %}
+</section>
