@@ -1,0 +1,55 @@
+{% assign author = site.authors[page.author] %}
+<section class="container post">
+  {% if page.title %}
+    <header class="row">
+      <span class="span6 offset3">
+        <h1>{{ page.title }}</h1>
+      </span>
+      {% if author.name %}
+      <span class="span6 offset3">
+        <small>by {{ author.name }}</small>
+      </span>
+      {% endif %}
+    </header>
+  {% endif %}
+  <article class="row">
+    <div class="span6 offset3">
+      {{ content }}
+    </div>
+  </article>
+  <nav class="row hidden-print">
+    <ul class="span6 offset3">
+      <li>
+        {% if page.previous %}
+          <a href="{{ BASE_PATH }}{{ page.previous.url }}/" title="{{ page.previous.title }}">&larr; older</a>
+        {% else %}
+          &larr; older
+        {% endif %}
+      </li>
+      <li>
+        <a href="{{ BASE_PATH }}/" title="excellenteasy blog">home</a>
+      </li>
+      <li>
+      {% if page.next %}
+        <a href="{{ BASE_PATH }}{{ page.next.url }}/" title="{{ page.next.title }}">newer &rarr;</a>
+      {% else %}
+        newer &rarr;
+      {% endif %}
+      </li>
+    </ul>
+  </nav>
+  {% if author.name  %}
+    <div class="row author hidden-print">
+      <div class="span6 offset3">
+        written by&nbsp;<strong>{{ author.name}}</strong><br />
+        {% if author.twitter %}
+          <a href="http://twitter.com/{{ author.twitter }}" title="{{ author.name}} on Twitter">follow the author</a>
+        {% endif %}
+      </div>
+      <div class="span6 offset3">
+        <div class="avatar" data-img="{{ author.name }}" alt="Image of {{ author.name }}" />
+      </div>
+    </div>
+  {% endif %}
+  {% include JB/comments %}
+</section>
