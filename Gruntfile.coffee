@@ -37,7 +37,7 @@ module.exports = (grunt) ->
       blog:
         options:
           removeComments: on
-          collapseWhitespace: on
+          collapseWhitespace: off
         files: [
           { expand: on, cwd: 'build/blog/', src: ['**/*.html'], dest: 'build/blog'}
         ]
