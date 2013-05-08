@@ -69,7 +69,7 @@ module.exports = (grunt) ->
 
     shell:
       jekyll:
-        command: 'cd src/blog; jekyll;'
+        command: 'jekyll build -s src/blog -d build/blog'
         stdout: on
         stderr: on
         failOnError: on
@@ -94,7 +94,6 @@ module.exports = (grunt) ->
     'less:build'
     'jade:build'
     'shell:jekyll'
-    'copy:blog'
     'cssmin:blog'
     'htmlmin:blog'
     'compress:build'

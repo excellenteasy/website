@@ -3,7 +3,6 @@
 permalink: /posts/:title
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: false
 pygments: true
 
 # Themes are encouraged to use these universal variables
@@ -66,7 +65,7 @@ JB :
   #     This means always setting the protocol (http|https) or prefixing with "/"
 
   BASE_PATH : /blog
-  url: http://excellenteasy.com/blog
+  # url: http://excellenteasy.com/blog
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
