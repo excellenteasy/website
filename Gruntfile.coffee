@@ -9,10 +9,39 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-less'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-shell'
+  grunt.loadNpmTasks 'grunt-image-resize'
+  grunt.loadNpmTasks 'grunt-contrib-imagemin'
 
   grunt.initConfig
     clean:
       build: ['build']
+
+    image_resize:
+      full:
+        options:
+          width: 660
+          overwrite: no
+        files: [
+          expand: on
+          cwd: 'src/blog/_images'
+          src: ['*']
+          dest: 'build/blog/processed'
+          rename: (destBase, destPath) ->
+            ext = destPath.match /\.[0-9a-z]+$/i
+            dest = destPath.replace /\.[0-9a-z]+$/i, "_660#{ext}"
+            dest = destBase+'/'+dest
+        ]
+
+    imagemin:
+      dist:
+        options:
+          optimizationLevel: 240
+        files: [
+          expand: on
+          cwd: 'build/blog/processed'
+          src: ['*']
+          dest: 'build/blog/processed'
+        ]
 
     copy:
       build:
@@ -94,6 +123,8 @@ module.exports = (grunt) ->
     'less:build'
     'jade:build'
     'shell:jekyll'
+    'image_resize'
+    'imagemin'
     'cssmin:blog'
     'htmlmin:blog'
     'compress:build'
