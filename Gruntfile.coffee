@@ -23,6 +23,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-shell'
   grunt.loadNpmTasks 'grunt-image-resize'
   grunt.loadNpmTasks 'grunt-contrib-imagemin'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
 
   grunt.initConfig
     clean:
@@ -68,6 +69,21 @@ module.exports = (grunt) ->
       blog:
         files: [
           'build/blog/assets/css/style.css': 'build/blog/assets/css/style.css'
+        ]
+
+    concat:
+      options:
+        separator: ';'
+      blogjs:
+        files: [
+          cwd: 'src/blog/assets/_js/'
+          src: [
+            'jquery.custom.min.js'
+            'jquery.unveil.min.js'
+            'enquire.min.js'
+            'custom.js'
+          ]
+          dest: 'build/blog/assets/js/a.js'
         ]
 
     htmlmin:
@@ -135,6 +151,7 @@ module.exports = (grunt) ->
     'less:build'
     'jade:build'
     'shell:jekyll'
+    'concat:blogjs'
     'cssmin:blog'
     'htmlmin:blog'
     'compress:build'

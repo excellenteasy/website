@@ -8,10 +8,10 @@
       <meta name="author" content="{{ site.author.name }}">
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <link href="{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
   </head>
 
   <body>
@@ -21,5 +21,6 @@
       <a href="https://excellenteasy.com/legal/" title="German law demands this">legal</a>
     </footer>
     {% include JB/analytics %}
+    <script type="text/javascript" src="{{ ASSET_PATH }}/js/a.js"></script>
   </body>
 </html>

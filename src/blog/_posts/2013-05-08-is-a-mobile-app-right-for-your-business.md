@@ -7,7 +7,10 @@ title: Is a mobile app right for your business? Top five things you should consi
 
 Today not only do people communicate more and more with text messaging and social networks using their smartphones, businesses are using tablets to replace what was traditionally done with a PC or laptop. When lightning struck our house and knocked out our internet connection last month the service tech pulled out his iPad, plugged it into the cable box and started running diagnostics tests on our system. Gone are the days that mobile apps consist of cute gadgets or simple games, today mobile apps are becoming ubiquitous business tools that help organizations stay connected and productive regardless of location.
 
-![LaunchTracker in iTunes](/blog/processed/Launchtracker-app-store_660.jpg "Launchtracker mobile business app")
+{% image Launchtracker-app-store.jpg %}
+  title: LaunchTracker mobile business app
+  alt: The image of LaunchTracker app in the App Store
+{% endimage %}
 
 *excellenteasy* worked with my company to get our [first app](https://itunes.apple.com/us/app/dockmaster-launchtracker/id581697493?ls=1/) in Apple's AppStore. We learned quite a bit about working with remote teams as mine managed the project from the US while excellenteasy built the app in Germany. I then worked through the app submittal process. I believe that company's should centralize their accounts on the Apple App Store and Google Play to create cohesive mobile analytics for comprehensive data analysis and to unify their marketing message. This is supported by the "2013 Mobile Trends For Marketers" report published by Forrester in Feb 2013. As I reflect back on the experience, I thought it might be useful to consider whether a mobile app is really for every business, all the time.
 
@@ -33,11 +36,17 @@ Have a hypothesis and then test by asking employees and customers for feedback.
 
 **3. What will it look like?** Some people will argue that once you've decided "in words" what you want your app to do, then its time to make a decision about the platform. I disagree. For me you don't know what you want until you know what it will look like. At the end of the day it's all about the user experience. Smartphone or tablet, iPhone or Android; none of that matters unless you deliver a superior user experience. So for me the next step is a mockup. A mockup is nothing more than a drawing. As a matter of fact, often the simplest thing you can do to convey to a developer what you want is to draw a picture.  Think back to your fourth grade art class. Whatever skills you may have had then is overkill for what you need to do now. Simply convey in a drawing what you want with buttons and display area to look like. Just draw boxes with words in them for starters. Here is a really simple drawing that I received from a customer which eventually led to the design of LaunchTracker.
 
-![LaunchTracker simple mockup](/blog/processed/Screen-Shot-2013-04-17-at-4.19.29-PM_660.png)
+{% image Screen-Shot-2013-04-17-at-4.19.29-PM.png %}
+  title: LaunchTracker simple mockup
+  alt: A sketched pencil mockup of LaunchTracker app
+{% endimage %}
 
 Before I received this, I had developed a mobile website using HTML5 and jQuery Mobile to show customers what the app might look like. I considered this site our minimum viable product. The site covered a broad range of things like time-clock, WO parts, add/view customers, etc. But the LaunchTracker portion was really clumsy. If it wasn't for our customer's input, we would have built the WRONG product. Remember, it's all about the user experience. Once we had this feedback in place I created a more "realistic" web mock-up that looked like this. I delivered a requirements document to excellenteasy that included the following mock-up.
 
-![LaunchTracker Web Mockup](/blog/processed/mockup_660.jpg)
+{% image mockup.jpg %}
+  title: LaunchTracker Web Mockup
+  alt: A jQuery mobile LaunchTracker mockup
+{% endimage %}
 
 Once the mockup is complete you can naturally move to the next step.
 
