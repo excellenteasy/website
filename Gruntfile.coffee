@@ -1,3 +1,15 @@
+getImageFilesArray = (width) ->
+  [
+    expand: on
+    cwd: 'src/blog/_images'
+    src: ['*']
+    dest: 'build/blog/images'
+    rename: (destBase, destPath) ->
+      ext = destPath.match /\.[0-9a-z]+$/i
+      dest = destPath.replace /\.[0-9a-z]+$/i, "_#{width}#{ext}"
+      dest = destBase+'/'+dest
+  ]
+
 module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-clean'
@@ -21,26 +33,22 @@ module.exports = (grunt) ->
         options:
           width: 660
           overwrite: no
-        files: [
-          expand: on
-          cwd: 'src/blog/_images'
-          src: ['*']
-          dest: 'build/blog/processed'
-          rename: (destBase, destPath) ->
-            ext = destPath.match /\.[0-9a-z]+$/i
-            dest = destPath.replace /\.[0-9a-z]+$/i, "_660#{ext}"
-            dest = destBase+'/'+dest
-        ]
+        files: getImageFilesArray 660
+      iphone:
+        options:
+          width: 280
+          overwrite: no
+        files: getImageFilesArray 280
 
     imagemin:
       dist:
         options:
-          optimizationLevel: 240
+          optimizationLevel: 7
         files: [
           expand: on
-          cwd: 'build/blog/processed'
+          cwd: 'build/blog/images'
           src: ['*']
-          dest: 'build/blog/processed'
+          dest: 'build/blog/images'
         ]
 
     copy:
@@ -70,7 +78,6 @@ module.exports = (grunt) ->
         files: [
           { expand: on, cwd: 'build/blog/', src: ['**/*.html'], dest: 'build/blog'}
         ]
-
 
     less:
       build:
@@ -102,6 +109,11 @@ module.exports = (grunt) ->
         stdout: on
         stderr: on
         failOnError: on
+      s3:
+        command: 'sh s3.sh'
+        stdout: on
+        stderr: on
+        failOnError: on
 
     watch:
       img:
@@ -123,12 +135,22 @@ module.exports = (grunt) ->
     'less:build'
     'jade:build'
     'shell:jekyll'
-    'image_resize'
-    'imagemin'
     'cssmin:blog'
     'htmlmin:blog'
     'compress:build'
   ]
+
+  grunt.registerTask 'images', [
+    'image_resize'
+    'imagemin'
+  ]
+
+  grunt.registerTask 'dist', [
+    'build'
+    'images'
+    'shell:s3'
+  ]
+
   grunt.registerTask 'default', [
     'build'
     'watch'
