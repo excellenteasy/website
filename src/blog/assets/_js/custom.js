@@ -1,40 +1,36 @@
-$(document).ready(function() {
-  enquire.register("screen and (min-width:700px)", {
+var changeImgSrcPostfixTo = function(width) {
+  $('img[data-src]').each(function(){
+    var $el = $(this);
+    // get data src
+    var datasrc = $el.attr('data-src');
+    // get file extension
+    var match = datasrc.match(/(_[0-9]*)?(\.[0-9a-z]+)$/i);
+    var ext = match[2];
+    // remove prepended _#{width} before applying new one
+    if (match[1]) {
+      datasrc = datasrc.replace(match[1], '');
+    }
+    // prepend extension with _#{width}
+    datasrc = datasrc.replace(ext, '_'+width+ext);
+    $el.attr('data-src', datasrc);
+  }).unveil(0);
+};
 
-    // OPTIONAL
-    // If supplied, triggered when a media query matches.
-    match : function() {
-      // change all data-src attributes on img tags to _660
-      $('img[data-src]').each(function(){
-        // get data src
-        var datasrc = $(this).attr('datasrc');
-        // get file extension
-        var ext = datasrc.replace();
-        // prepend extension with _660
-        // TODO
-      });
-    },
-
-    // OPTIONAL
-    // If supplied, triggered when the media query transitions
-    // *from a matched state to an unmatched state*.
-    unmatch : function() {},
-
-    // OPTIONAL
-    // If supplied, triggered once, when the handler is registered.
-    setup : function() {},
-
-    // OPTIONAL, defaults to false
-    // If set to true, defers execution of the setup function
-    // until the first time the media query is matched
-    deferSetup : true,
-
-    // OPTIONAL
-    // If supplied, triggered when handler is unregistered.
-    // Place cleanup code here
-    destroy : function() {}
-
+var registerMatchForWidth = function(maxwidth, width) {
+  var minwidth = maxwidth - 190;
+  enquire.register("screen and (min-width: "+minwidth+"px) and (max-width: "+maxwidth+"px)", function() {
+    // change all data-src attributes on img tags to width
+    changeImgSrcPostfixTo(width);
   });
+};
 
-  $("img").unveil(200);
+registerMatchForWidth(699, 470);
+registerMatchForWidth(509, 280);
+registerMatchForWidth(319, 150);
+
+// TODO: more granular matches
+
+// 700+px
+enquire.register("screen and (min-width:700px)", function() {
+  changeImgSrcPostfixTo(660);
 });

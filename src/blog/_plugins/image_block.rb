@@ -16,7 +16,7 @@ module Jekyll
     end
 
     def image_tag
-      "<img src='https://d2b0jc4z1uybmh.cloudfront.net/website/blog/assets/img/blank.png' data-src='#{image_url}' title='#{title}' alt='#{alt}' width='660px' />"
+      "<img data-src='#{image_url}' title='#{title}' alt='#{alt}' />"
     end
 
     def load_options(contents)
@@ -40,6 +40,7 @@ module Jekyll
 
     def image_url
       "https://d2b0jc4z1uybmh.cloudfront.net/website/blog/images/#{@image_name}"
+      # "/blog/images/#{@image_name}"
     end
 
     def link?
