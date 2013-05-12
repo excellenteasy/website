@@ -3,6 +3,8 @@ module Jekyll
     def initialize(tag_name, filename, tokens)
       super
       @image_name = filename.strip
+      ext = File.extname(@image_name)
+      @low_res = @image_name.gsub /#{ext}$/, "_280#{ext}"
     end
 
     def render(context)
@@ -16,7 +18,7 @@ module Jekyll
     end
 
     def image_tag
-      "<img data-src='#{image_url}' title='#{title}' alt='#{alt}' />"
+      "<img src='#{low_res_image}' data-src='#{image_url}' title='#{title}' alt='#{alt}' />"
     end
 
     def load_options(contents)
@@ -38,9 +40,16 @@ module Jekyll
       [matches.captures[0], matches.captures[1].strip]
     end
 
+    def image_src
+      "https://d2b0jc4z1uybmh.cloudfront.net/website/blog/images"
+    end
+
     def image_url
-      "https://d2b0jc4z1uybmh.cloudfront.net/website/blog/images/#{@image_name}"
-      # "/blog/images/#{@image_name}"
+      "#{image_src}/#{@image_name}"
+    end
+
+    def low_res_image
+      "#{image_src}/#{@low_res}"
     end
 
     def link?

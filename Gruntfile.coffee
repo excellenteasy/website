@@ -75,14 +75,14 @@ module.exports = (grunt) ->
     cssmin:
       blog:
         files: [
-          'build/blog/assets/css/style.css': 'build/blog/assets/css/style.css'
+          'build/blog/assets/css/style-4.css': 'build/blog/assets/css/style.css'
         ]
 
     concat:
       options:
         separator: ';'
       build:
-        dest: 'build/blog/assets/js/c.js'
+        dest: 'build/blog/assets/js/c-1.js'
         src: [
           'src/blog/assets/_js/jquery.min.js'
           'src/blog/assets/_js/jquery.unveil.min.js'
@@ -93,7 +93,7 @@ module.exports = (grunt) ->
     uglify:
       dist:
         files:
-          'build/blog/assets/js/c.js': [
+          'build/blog/assets/js/c-1.js': [
             'src/blog/assets/_js/jquery.min.js'
             'src/blog/assets/_js/jquery.unveil.min.js'
             'src/blog/assets/_js/enquire.js'
@@ -127,10 +127,13 @@ module.exports = (grunt) ->
         ]
 
     compress:
-      build:
+      dist:
         options: mode: 'gzip'
         files: [
-          { expand: on, cwd: 'build/', src: ['**/*.html','**/*.css'], dest: 'build' }
+          expand: on
+          cwd: 'build/'
+          src: ['**/*.html','**/*.css','**/*.js']
+          dest: 'build'
         ]
 
     shell:
@@ -167,7 +170,6 @@ module.exports = (grunt) ->
     'shell:jekyll'
     'cssmin:blog'
     'htmlmin:blog'
-    'compress:build'
   ]
 
   grunt.registerTask 'build', [
@@ -183,6 +185,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'dist', [
     '_build'
     'uglify:dist'
+    'compress:dist'
     'images'
     'shell:s3'
   ]
