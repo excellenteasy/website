@@ -1,25 +1,41 @@
+{% assign author = site.authors[page.author] %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>{{ page.title }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta charset="utf-8">
-    {% if site.author.name %}
-      <meta name="author" content="{{ site.author.name }}">
+    {% if author.name %}
+      <meta name="author" content="{{ author.name }}">
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ BASE_PATH }}{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/style-4.css" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="/favicon.ico">
-    <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
-    <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    {% if author.gplus %}
+      <link rel="author" href="{{ author.gplus }}">
+    {% endif %}
+    <link href="{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
   </head>
 
   <body>
-    <div class="introduction">You're reading the&nbsp;<a href="http://excellenteasy.com" title="excellenteasy home">excellenteasy</a>&nbsp;blog, a publication about the mobile web.</div>
+    <div class="introduction">You're reading the&nbsp;<a href="https://excellenteasy.com" title="excellenteasy home">excellenteasy</a>&nbsp;blog, a publication about the mobile web.</div>
     {{ content }}
     <footer class="hidden-print">
-      <a href="http://excellenteasy.com/legal/" title="German law demands this">legal</a>
+      <a href="https://excellenteasy.com/legal/" title="German law demands this">legal</a>
     </footer>
     {% include JB/analytics %}
+    <script type="text/javascript">
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "{{ ASSET_PATH }}/js/c-1.js";
+        document.body.appendChild(element);
+      }
+      if (window.addEventListener)
+      window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+      window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+    </script>
   </body>
 </html>
