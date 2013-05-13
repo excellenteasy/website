@@ -5,12 +5,14 @@ append head
 
 block slogan
   h1.span12.slogan
-    | We make your &nbsp;
-    strong iPhone app &nbsp;<br />
-    | work on &nbsp;
-    strong Android &nbsp;
-    //- strong We convert your apps
-    //- | from iOS to Android
+    | Your&nbsp;
+    strong iPhone app<br />
+    | will work on&nbsp;
+    strong Android
+    | ,<br />
+    | in less than&nbsp;
+    strong 3 hours
+    | .
 
 block content
   section#conversion
@@ -30,18 +32,16 @@ block content
 
           h2 Have your app on Android in weeks with our bulletproof Five-Step process.
 
-          p Our common time to market is 4 weeks, but for you personally it's less than three hours. We handle the entire process on our side, so you can sleep well at night. Just send us your current app and you'll hear from us when your Android app is ready for prime time.
-
   section#testimonials
     .container
       .row
         blockquote.span8.
-          The Android version of our app was ready within a week.
+          We invested 3 hours to get our<br /> existing iPhone app converted to Android
         .author.span4 Dr. Albrecht Pfahler<br /> CEO of&nbsp;
           a(href='http://www.remark-pharma.de') REMARK GmbH
       .row
         blockquote.span8.
-          They are the leading experts in the Android conversion market.
+          They are the leading experts<br /> in the Android conversion market.
         .author.span4 Patrice Archer<br /> Founder of&nbsp;
           a(href='https://www.facebook.com/PrimalPaleo') Primal Paleo App
       .row
@@ -54,20 +54,80 @@ block content
       header.row
         .span8.offset2
           h1 Five-Step iPhone to Android process
-          | We bring your app to Android over the course of five steps. The entire process is focused on minimizing the time investment on your end and ensuring highest possible quality on our end.
+          p We bring your app to Android over the course of five steps. The entire process is focused on minimizing the time investment on your end and ensuring highest possible quality on our end.
+          p Our common time to market is 4 weeks, but for you personally it's less than three hours. We handle the entire process on our side, so you can sleep well at night. Just send us your current app and you'll hear from us when your Android app is ready for prime time.
+
       .row
         .span4
+          i.icon-quill
           h2 1. Make your app available to us and describe it
         .span4
-          h2 2. We analyze your app and give you a binding offer
+          i.icon-download
+          h2 2. We analyze your app and give you an offer
         .span4
+          i.icon-folder
           h2 3. Send us required assets and documentation
         .span6
-          h2 4. We confirm, ask for your payment and start creating your product
+          i.icon-wand
+          h2 4. We confirm, ask for your payment and create your product
         .span6
+          i.icon-users
           h2 5. Review your app and give it to your users
-        a.btn.btn-large.span4.offset4(href='/contact/')
-          | Let's get in touch
-
+  section#pricing
+    .container
+      header.row
+        .span8.offset2
+          h1 App Conversion Packages
+      .row
+        table.table.span12
+          thead
+            tr
+              th Professional
+              th.highlight Enterprise
+              th Basic
+          tbody
+            tr.active
+              td Apple's UIKit
+              td.highlight Apple's UIKit
+              td Apple's UIKit
+            tr
+              td Device APIs
+              td.highlight Device APIs
+              td
+            tr
+              td Social Integration
+              td.highlight Social Integration
+              td
+            tr
+              td Static Content
+              td.highlight
+                strong Remote Content
+              td Static Content
+          tfoot
+            tr
+              td $ 7,900
+              td.highlight $ 11,490
+              td $ 5,900
+            tr.no-border
+              td
+              td
+                a.btn.btn-large(href='/contact/')
+                  | Order Now
+              td
+    .container.definitions
+      .row
+        .span3
+          h1 Apple's UIKit
+          | We'll convert common iOS user interface elements like tables, buttons, lists, tabbars and navbars.
+        .span3
+          h1 Device APIs
+          | You Android app will be able to take advantage of iOS device APIs like GPS, camera, acceleration and orientation.
+        .span3
+          h1 Social Integration
+          | It's crucial to have social integration these days.
+          | Therfor your app will make use of Facebook, Twitter, Instagram etc.
+        .span3
+          h1 Content
+          | You may choose between static content for your app or a tight integration to your existing backend infrastructure.
 
 
