@@ -53,6 +53,15 @@ module.exports = (grunt) ->
         files: getImageFilesArray 150
 
     imagemin:
+      src:
+        options:
+          optimizationLevel: 7
+        files: [
+          expand: on
+          cwd: 'src/blog/_images'
+          src: ['*']
+          dest: 'src/blog/_images'
+        ]
       dist:
         options:
           optimizationLevel: 7
@@ -151,19 +160,18 @@ module.exports = (grunt) ->
     watch:
       img:
         files: ['src/img/**/*']
-        tasks: ['copy:build']
+        tasks: ['build']
       less:
         files: ['src/less/**/*']
-        tasks: ['less:build']
+        tasks: ['build']
       jade:
         files: ['src/jade/**/*']
-        tasks: ['jade:build']
+        tasks: ['build']
       jekyll:
         files: ['src/blog/**/*']
-        tasks: ['shell:jekyll']
+        tasks: ['build']
 
   grunt.registerTask '_build', [
-    'clean:build'
     'copy:build'
     'less:build'
     'jade:build'
@@ -178,11 +186,13 @@ module.exports = (grunt) ->
   ]
 
   grunt.registerTask 'images', [
+    'imagemin:src'
     'image_resize'
-    'imagemin'
+    'imagemin:dist'
   ]
 
   grunt.registerTask 'dist', [
+    'clean:build'
     '_build'
     'uglify:dist'
     'compress:dist'
