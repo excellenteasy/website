@@ -7,21 +7,32 @@ block content
   #content
     .container
       .row
-        .span12
+        .span12(itemscope, itemtype='http://data-vocabulary.org/Organization')
           p
             em [German law demands this]
           p
             h1 Information gemäß § 5 TMG
-            | excellenteasy GbR, Stephan Bönnemann und David Pfahler
+            span(itemprop='name') excellenteasy GbR, Stephan Bönnemann und David Pfahler
             br
-            | Ringstraße 3
-            br
-            | 85764 Oberschleißheim
+            span(itemprop='address', itemscope, itemtype='http://data-vocabulary.org/Address')
+              span(itemprop='street-address') Ringstraße 3
+              br
+              span(itemprop='postal-code') 85764&nbsp;
+              span(itemprop='locality') Oberschleißheim
+              br
+              span(itemprop='region') Bayern
+              | ,&nbsp;
+              span(itemprop='country-name') Deutschland
           p
             h2  Kontakt
-            | Telefon: 00 49 (0) 89 315 772 45
+            | Telefon:&nbsp;
+            span(itemprop="tel") 00 49 (0) 89 315 772 45
             br
-            | E-Mail: contact@excellenteasy.com
+            | E-Mail:&nbsp;
+            a(href='mailto:contact@excellenteasy.com') contact@excellenteasy.com
+            br
+            | Website:&nbsp;
+            a(href='https://excellenteasy.com', itemprop='url') https://excellenteasy.com
           p
             h2 Haftungsausschluss:
             h3 Die Inhalte
@@ -74,5 +85,5 @@ block content
             | Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten
             | Zweck einverstanden.
           p
-            | Quellenangaben:
+            | Quellenangaben:&nbsp;
             a(href='http://www.google.com/intl/de_ALL/analytics/tos.html') Google Analytics Bedingungen

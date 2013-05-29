@@ -17,16 +17,19 @@ authors:
     email: stephan@excellenteasy.com
     twitter: boennemann
     gravatar: 29e45e7e0bf9561770aae5818f139c80
+    gplus: https://plus.google.com/113353965355208963616
   david:
     name: David Pfahler
     email: david@excellenteasy.com
     twitter: davidpfahler
     gravatar: bd6985f75d8c77a4847ce288adebeb82
+    gplus: https://plus.google.com/111052005362469453451
   cam:
     name: Cam Collins
     email: cam@excellenteasy.com
     twitter: camcollins
     gravatar: 7283a5ec9a50537462a7ac86893a14b7
+    gplus: https://plus.google.com/105153740534813001691
 
 
 # The production_url is only used when full-domain names are needed
@@ -34,7 +37,7 @@ authors:
 # Most places will/should use BASE_PATH to make the urls
 #
 
-production_url : http://excellenteasy.com/blog
+production_url : https://excellenteasy.com/blog
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -76,7 +79,9 @@ JB :
   #   /assets
   #
 
-  ASSET_PATH : /assets
+  ASSET_PATH : https://d2b0jc4z1uybmh.cloudfront.net/website/blog/assets
+  # ASSET_PATH : /blog/assets
+  # ASSET_PATH : https://s3.amazonaws.com/excellenteasy.com/website/blog/assets
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
@@ -84,8 +89,8 @@ JB :
   archive_path: /archive/
   # categories_path : /categories.html
   tags_path : /topics/
-  atom_path : /atom.xml
-  rss_path : /rss.xml
+  atom_path : https://d2b0jc4z1uybmh.cloudfront.net/website/blog/atom.xml
+  rss_path : https://d2b0jc4z1uybmh.cloudfront.net/website/blog/rss.xml
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.

@@ -117,10 +117,96 @@
   h1, h2 {
     line-height: 1.2em;
   }
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin-bottom: 40px;
+  }
   color: white;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   padding-bottom: 40px;
   background-color: #33A269;
+  .icon-quill, .icon-download, .icon-folder, .icon-wand, .icon-users {
+    display: block;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    width: 100%;
+    text-align: center;
+    font-size: 64px;
+    font-family: 'excellenteasy-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-quill:before {
+    content: "\e000";
+  }
+  .icon-download:before {
+    content: "\e001";
+  }
+  .icon-folder:before {
+    content: "\e002";
+  }
+  .icon-wand:before {
+    content: "\e003";
+  }
+  .icon-users:before {
+    content: "\e004";
+  }
+}
+
+#pricing {
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #347093;
+  header h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.2em;
+    // margin-bottom: 60px;
+  }
+  table {
+    max-width: 100%;
+    border: none;
+    &, td, th {
+      text-align: center;
+    }
+    td, th {
+      width: 33%;
+      max-width: 33%;
+    }
+    tbody tr:hover td {
+      background-color: #95BDD4;
+      &.highlight {
+        background-color: #74B0D4;
+      }
+    }
+    .highlight {
+      background-color: #164A69;
+    }
+    th.highlight, tfoot tr td.highlight {
+      padding: 24px 8px;
+    }
+    thead th {
+      font-size: 1.6em;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    }
+    tfoot td {
+      font-size: 1.2em;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    }
+    tfoot .no-border td {
+      border: none;
+      padding: 24px 8px;
+    }
+  }
 }
 
 /* Large desktop */
