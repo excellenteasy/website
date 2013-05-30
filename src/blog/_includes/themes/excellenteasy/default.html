@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }}{% if page.title %} – {% endif %}excellenteasy blog</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta charset="utf-8">
     {% if author.name %}
@@ -19,12 +19,17 @@
   </head>
 
   <body>
-    <header class="hidden-print">
-      <div id="logo" alt="excellenteasy logo"></div>
+    <header class="top hidden-print">
+      <div id="logo" alt="excellenteasy logo">
+        <a href="{{ BASE_PATH }}" title="Blog home"></a>
+      </div>
     </header>
     <div class="introduction">You're reading the&nbsp;<a href="https://excellenteasy.com" title="excellenteasy home">excellenteasy</a>&nbsp;blog, a publication about the mobile web.</div>
     {{ content }}
     <footer class="hidden-print">
+      <a href="https://plus.google.com/b/105998495854622724338/105998495854622724338/" title="Google Plus">+</a>
+      <a href="https://twitter.com/excellenteasy" title="Twitter">@</a>
+      <a href="https://alpha.app.net/excellenteasy" title="App.net">α</a>
       <a href="https://excellenteasy.com/legal/" title="German law demands this">legal</a>
     </footer>
     {% include JB/analytics %}

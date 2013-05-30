@@ -23,17 +23,17 @@
         {% if page.previous %}
           <a href="{{ BASE_PATH }}{{ page.previous.url }}/" title="{{ page.previous.title }}">&larr; older</a>
         {% else %}
-          &larr; older
+          oldest
         {% endif %}
       </li>
       <li>
-        <a href="{{ BASE_PATH }}/" title="excellenteasy blog">home</a>
+        <a href="#logo" title="Back to top">back to top</a>
       </li>
       <li>
       {% if page.next %}
         <a href="{{ BASE_PATH }}{{ page.next.url }}/" title="{{ page.next.title }}">newer &rarr;</a>
       {% else %}
-        newer &rarr;
+        newest
       {% endif %}
       </li>
     </ul>
