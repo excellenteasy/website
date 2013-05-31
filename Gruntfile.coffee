@@ -98,6 +98,13 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/enquire.js'
           'src/blog/assets/_js/custom.js'
         ]
+      contact:
+        dest: 'build/js/contact.js'
+        src: [
+          'src/js/lib/jquery.min.js'
+          'src/js/lib/nod.min.js'
+          'src/js/contact.js'
+        ]
 
     uglify:
       dist:
@@ -108,6 +115,12 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/enquire.js'
             'src/blog/assets/_js/custom.js'
           ]
+      contact:
+        files: 'build/js/contact.js': [
+          'src/js/lib/jquery.min.js'
+          'src/js/lib/nod.min.js'
+          'src/js/contact.js'
+        ]
 
     htmlmin:
       blog:
@@ -125,6 +138,7 @@ module.exports = (grunt) ->
           optimization: 1
         files: [
           'build/css/main.css': 'src/less/main.less'
+          'build/css/contact.css': 'src/less/contact.less'
         ]
 
     jade:
@@ -175,6 +189,7 @@ module.exports = (grunt) ->
     'copy:build'
     'less:build'
     'jade:build'
+    'concat:contact'
     'shell:jekyll'
     'cssmin:blog'
     'htmlmin:blog'
@@ -194,6 +209,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'dist', [
     'clean:build'
     '_build'
+    'uglify:contact'
     'uglify:dist'
     'compress:dist'
     'images'

@@ -1,11 +1,70 @@
 extends ../layout
 
+block style
+  link(href='/css/contact.css', rel='stylesheet', type='text/css')
+
 block slogan
   h1.span12.slogan Let's get in touch
 
 block content
   #content
     .container
-      .row
-        iframe.span12(src="https://docs.google.com/forms/d/1H9xLKWx89qYAAquCcI4TruN6PraE4RBADDgQNN-Qpd4/viewform?embedded=true", height="1000", frameborder="0", marginheight="0", marginwidth="0")
-            | Loading...
+      form#contact-form.row(action='https://docs.google.com/forms/d/1H9xLKWx89qYAAquCcI4TruN6PraE4RBADDgQNN-Qpd4/formResponse', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+        .control-group.span6.offset3
+          label.control-label(for='entry_30214035')
+            strong Your app's name *
+          .controls
+            input#entry_30214035(style='width: 100%', placeholder='App Name', type='text', name='entry.30214035', value='', dir='auto', aria-required='true', required)
+        .control-group.span6.offset3
+          label.control-label(for='entry_1272316739')
+            strong Link to your app in the Apple App Store
+            br
+            | Please continue if your app is currently not in the app store.
+          .controls
+            input#entry_1272316739(style='width: 100%', placeholder='https://itunes.apple.com/us/app/app-name', type='text', name='entry.1272316739', value='', dir='auto')
+        .control-group.span6.offset3
+          label.control-label(for='entry_1555319012')
+            strong Promotion Code (if your app is not free)
+            br
+            | Please continue if your app is currently not in the app store.
+          .controls
+            input#entry_1555319012(style='width: 100%', placeholder='XJK4L6A12SDG', type='text', name='entry.1555319012', value='', dir='auto')
+        .control-group.span6.offset3
+          label.control-label(for='entry_645247925')
+            strong Other method of retrieving your app
+            br
+            |  If your app isn't published on the App Store, how else can we get your app?
+          .controls
+            textarea#entry_645247925(style='width: 100%', placeholder='Testflight?', name='entry.645247925', rows='3', cols='0', dir='auto')
+        .control-group.span6.offset3
+          label.control-label(for='entry_2031663475')
+            strong What is the purpose of your app? *
+            br
+            |  Please write a short description of what your app does.
+          .controls
+            textarea#entry_2031663475(style='width: 100%', placeholder='It helps our customers to...', name='entry.2031663475', rows='3', cols='0', dir='auto', aria-required='true', required)
+        .control-group.span6.offset3
+          label.control-label(for='entry_2135121452')
+            strong Contact Information *
+            br
+            |  How may we get back to you?
+          .controls
+            textarea#entry_2135121452(style='width: 100%', placeholder='E-Mail, Skype, Phone?', name='entry.2135121452', rows='3', cols='0', dir='auto', aria-required='true', required)
+        input(type='hidden', name='draftResponse', value='[]')
+        input(type='hidden', name='pageHistory', value='0')
+        .span6.offset3
+          button#submit-button.btn(style='width: 100%', type='submit', name='submit', value='Submit', disabled) Submit
+      iframe#hidden_iframe(name='hidden_iframe', style='display: none;', onload='if(window.submit === true){window.submitted()}')
+
+block js
+  script(type="text/javascript").
+    function downloadJSAtOnload() {
+      var element = document.createElement("script");
+      element.src = "/js/contact.js";
+      document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
