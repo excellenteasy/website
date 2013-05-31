@@ -97,7 +97,12 @@ article, .post nav, .post .author {
   margin-bottom: 1em;
 }
 
-.post article img { display: block; margin: 20px auto }
+.post article {
+  figure { margin: 20px auto }
+  figcaption { text-align: center; font-size: 0.8em }
+  img { display: block; margin: 20px auto }
+  figure img { margin: 0 auto }
+}
 
 .post nav ul {
   padding: 0;

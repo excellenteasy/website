@@ -9,11 +9,16 @@ There's a thicker rather than a mere fine line which perceptibly creates the dis
 
 More than that, we should also accept the fact that most of us are having a hard time when it comes to leaping from one platform to another. For instance, when you ask a loyal *iOS* user to switch to an *Android*-powered device, you are more likely to come across a face filled with bafflement and disorientation than one that is painted with affirmation.
 
+<figure>
 {% image ios_devices.jpg %}
   title: different iOS devices lying on a table
   alt: different iOS devices lying on a table
 {% endimage %}
+<figcaption>
 Photo by [Blake Patterson](http://www.flickr.com/photos/35448539@N00/4773693893) [CC BY 2.0](http://creativecommons.org/licenses/by/2.0/)
+</figcaption>
+</figure>
+
 
 Nevertheless, the reaction is not surprising. However, this does not mean that we are trapped on a dead end. Simply understanding the differences of *iOS* and *Android* would certainly allow us to marvel – and soon – conquer them. <!-- more --><span id="more"></span>
 
@@ -33,22 +38,29 @@ Particularly, *Android*'s graphical user interface clearly diverges from *iOS*' 
 
 The graphical user interface (GUI) that could be experienced using *Android* devices utilizes particular images as signals to perform certain commands. To illustrate it, you could just [picture yourself unlocking the screen of an *Android*](http://www.android.com/about/ice-cream-sandwich/#face-unlock). When asked to slide your fingers, the line that you create is the image that signals your device to unlock its screen – allowing you then to perform other graphical or image-based functions.
 
+<figure>
 {% image gestures.jpg %}
   title: unlocking an Android devices with a swipe gesture
   alt: unlocking an Android devices with a swipe gesture
 {% endimage %}
+<figcaption>
 Photo by [Robert Bejil](http://www.flickr.com/photos/28618109@N05/6783731870/) [CC BY 2.0](http://creativecommons.org/licenses/by/2.0/)
+</figcaption>
+</figure>
 
 Meanwhile, the gesture that is used by *iOS* uses commands that are pretty different from the GUI of the *Android* OS. While it also employs a gesture recognition system, it is essentially different. For instance, instead of creating an image of a vertical line, you may rather be prompted to create a horizontal line to unlock an *iPhone*, that's what we know as "slide to unlock".
 
 The characteristics get even more complicated with the distinct app publishing opportunities offered. Apple sells only reviewed apps and exclusivly through their *App Store*, Google freely distributes theirs through *Google Play* and allows to install them from any source you like. Generally speaking this means you can install quality apps on *iOS*, but they are limited in their use cases. On *Android* you might encounter low quality software, but there are no limits of what they could do for you.
 
-
+<figure>
 {% image mobile_devices.jpg %}
   title: different mobile devices
   alt: different mobile devices
 {% endimage %}
+<figcaption>
 Photo by [Jeremy Keith](http://www.flickr.com/photos/74105777@N00/7753864240/) [CC BY 2.0](http://creativecommons.org/licenses/by/2.0/)
+</figcaption>
+</figure>
 
 Most importantly, the choices get even more confined as both companies limit their products to certain devices. *iOS* is very limited to Apple platforms such as the *iPhone*, *iPod* touch & *iPad*. Meanwhile, *Android* explores larger markets as it shouts for compatibility to smartphones that are brought out by several leading manufacturers such as Samsung, HTC, Acer, Lenovo, LG, and such. While you can reach much more devices, and therefor people, with Android it's proportionally more effort to support all the different screen sizes and computing powers.
 
