@@ -23,7 +23,7 @@ The way **iOS handles navigation** is through its navigation bar. It's located o
 {% endimage %}
 [Image Source](http://developer.android.com/design/patterns/navigation.html)
 
-**Navigation for Android** is slightly different. Phones and tablets feature a hardware back button as well as a software up button. The back button directly relates to the page that you just came from, this means that there is no hierarchy related to the back button. If you are on Facebook and switch to a contact in the contacts apps the back button will bring you right back to Facebook. Instead the up button does use a hierarchy so it would bring you – just as iOS – to the contacts list.
+**Navigation for Android** is slightly different. <!-- more --><span id="more"></span>Phones and tablets feature a hardware back button as well as a software up button. The back button directly relates to the page that you just came from, this means that there is no hierarchy related to the back button. If you are on Facebook and switch to a contact in the contacts apps the back button will bring you right back to Facebook. Instead the up button does use a hierarchy so it would bring you – just as iOS – to the contacts list.
 
 {% image ios_tool_and_tab_bar.png %}
   title: iOS tool bar and tab bar

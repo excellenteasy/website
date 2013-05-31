@@ -20,8 +20,8 @@ layout: page
   {% endif %}
   <article class="row">
     <div class="span6 offset3">
-      {{ post | only_first_p }}
-      <a href="{{ BASE_PATH }}{{ post.url }}/" title="Read more">Read more</a>
+      {{ post.content | split: '<!-- more -->' | first }}
+      <a href="{{ BASE_PATH }}{{ post.url }}/#more" title="Continue Reading">Continue Reading …</a>
       {% unless forloop.last %}
       <hr />
       {% endunless %}

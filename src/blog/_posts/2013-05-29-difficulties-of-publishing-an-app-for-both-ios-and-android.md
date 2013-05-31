@@ -15,7 +15,7 @@ More than that, we should also accept the fact that most of us are having a hard
 {% endimage %}
 Photo by [Blake Patterson](http://www.flickr.com/photos/35448539@N00/4773693893) [CC BY 2.0](http://creativecommons.org/licenses/by/2.0/)
 
-Nevertheless, the reaction is not surprising. However, this does not mean that we are trapped on a dead end. Simply understanding the differences of *iOS* and *Android* would certainly allow us to marvel – and soon – conquer them.
+Nevertheless, the reaction is not surprising. However, this does not mean that we are trapped on a dead end. Simply understanding the differences of *iOS* and *Android* would certainly allow us to marvel – and soon – conquer them. <!-- more --><span id="more"></span>
 
 ## The Skin-Deep Divide
 
