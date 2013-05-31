@@ -37,7 +37,7 @@ Items on the **iOS tool bar** perform actions related to what is on the screen, 
 {% endimage %}
 
  **Android's action bar** is like a combination of the two. Both tools and tabs are placed inside an action bar.
- While there is a dropdown of tabs on the left side (see Maps screenshot) the tools that are used more often are placed on the right side of the bar, and the ones that are used less often are placed in yet another dropdown menu hidden behind a more button (see right screenshot).
+ While there is a dropdown of tabs on the left side (Listen Now) the tools that are used more often are placed on the right side of the bar, and the ones that are used less often are placed in yet another dropdown menu hidden behind a more button (Search, More).
 
 *Android* has its phones and tablets come with a **multi-pane view**. With a smaller device, clicking on something might take you to a detailed view of the page. How the multi-pane layout works though is that with a tablet if you click on that same thing you will have the detailed view appear on screen next to the original view. *iOS* does not really have a multi-pane layout so it takes a bit of reorganization to transfer information.
 
