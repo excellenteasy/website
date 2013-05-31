@@ -89,8 +89,8 @@ JB :
   archive_path: /archive/
   # categories_path : /categories.html
   tags_path : /topics/
-  atom_path : https://d2b0jc4z1uybmh.cloudfront.net/website/blog/atom.xml
-  rss_path : https://d2b0jc4z1uybmh.cloudfront.net/website/blog/rss.xml
+  atom_path : /blog/atom.xml
+  rss_path : /blog/rss.xml
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
