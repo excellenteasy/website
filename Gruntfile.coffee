@@ -138,7 +138,6 @@ module.exports = (grunt) ->
           optimization: 1
         files: [
           'build/css/main.css': 'src/less/main.less'
-          'build/css/contact.css': 'src/less/contact.less'
         ]
 
     jade:
