@@ -78,42 +78,34 @@ block content
       header.row
         .span8.offset2
           h1 App Conversion Packages
-      .row
-        table.table.span12
-          thead
-            tr
-              th Professional
-              th.highlight Enterprise
-              th Basic
-          tbody
-            tr.active
-              td Apple's UIKit
-              td.highlight Apple's UIKit
-              td Apple's UIKit
-            tr
-              td Device APIs
-              td.highlight Device APIs
-              td
-            tr
-              td Social Integration
-              td.highlight Social Integration
-              td
-            tr
-              td Static Content
-              td.highlight
-                strong Remote Content
-              td Static Content
-          tfoot
-            tr
-              td $ 7,900
-              td.highlight $ 11,490
-              td $ 5,900
-            tr.no-border
-              td
-              td
-                a.btn.btn-large(href='/contact/')
-                  | Order Now
-              td
+      .row.pricing
+        .span4
+          .headline Professional
+          div Apple's UIKit
+          div Device APIs
+          div Social Integration
+          div Static Content
+          .price $ 7,900
+        .span4
+          .headline.highlight Enterprise
+          .highlight Apple's UIKit
+          .highlight Device APIs
+          .highlight Social Integration
+          .highlight
+            strong Remote Content
+          .price.highlight $ 11,490
+        .span4
+          .headline Basic
+          div Apple's UIKit
+          div -
+          div -
+          div Static Content
+          .price $ 5,900
+      .row.order
+        .span4.offset4
+          a.btn.btn-large(href='/contact/')
+            | Order Now
+
     .container.definitions
       .row
         .span3
