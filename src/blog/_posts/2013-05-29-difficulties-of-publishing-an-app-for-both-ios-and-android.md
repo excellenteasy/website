@@ -19,12 +19,11 @@ Photo by [Blake Patterson](http://www.flickr.com/photos/35448539@N00/4773693893)
 </figcaption>
 </figure>
 
-
-This reaction is not surprising but it does not mean that we are trapped in a dead end. Simply understanding the differences between *iOS* and *Android* would certainly allow us to appreciate – and soon – conquer them both. <!-- more --><span id="more"></span>
+This reaction is not surprising but it does not mean that we are trapped in a dead end. Simply understanding the differences between *iOS* and *Android* would certainly allow us to appreciate – and soon – conquer them both.
 
 ## The Skin-Deep Divide
 
-First things first – these two ubiquitous operating systems were birthed by equally distinct giants when it comes to the digital and mobile technology industry. [*Android* is a product of Google](http://www.android.com/) while [*iOS* is created by Apple](http://www.apple.com/iphone/ios/).
+First things first – these two ubiquitous operating systems were birthed by equally distinct giants when it comes to the digital and mobile technology industry. <!-- more --><span id="more"></span>[*Android* is a product of Google](http://www.android.com/) while [*iOS* is created by Apple](http://www.apple.com/iphone/ios/).
 
 As trivial as it may seem at first glance, the divergence when it comes to the manufacturers of the operating systems is far greater than the appearance of the devices on the store shelves or their price difference.
 
