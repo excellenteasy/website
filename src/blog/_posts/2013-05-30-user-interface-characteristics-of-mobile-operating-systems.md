@@ -62,7 +62,7 @@ Items on the *iOS tool bar* perform actions related to what is on the screen, e.
 {% endimage %}
 </figure>
 
-<p><em>iOS</em> has some areas on the interface that if you tap nothing will happen, like blank metal surfaces on an old analog radio. Android focuses more on allowing you to tap anywhere because almost every space on a page should be useable.</p>
+*iOS* has some areas on the interface that if you tap nothing will happen, like blank metal surfaces on an old analog radio. Android focuses more on allowing you to tap anywhere because almost every space on a page should be useable.
 
 In some areas of the *iOS* interface when you tap nothing will happen. This is similar to the blank metal surfaces of an old analog radio. Only the knobs are usable. Android focuses more on allowing you to tap anywhere on the surface/pane because the philosophy based on flat design principles is that almost every space on a page should be usable.
 
