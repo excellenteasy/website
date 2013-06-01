@@ -5,9 +5,9 @@ title: The difficulties of publishing an app for both iOS and Android
 ---
 {% include JB/setup %}
 
-There's a thicker rather than a mere fine line which perceptibly creates the distinctions of *iOS* and *Android*, **the world's two largest mobile operating systems** [empowering over 90% of smartphones and tablets](http://en.wikipedia.org/wiki/Usage_share_of_operating_systems#Mobile_devices).
+*iOS* and *Android* are the **world's two largest mobile operating systems** [empowering over 90% of smartphones and tablets](http://en.wikipedia.org/wiki/Usage_share_of_operating_systems#Mobile_devices). However the differences in the user experience, distribution of the apps as well as the operating systems is quite distinct.
 
-More than that, we should also accept the fact that most of us are having a hard time when it comes to leaping from one platform to another. For instance, when you ask a loyal *iOS* user to switch to an *Android*-powered device, you are more likely to come across a face filled with bafflement and disorientation than one that is painted with affirmation.
+Many people have a hard time transitioning from one platform to another. It is not unlike the experience of going from a Blackberry to an iPhone when the elegant iPhone touchscreen first emerged. When you ask a loyal *iOS* user to switch to an *Android*-powered device, you are more likely to come across a face filled with bafflement and disorientation rather than bliss.
 
 <figure>
 {% image ios_devices.jpg %}
@@ -20,23 +20,21 @@ Photo by [Blake Patterson](http://www.flickr.com/photos/35448539@N00/4773693893)
 </figure>
 
 
-Nevertheless, the reaction is not surprising. However, this does not mean that we are trapped on a dead end. Simply understanding the differences of *iOS* and *Android* would certainly allow us to marvel – and soon – conquer them. <!-- more --><span id="more"></span>
+This reaction is not surprising but it does not mean that we are trapped in a dead end. Simply understanding the differences between *iOS* and *Android* would certainly allow us to appreciate – and soon – conquer them both. <!-- more --><span id="more"></span>
 
 ## The Skin-Deep Divide
 
-First things first – the said gigantic operating systems are birthed by equally distinct giants when it comes to the digital and mobile technology industry. [*Android* is a product of Google](http://www.android.com/) while [*iOS* is propped by Apple](http://www.apple.com/iphone/ios/).
+First things first – these two ubiquitous operating systems were birthed by equally distinct giants when it comes to the digital and mobile technology industry. [*Android* is a product of Google](http://www.android.com/) while [*iOS* is created by Apple](http://www.apple.com/iphone/ios/).
 
-As trivial as it may seem at a glance, the divergence when it comes to the manufacturers of the operating systems creeps towards more than what you could see on the price tag.
+As trivial as it may seem at first glance, the divergence when it comes to the manufacturers of the operating systems is far greater than the appearance of the devices on the store shelves or their price difference.
 
-The said difference calls for an inconsistency between the programming of the two. While Google's *Android* fires mobile devices with its Java programmed interface, apps for *iPhones* and iPads are powered with Objective-C.
+What most consumers don't realize is that the operating systems are quite different from a programming language perspective. Google's *Android* mobile devices are built upon the Java programming language, while apps for iPhones and iPads are powered with Objective-C.
 
-To put it in simpler terms, this means that it may be beyond imagining to run programs or open files that are crafted for an *Android* powered device into an *iOS*-powered gadget and vice versa. For instance, it's immpossible to run apps with an *.apk* file extension on an *iPhone* or an *iPad* and an *.ipa* on an *Android* device.
+To put it in simpler terms, apps that were developed for an *Android* powered device can not be simply moved to an *iOS*-powered device and vice versa. The apps simply won't work. For instance, it's impossible to run apps with a *.apk* file extension on an iPhone or a *.ipa* file on an *Android* device.
 
-The bounds between the aforementioned mobile operating systems get even thicker as you try to experience both of them.
+The user experience difference between both devices are even more pronounced. In particular, *Android*'s graphical user interface clearly diverges from *iOS*' UIKit touch interfaces.
 
-Particularly, *Android*'s graphical user interface clearly diverges from *iOS*' UIKit touch interfaces.
-
-The graphical user interface (GUI) that could be experienced using *Android* devices utilizes particular images as signals to perform certain commands. To illustrate it, you could just [picture yourself unlocking the screen of an *Android*](http://www.android.com/about/ice-cream-sandwich/#face-unlock). When asked to slide your fingers, the line that you create is the image that signals your device to unlock its screen – allowing you then to perform other graphical or image-based functions.
+The graphical user interface (GUI) experienced using *Android* devices utilizes particular images as signals to perform certain commands. To illustrate this, [picture yourself unlocking the screen of an *Android*](http://www.android.com/about/ice-cream-sandwich/#face-unlock). When asked to slide your fingers, the line that you create is the image that signals your device to unlock its screen – allowing you then to perform other graphical or image-based functions.
 
 <figure>
 {% image gestures.jpg %}
@@ -48,9 +46,9 @@ Photo by [Robert Bejil](http://www.flickr.com/photos/28618109@N05/6783731870/) [
 </figcaption>
 </figure>
 
-Meanwhile, the gesture that is used by *iOS* uses commands that are pretty different from the GUI of the *Android* OS. While it also employs a gesture recognition system, it is essentially different. For instance, instead of creating an image of a vertical line, you may rather be prompted to create a horizontal line to unlock an *iPhone*, that's what we know as "slide to unlock".
+Like *Android*, *iOS* has a gesture recognition system, but it is fundamentally different. Instead of creating an image of a vertical line, you are prompted to create a horizontal line to unlock an *iPhone*. This is known as the "slide to unlock" gesture.
 
-The characteristics get even more complicated with the distinct app publishing opportunities offered. Apple sells only reviewed apps and exclusivly through their *App Store*, Google freely distributes theirs through *Google Play* and allows to install them from any source you like. Generally speaking this means you can install quality apps on *iOS*, but they are limited in their use cases. On *Android* you might encounter low quality software, but there are no limits of what they could do for you.
+These characteristics diverge further when you look at the millions of apps published for these devices. Apple has a very strict process of reviewing the apps that are sold in the *App Store*. Furthermore, the *App Store* is the only commercial distribution hub for *iOS* apps. On the other hand, Google distributes *Android* apps through *Google Play* and allows you to install them from any source you like. There are little to no restrictions on how *Android* apps are distributed and furthermore there is no review process.
 
 <figure>
 {% image mobile_devices.jpg %}
@@ -62,12 +60,12 @@ Photo by [Jeremy Keith](http://www.flickr.com/photos/74105777@N00/7753864240/) [
 </figcaption>
 </figure>
 
-Most importantly, the choices get even more confined as both companies limit their products to certain devices. *iOS* is very limited to Apple platforms such as the *iPhone*, *iPod* touch & *iPad*. Meanwhile, *Android* explores larger markets as it shouts for compatibility to smartphones that are brought out by several leading manufacturers such as Samsung, HTC, Acer, Lenovo, LG, and such. While you can reach much more devices, and therefor people, with Android it's proportionally more effort to support all the different screen sizes and computing powers.
+Both companies limit the distribution of their apps to certain devices but their are philosophical and distribution differences here too. *iOS* is limited to only Apple platforms such as the *iPhone*, *iPod Touch* & *iPad*. Only Apple makes *iOS* devices. However *Android* follows a similar line of reasoning that Microsoft adopted with Windows allowing numerous hardware suppliers to adopt their operating system. Therefore the *Android* market is larger because several leading manufacturers such as Samsung, HTC, Acer, Lenovo, LG, and such have adopted it as their mobile operating system. While you can reach much more devices and therefore people with Android, it's proportionally more difficult to support all the different screen sizes and hardware differences.
 
 ## Breaking the boundaries between Android and iOS
 
-As previously mentioned, despite the obvious differences of *iOS* and *Android*, we are not trapped on a dead end. There is a way to erase the line that separates *Android* from *iOS* for app publishers.
+As previously mentioned, despite the obvious differences between *iOS* and *Android*, we are not trapped in a dead end. There is a way to erase the line that separates *Android* from *iOS* for app publishers.
 
-Most of the cross-platform solutions offered won't take into account all of the fine differences we just had a look at. They simply ship the same looking App to both platforms. Results are just the lowest common denominator that fits both worlds, but certainly leaves disappointed user with an inappropriate user experience.
+Most of the cross-platform solutions offered don't take into account all of the fine differences we have explored. They simply ship the same looking app for both platforms. This produces a lowest common denominator app that attempts to fit into both worlds while leaving the user disappointed.
 
-We at *excellenteasy* have specialized in converting existing iOS applications to Android. This means you can develop a native iOS application with an outstanding experience and we'll translate all the fine details to a carefully crafted Android app afterwards.
+At *excellenteasy* we specialize in converting existing iOS applications to Android. This means you can develop a native iOS application with an outstanding experience and we will translate all the fine details to a carefully crafted Android app.
