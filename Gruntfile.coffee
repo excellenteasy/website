@@ -85,6 +85,7 @@ module.exports = (grunt) ->
       blog:
         files: [
           'build/blog/assets/css/style-4.css': 'build/blog/assets/css/style.css'
+          'build/blog/assets/css/search-1.css': 'build/blog/assets/css/search.css'
         ]
 
     concat:
@@ -97,6 +98,13 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/jquery.unveil.min.js'
           'src/blog/assets/_js/enquire.js'
           'src/blog/assets/_js/custom.js'
+        ]
+      search:
+        dest: 'build/blog/assets/js/search-1.js'
+        src: [
+          'src/js/lib/jquery.min.js'
+          'src/blog/assets/_js/jquery.autogrow.js'
+          'src/blog/assets/_js/search.js'
         ]
       contact:
         dest: 'build/js/contact.js'
@@ -114,6 +122,11 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/jquery.unveil.min.js'
             'src/blog/assets/_js/enquire.js'
             'src/blog/assets/_js/custom.js'
+          ]
+          'build/blog/assets/js/search-1.js': [
+            'src/js/lib/jquery.min.js'
+            'src/blog/assets/_js/jquery.autogrow.js'
+            'src/blog/assets/_js/search.js'
           ]
       contact:
         files: 'build/js/contact.js': [
@@ -197,6 +210,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'build', [
     '_build'
     'concat:build'
+    'concat:search'
   ]
 
   grunt.registerTask 'images', [

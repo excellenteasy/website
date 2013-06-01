@@ -9,7 +9,7 @@
       <meta name="author" content="{{ author.name }}">
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ ASSET_PATH }}/css/style-4.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/{% if page.css %}{{ page.css }}{% else %}{{ site.css }}{% endif %}.css" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="/favicon.ico">
     {% if author.gplus %}
       <link rel="author" href="{{ author.gplus }}">
@@ -24,19 +24,19 @@
         <a href="{{ BASE_PATH }}" title="Blog home"></a>
       </div>
     </header>
-    <div class="introduction">You're reading the&nbsp;<a href="https://excellenteasy.com" title="excellenteasy home">excellenteasy</a>&nbsp;blog, a publication about the mobile web.</div>
     {{ content }}
     <footer class="hidden-print">
       <a href="https://plus.google.com/b/105998495854622724338/105998495854622724338/" title="Google Plus">+</a>
       <a href="https://twitter.com/excellenteasy" title="Twitter">@</a>
       <a href="https://alpha.app.net/excellenteasy" title="App.net">α</a>
-      <a href="https://excellenteasy.com/legal/" title="German law demands this">legal</a>
+      <a href="/blog/search/" title="Search this blog">search</a>
+      <a href="/legal/" title="German law demands this">legal</a>
     </footer>
     {% include JB/analytics %}
     <script type="text/javascript">
       function downloadJSAtOnload() {
         var element = document.createElement("script");
-        element.src = "{{ ASSET_PATH }}/js/c-1.js";
+        element.src = "{{ ASSET_PATH }}/js/{% if page.js %}{{ page.js }}{% else %}{{ site.js }}{% endif %}.js";
         document.body.appendChild(element);
       }
       if (window.addEventListener)

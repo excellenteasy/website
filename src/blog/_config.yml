@@ -12,6 +12,9 @@ markdown: rdiscount
 title : excellenteasy blog
 tagline: Site Tagline
 
+css: style-4
+js: c-1
+
 authors:
   stephan:
     name: Stephan Bönnemann
@@ -142,6 +145,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-
-only_first_p:
-  show_read_more_link: false

@@ -1,0 +1,29 @@
+@import 'style';
+
+.introduction {
+  input[type=text] {
+    color: #e76e48;
+    border: none;
+    outline: none;
+    width: 10px;
+    min-width: 10px;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: 2px;
+    font-family: Alegreya,Georgia,serif;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  span, input[type=text] {
+    display: inline;
+    &, &::-webkit-input-placeholder {
+      height: 20px;
+      font: normal normal normal medium normal Alegreya,Georgia,serif;
+    }
+  }
+}
+
+.search-result {
+  text-align: center;
+}
