@@ -178,7 +178,7 @@ module.exports = (grunt) ->
         stderr: on
         failOnError: on
       s3:
-        command: 'sh s3.sh'
+        command: './s3.sh'
         stdout: on
         stderr: on
         failOnError: on
