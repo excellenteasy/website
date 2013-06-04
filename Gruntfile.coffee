@@ -76,23 +76,27 @@ module.exports = (grunt) ->
       build:
         files: [
           { expand: on, cwd: 'src/img/', src: ['sprites.png', 'sprites@2x.png'], dest: 'build/img' }
-          { expand: on, cwd: 'src/img/', src: ['sprites.png', 'sprites@2x.png'], dest: 'build/img' }
+          'build/favicon.ico': 'src/favicon.ico'
           'build/robots.txt': 'src/robots.txt'
           'build/sitemap.xml': 'src/sitemap.xml'
+        ]
+      dist:
+        files: [
+          'excellenteasy.com/favicon.ico': 'build/favicon.ico'
         ]
 
     cssmin:
       blog:
         files: [
-          'build/blog/assets/css/style-4.css': 'build/blog/assets/css/style.css'
-          'build/blog/assets/css/search-1.css': 'build/blog/assets/css/search.css'
+          'build/blog/assets/css/style-5.css': 'build/blog/assets/css/style.css'
+          'build/blog/assets/css/search-2.css': 'build/blog/assets/css/search.css'
         ]
 
     concat:
       options:
         separator: ';'
       build:
-        dest: 'build/blog/assets/js/c-1.js'
+        dest: 'build/blog/assets/js/c-2.js'
         src: [
           'src/blog/assets/_js/jquery.min.js'
           'src/blog/assets/_js/jquery.unveil.min.js'
@@ -119,7 +123,7 @@ module.exports = (grunt) ->
     uglify:
       dist:
         files:
-          'build/blog/assets/js/c-1.js': [
+          'build/blog/assets/js/c-2.js': [
             'src/blog/assets/_js/jquery.min.js'
             'src/blog/assets/_js/jquery.unveil.min.js'
             'src/blog/assets/_js/enquire.js'
@@ -169,8 +173,8 @@ module.exports = (grunt) ->
         files: [
           expand: on
           cwd: 'build/'
-          src: ['**/*.html','**/*.css','**/*.js']
-          dest: 'build'
+          src: ['**/*.html','**/*.xml','**/*.json', '**/*.txt']
+          dest: 'excellenteasy.com'
         ]
 
     shell:
@@ -181,6 +185,11 @@ module.exports = (grunt) ->
         failOnError: on
       s3:
         command: './s3.sh'
+        stdout: on
+        stderr: on
+        failOnError: on
+      scp:
+        command: 'scp -i ec2.pem -r excellenteasy.com ubuntu@54.235.107.114:/var/www/'
         stdout: on
         stderr: on
         failOnError: on
@@ -227,7 +236,9 @@ module.exports = (grunt) ->
     'uglify:contact'
     'uglify:dist'
     'compress:dist'
+    'copy:dist'
     'images'
+    'shell:scp'
     'shell:s3'
   ]
 

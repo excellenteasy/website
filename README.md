@@ -32,7 +32,7 @@ grunt build
 
 ## Distribution
 Requires S3 credentials and SFTP access to EC2.
+Requires EC2 SSH key `.pem` file. Store it in the root of the repo as `ec2.pem`.
 ```bash
 grunt dist
 ```
-If `html` files changed, upload them by hand via FTP to EC2.
