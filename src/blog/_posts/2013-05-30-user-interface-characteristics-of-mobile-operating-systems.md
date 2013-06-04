@@ -9,42 +9,29 @@ Imagine two smartphones, one running Apple's *iOS* and the other running Google'
 
 ## Navigation Observations
 
-<figure>
 {% image ios_back_button.png %}
   title: iOS back button
   alt: iOS back button in the contacts app
 {% endimage %}
-</figure>
 
 The way **iOS handles navigation** is through its navigation bar. It's located on the top of the screen, just below the status bar. In the navigation bar is the title of the current page that you are on and controls specific to the content like Submit, Cancel or Done. The most interesting part, especially in comparison to Android, is that the *back button* can take you to the the hierarchical parent of the page. To elaborate, for each page of any app, there is a hierarchy that you navigate through. If you go to a specific contact from the list of contacts in your address book and press back it will take you back to the contacts.
 
-<figure>
 {% image android_back_button.png %}
   title: Android navigation concept
-  alt: Android navigation concept
+  caption: [Image Source](http://developer.android.com/design/patterns/navigation.html)
 {% endimage %}
-<figcaption>
-[Image Source](http://developer.android.com/design/patterns/navigation.html)
-</figcaption>
-</figure>
 
 **Navigation for Android** is slightly different. <!-- more --><span id="more"></span>Android phones and tablets feature a hardware *back button* as well as a software *up button*. The back button directly relates to the page that you just came from, this means that there is no hierarchy related to the back button. If you are on Facebook and switch to a contact in the Contacts app the back button will bring you right back to Facebook. However the *up button* does use a hierarchy so it would bring you – just as with iOS – to the contacts list.
 
-<figure>
 {% image ios_tool_and_tab_bar.png %}
   title: iOS tool bar and tab bar
-  alt: iOS tool bar and tab bar
 {% endimage %}
-</figure>
 
 Items on the *iOS tool bar* perform actions related to what is on the screen, e.g. Share. However the *iOS tab bar* allows you to switch to different sub-tasks, modes, or views. For example you can switch from your alarm to a stopwatch from the tab bar.
 
-<figure>
 {% image android_action_bar.png %}
  title: Android action bar
- alt: Android action bar
 {% endimage %}
-</figure>
 
 **Android's action bar** is like a combination of the two. Both tools and tabs are placed inside an action bar. While there is a dropdown of tabs on the left side (e.g. Listen Now) the tools that are used more often are placed on the right side of the bar, and the ones that are used less often are placed in yet another dropdown menu hidden behind a *More button* (e.g. Search, More).
 
@@ -55,12 +42,9 @@ Items on the *iOS tool bar* perform actions related to what is on the screen, e.
 
 *iOS* is based on a concept called [skeuomorphism](http://en.wikipedia.org/wiki/Skeuomorph), whereby objects (UI elements) are designed to resemble their real-life counterparts, textures or materials. For example, the Notes app on *iOS* has the look of a real notebook. *Android* leans more to a [flat design](http://fltdsgn.com/). The UI elements are very distinctly "digital" and therefore are not meant to resemble real-life objects.
 
-<figure>
 {% image skeuomorphism_vs_flat_design.png %}
  title: Skeuomorphism vs. Flat Design
- alt: Skeuomorphism vs. Flat Design
 {% endimage %}
-</figure>
 
 *iOS* has some areas on the interface that if you tap nothing will happen, like blank metal surfaces on an old analog radio. Android focuses more on allowing you to tap anywhere because almost every space on a page should be useable.
 
