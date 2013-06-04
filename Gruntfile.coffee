@@ -104,7 +104,7 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/custom.js'
         ]
       search:
-        dest: 'build/blog/assets/js/search-3.js'
+        dest: 'build/blog/assets/js/search-4.js'
         src: [
           'src/blog/assets/_js/lodash.custom.js'
           'src/js/lib/jquery.min.js'
@@ -129,10 +129,11 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/enquire.js'
             'src/blog/assets/_js/custom.js'
           ]
-          'build/blog/assets/js/search-3.js': [
+          'build/blog/assets/js/search-4.js': [
             'src/blog/assets/_js/lodash.custom.js'
             'src/js/lib/jquery.min.js'
             'src/blog/assets/_js/jquery.autogrow.js'
+            'src/blog/assets/_js/jquery.fuzzymatch.js'
             'src/blog/assets/_js/search.js'
           ]
       contact:
@@ -175,6 +176,14 @@ module.exports = (grunt) ->
           cwd: 'build/'
           src: ['**/*.html','**/*.xml','**/*.json', '**/*.txt']
           dest: 'excellenteasy.com'
+        ]
+      s3:
+        options: mode: 'gzip'
+        files: [
+          expand: on
+          cwd: 'build/'
+          src: ['**/*.js','**/*.css']
+          dest: 'build'
         ]
 
     shell:
@@ -236,6 +245,7 @@ module.exports = (grunt) ->
     'uglify:contact'
     'uglify:dist'
     'compress:dist'
+    'compress:s3'
     'copy:dist'
     'images'
     'shell:scp'
