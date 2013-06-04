@@ -1,0 +1,1 @@
+function downloadJSAtOnload(){var a=document.createElement("script");a.src="{{ ASSET_PATH }}/js/{% if page.js %}{{ page.js }}{% else %}{{ site.js }}{% endif %}.js",document.body.appendChild(a)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;

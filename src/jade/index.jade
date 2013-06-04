@@ -168,8 +168,8 @@ block content
           h1 Content
           | You may choose between static content for your app or a tight integration to your existing backend infrastructure.
 
-block js
-  script(type="text/javascript").
+append js
+  script(type="text/javascript")
     function downloadJSAtOnload() {
       var element = document.createElement("script");
       element.src = "/js/contact.js";

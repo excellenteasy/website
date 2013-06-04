@@ -32,18 +32,6 @@
       <a href="/blog/search/" title="Search this blog">search</a>
       <a href="/legal/" title="German law demands this">legal</a>
     </footer>
-    {% include JB/analytics %}
-    <script type="text/javascript">
-      function downloadJSAtOnload() {
-        var element = document.createElement("script");
-        element.src = "{{ ASSET_PATH }}/js/{% if page.js %}{{ page.js }}{% else %}{{ site.js }}{% endif %}.js";
-        document.body.appendChild(element);
-      }
-      if (window.addEventListener)
-      window.addEventListener("load", downloadJSAtOnload, false);
-      else if (window.attachEvent)
-      window.attachEvent("onload", downloadJSAtOnload);
-      else window.onload = downloadJSAtOnload;
-    </script>
+    <script type="text/javascript">{% include JB/analytics-providers/googlejs %}{% include themes/excellenteasy/downloadJSAtOnload %}</script>
   </body>
 </html>
