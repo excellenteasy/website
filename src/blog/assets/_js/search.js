@@ -16,7 +16,7 @@
       $searchResults.append(
         '<div class="search-result">'+
           (parseInt(result.score*100))+ '% match: ' +
-          '<a href="' + result.href + '">'+
+          '<a href="/blog' + result.href + '">'+
             result.title+
           '</a>'+
         '</div>'

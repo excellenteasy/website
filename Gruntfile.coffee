@@ -104,7 +104,7 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/custom.js'
         ]
       search:
-        dest: 'build/blog/assets/js/search-2.js'
+        dest: 'build/blog/assets/js/search-3.js'
         src: [
           'src/blog/assets/_js/lodash.custom.js'
           'src/js/lib/jquery.min.js'
@@ -129,7 +129,7 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/enquire.js'
             'src/blog/assets/_js/custom.js'
           ]
-          'build/blog/assets/js/search-2.js': [
+          'build/blog/assets/js/search-3.js': [
             'src/blog/assets/_js/lodash.custom.js'
             'src/js/lib/jquery.min.js'
             'src/blog/assets/_js/jquery.autogrow.js'
