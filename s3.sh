@@ -34,7 +34,7 @@ s3cmd sync --acl-public --mime-type "text/javascript" --add-header="Content-Enco
 # blog img assets
 s3cmd sync --acl-public --guess-mime-type --add-header "Cache-Control: private, max-age=31536000" \
   --add-header "Expires: 31536000" \
-  -r build/blog/assets/img s3://excellenteasy.com/website/blog/
+  -r build/blog/assets/img s3://excellenteasy.com/website/blog/assets/
 
 # blog content images
 s3cmd sync --acl-public --guess-mime-type --add-header "Cache-Control: private, max-age=31536000" \

@@ -1,3 +1,4 @@
+require 'rdiscount'
 module Jekyll
   class ImageBlock < Liquid::Block
     def initialize(tag_name, filename, tokens)
@@ -10,11 +11,18 @@ module Jekyll
     def render(context)
       load_options block_contents
 
+      html = "<figure>"
       if link?
-        "<a href='#{link_url}'>#{image_tag}</a>"
+        html += "<a href='#{link_url}'>#{image_tag}</a>"
       else
-        image_tag
+        html += image_tag
       end
+
+      if caption
+        html += "<figcaption>#{RDiscount.new(caption).to_html()}</figcaption>"
+      end
+
+      html += "</figure>"
     end
 
     def image_tag
@@ -67,6 +75,10 @@ module Jekyll
 
     def alt
       @alt || title
+    end
+
+    def caption
+      @caption
     end
   end
 end

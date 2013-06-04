@@ -160,7 +160,6 @@ module.exports = (grunt) ->
       build:
         files: [
           'build/index.html': 'src/jade/index.jade'
-          'build/contact/index.html': 'src/jade/contact/index.jade'
           'build/legal/index.html': 'src/jade/legal/index.jade'
         ]
 
@@ -181,7 +180,7 @@ module.exports = (grunt) ->
         stderr: on
         failOnError: on
       s3:
-        command: 'sh s3.sh'
+        command: './s3.sh'
         stdout: on
         stderr: on
         failOnError: on
