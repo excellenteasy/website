@@ -100,10 +100,12 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/custom.js'
         ]
       search:
-        dest: 'build/blog/assets/js/search-1.js'
+        dest: 'build/blog/assets/js/search-2.js'
         src: [
+          'src/blog/assets/_js/lodash.custom.js'
           'src/js/lib/jquery.min.js'
           'src/blog/assets/_js/jquery.autogrow.js'
+          'src/blog/assets/_js/jquery.fuzzymatch.js'
           'src/blog/assets/_js/search.js'
         ]
       contact:
@@ -123,7 +125,8 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/enquire.js'
             'src/blog/assets/_js/custom.js'
           ]
-          'build/blog/assets/js/search-1.js': [
+          'build/blog/assets/js/search-2.js': [
+            'src/blog/assets/_js/lodash.custom.js'
             'src/js/lib/jquery.min.js'
             'src/blog/assets/_js/jquery.autogrow.js'
             'src/blog/assets/_js/search.js'
