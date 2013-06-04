@@ -160,7 +160,6 @@ module.exports = (grunt) ->
       build:
         files: [
           'build/index.html': 'src/jade/index.jade'
-          'build/contact/index.html': 'src/jade/contact/index.jade'
           'build/legal/index.html': 'src/jade/legal/index.jade'
         ]
 
