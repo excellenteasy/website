@@ -12,8 +12,8 @@ markdown: rdiscount
 title : excellenteasy blog
 tagline: Site Tagline
 
-css: style-4
-js: c-2
+css: style-5
+js: c-3
 
 authors:
   stephan:
@@ -101,7 +101,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : false #disqus
+    provider : "disqus"
     disqus :
       short_name : excellenteasy
     # livefyre :

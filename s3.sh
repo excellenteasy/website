@@ -51,7 +51,7 @@ s3cmd sync --acl-public --mime-type "text/javascript" --add-header="Content-Enco
   --add-header "Cache-Control: private, max-age=31536000" \
   --add-header "Expires: 31536000" \
   --add-header "Vary: Accept-Encoding" \
-  build/blog/assets/js/c-2.js.gz s3://excellenteasy.com/website/blog/assets/js/c-2.js
+  build/blog/assets/js/c-3.js.gz s3://excellenteasy.com/website/blog/assets/js/c-3.js
 
 s3cmd sync --acl-public --mime-type "text/javascript" --add-header="Content-Encoding: gzip" \
   --add-header "Cache-Control: private, max-age=31536000" \
