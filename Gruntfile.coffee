@@ -27,8 +27,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
 
   grunt.initConfig
+    jekyllConfig: grunt.file.readYAML 'src/blog/_config.yml'
+
     clean:
-      build: ['build']
+      build: ['build', 'excellenteasy.com', 's3']
 
     image_resize:
       full:
@@ -88,7 +90,7 @@ module.exports = (grunt) ->
     cssmin:
       blog:
         files: [
-          'build/blog/assets/css/style-5.css': 'build/blog/assets/css/style.css'
+          "build/blog/assets/css/<%= jekyllConfig.css %>.css": 'build/blog/assets/css/style.css'
           'build/blog/assets/css/search-2.css': 'build/blog/assets/css/search.css'
         ]
 
@@ -96,7 +98,7 @@ module.exports = (grunt) ->
       options:
         separator: ';'
       build:
-        dest: 'build/blog/assets/js/c-4.js'
+        dest: "build/blog/assets/js/<%= jekyllConfig.js %>.js"
         src: [
           'src/blog/assets/_js/jquery.min.js'
           'src/blog/assets/_js/jquery.unveil.min.js'
@@ -123,7 +125,7 @@ module.exports = (grunt) ->
     uglify:
       dist:
         files:
-          'build/blog/assets/js/c-4.js': [
+          "build/blog/assets/js/<%= jekyllConfig.js %>.js": [
             'src/blog/assets/_js/jquery.min.js'
             'src/blog/assets/_js/jquery.unveil.min.js'
             'src/blog/assets/_js/enquire.js'
@@ -182,8 +184,13 @@ module.exports = (grunt) ->
         files: [
           expand: on
           cwd: 'build/'
-          src: ['**/*.js','**/*.css']
-          dest: 'build'
+          src: ['**/*.css']
+          dest: 's3/css/website'
+        ,
+          expand: on
+          cwd: 'build/'
+          src: ['**/*.js']
+          dest: 's3/js/website'
         ]
 
     shell:
@@ -217,6 +224,11 @@ module.exports = (grunt) ->
         files: ['src/blog/**/*']
         tasks: ['build']
 
+  grunt.registerTask 'removegz', ->
+    grunt.file.recurse 's3', (abspath, rootdir, subdir, filename) ->
+      grunt.file.copy abspath, abspath.replace '.gz', ''
+      grunt.file.delete abspath
+
   grunt.registerTask '_build', [
     'copy:build'
     'less:build'
@@ -246,6 +258,7 @@ module.exports = (grunt) ->
     'uglify:dist'
     'compress:dist'
     'compress:s3'
+    'removegz'
     'copy:dist'
     'images'
     'shell:scp'
