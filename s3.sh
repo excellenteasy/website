@@ -38,7 +38,7 @@ s3cmd sync --acl-public --mime-type "text/css" --add-header="Content-Encoding: g
   --add-header "Cache-Control: private, max-age=31536000" \
   --add-header "Expires: 31536000" \
   --add-header "Vary: Accept-Encoding" \
-  build/blog/assets/css/style-4.css.gz s3://excellenteasy.com/website/blog/assets/css/style-4.css
+  build/blog/assets/css/style-5.css.gz s3://excellenteasy.com/website/blog/assets/css/style-5.css
 
 s3cmd sync --acl-public --mime-type "text/css" --add-header="Content-Encoding: gzip" \
   --add-header "Cache-Control: private, max-age=31536000" \
