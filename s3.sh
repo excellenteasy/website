@@ -24,14 +24,14 @@ s3cmd sync --acl-public --mime-type "text/css" --add-header="Content-Encoding: g
   --add-header "Cache-Control: private, max-age=31536000" \
   --add-header "Expires: 31536000" \
   --add-header "Vary: Accept-Encoding" \
-  build/css/main.css.gz s3://excellenteasy.com/website/css/main.css
+  build/css/main-1.css.gz s3://excellenteasy.com/website/css/main-1.css
 
 # site javascript
 s3cmd sync --acl-public --mime-type "text/css" --add-header="Content-Encoding: gzip" \
   --add-header "Cache-Control: private, max-age=31536000" \
   --add-header "Expires: 31536000" \
   --add-header "Vary: Accept-Encoding" \
-  build/js/contact.js.gz s3://excellenteasy.com/website/js/contact.js
+  build/js/contact-1.js.gz s3://excellenteasy.com/website/js/contact-1.js
 
 # blog style
 s3cmd sync --acl-public --mime-type "text/css" --add-header="Content-Encoding: gzip" \

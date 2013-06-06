@@ -30,7 +30,7 @@ body > header {
       z-index: 50;
       display: block;
       margin: 0;
-      margin-left: 80px;
+      margin-left: 160px;
       float: left;
       opacity: 0;
       .image("logo_text");
@@ -81,10 +81,10 @@ body > header {
 @media (min-width: 768px) {
   body > header {
     div.span6 {
-      &:hover, &:active {
+      &:hover, &:active, &.hover {
         #logo {
           left: 0;
-          margin-left: 0;
+          margin-left: 80px;
         }
         h1 {
           opacity: 1;

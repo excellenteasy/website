@@ -33,4 +33,8 @@
     $('#contact-form').show();
     $('#entry_30214035').focus();
   });
+  //hide logo
+  setTimeout(function() {
+    $('#brand').removeClass('hover');
+  }, 1000);
 }).call(this);

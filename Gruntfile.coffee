@@ -113,7 +113,7 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/search.js'
         ]
       contact:
-        dest: 'build/js/contact.js'
+        dest: 'build/js/contact-1.js'
         src: [
           'src/js/lib/jquery.min.js'
           'src/js/lib/nod.min.js'
@@ -137,7 +137,7 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/search.js'
           ]
       contact:
-        files: 'build/js/contact.js': [
+        files: 'build/js/contact-1.js': [
           'src/js/lib/jquery.min.js'
           'src/js/lib/nod.min.js'
           'src/js/contact.js'
@@ -158,7 +158,7 @@ module.exports = (grunt) ->
           yuicompress: on
           optimization: 1
         files: [
-          'build/css/main.css': 'src/less/main.less'
+          'build/css/main-1.css': 'src/less/main.less'
         ]
 
     jade:
