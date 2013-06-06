@@ -13,18 +13,6 @@ title : Sitemap
     <loc>https://excellenteasy.com/blog/search/</loc>
     <priority>0.60</priority>
   </url>
-  <url>
-    <loc>https://excellenteasy.com/blog/atom.xml</loc>
-    <priority>0.30</priority>
-  </url>
-  <url>
-    <loc>https://excellenteasy.com/blog/rss.xml</loc>
-    <priority>0.30</priority>
-  </url>
-  <url>
-    <loc>https://excellenteasy.com/blog/sitemap.xml</loc>
-    <priority>0.30</priority>
-  </url>
   {% for post in site.posts %}
     <url>
       <loc>{{site.production_url}}{{ post.url }}/</loc>

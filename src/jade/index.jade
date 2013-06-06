@@ -2,12 +2,13 @@ extends layout
 
 append head
   link(rel='publisher', href='https://plus.google.com/105998495854622724338')
+  meta(name='description', content="You published your app to iOS first? Now your app needs to move to the world's largest mobile platform and we will help you to convert it.")
 
 block slogan
   h1.span12.slogan
     | Your&nbsp;
-    strong iPhone app<br />
-    | will work on&nbsp;
+    strong iOS app&nbsp;
+    | will<br /> work on&nbsp;
     strong Android
     | ,<br />
     | in less than&nbsp;
@@ -28,15 +29,20 @@ block content
     .container.copy
       .row
         .span6
-          h1 Your app deserves to be available on the world's largest mobile platform.
-
-          h2 Have your app on Android with our bulletproof Five-Step process.
+          h1 You published your app to iOS first?
+          h2 Now your app needs to move to the world's largest mobile platform.
+          | With over 900 million activations and 48 billion app installations
+          | Google's Android is the logical next step for your mobile strategy.
+          | We will help you to bring your app to Android.
 
   section#testimonials
     .container
+      header.row
+        .span8.offset2
+          h1 What our customers say:
       .row
         blockquote.span8.
-          We invested 3 hours to get our<br /> existing iPhone app converted to Android
+          We invested 3 hours to move our<br /> existing iOS app to Android.
         .author.span4 Dr. Albrecht Pfahler<br /> CEO of&nbsp;
           a(href='http://www.remark-pharma.de') REMARK GmbH
       .row
@@ -46,14 +52,14 @@ block content
           a(href='https://www.facebook.com/PrimalPaleo') Primal Paleo App
       .row
         blockquote.span8.
-          Half of our customers use Android devices. For business related apps like ours supporting the devices our customers use was a critical factor. Buying the Android conversion was a no brainer.
+          Half of our customers use Android devices. For business related apps like ours supporting the devices our customers use was a critical factor. It was a no brainer to convert our apps.
         .author.span4 Cam Collins<br /> CEO of&nbsp;
           a(href='http://www.exumatech.com') Exuma Technologies Inc.
   section#product
     .container
       header.row
         .span8.offset2
-          h1 Five-Step iPhone to Android process
+          h1 Five-Step iOS to Android process
           p We bring your app to Android over the course of five steps. The entire process is focused on minimizing the time investment on your end and ensuring highest possible quality on our end.
           p Our common time to market is 4 weeks, but for you personally it's less than three hours. We handle the entire process on our side, so you can sleep well at night. Just send us your current app and you'll hear from us when your Android app is ready for prime time.
 
@@ -69,7 +75,7 @@ block content
           h2 3. Send us required assets and documentation
         .span6
           i.icon-wand
-          h2 4. We confirm, ask for your payment and create your product
+          h2 4. We confirm, ask for your payment and create your product anew
         .span6
           i.icon-users
           h2 5. Review your app and give it to your users
@@ -77,29 +83,29 @@ block content
     .container
       header.row
         .span8.offset2
-          h1#message App Conversion Packages
+          h1#message Convert your App with our Packages
       .row.pricing
         .span4
           .headline Professional
-          div Apple's UIKit
-          div Device APIs
-          div Social Integration
           div Static Content
+          div Social Integration
+          div Device APIs
+          div UI Conversion
           .price $ 7,900
         .span4
           .headline.highlight Enterprise
-          .highlight Apple's UIKit
-          .highlight Device APIs
-          .highlight Social Integration
           .highlight
             strong Remote Content
+          .highlight Social Integration
+          .highlight Device APIs
+          .highlight UI Conversion
           .price.highlight $ 11,490
         .span4
           .headline Basic
-          div Apple's UIKit
-          div -
-          div -
           div Static Content
+          div -
+          div -
+          div UI Conversion
           .price $ 5,900
       .row.order
         .span4.offset4
@@ -155,18 +161,18 @@ block content
     .container.definitions
       .row
         .span3
-          h1 Apple's UIKit
-          | We'll convert common iOS user interface elements like tables, buttons, lists, tabbars and navbars.
-        .span3
-          h1 Device APIs
-          | You Android app will be able to take advantage of iOS device APIs like GPS, camera, acceleration and orientation.
+          h1 Content
+          | Content is the most important part of your app, so you should have full control over it. We can either use the existing iOS content or integrate with your own backend solution.
         .span3
           h1 Social Integration
-          | It's crucial to have social integration these days.
-          | Therefor your app will make use of Facebook, Twitter, Instagram etc.
+          | It's crucial to integrate social media channels with your apps these days.
+          | In order to engage your users we'll make use of Facebook, Twitter and Google Plus, just like on iOS.
         .span3
-          h1 Content
-          | You may choose between static content for your app or a tight integration to your existing backend infrastructure.
+          h1 Device APIs
+          | You Android app will be able to take advantage of the same device APIs (GPS, camera, acceleration and orientation) your iOS app already uses.
+        .span3
+          h1 UI Conversion
+          | We'll convert common iOS user interface elements like tables, buttons, lists, tab- and navgiation bars to their Android counterparts.
 
 append js
   script(type="text/javascript")
