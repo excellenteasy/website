@@ -96,7 +96,7 @@ module.exports = (grunt) ->
       options:
         separator: ';'
       build:
-        dest: 'build/blog/assets/js/c-3.js'
+        dest: 'build/blog/assets/js/c-4.js'
         src: [
           'src/blog/assets/_js/jquery.min.js'
           'src/blog/assets/_js/jquery.unveil.min.js'
@@ -123,7 +123,7 @@ module.exports = (grunt) ->
     uglify:
       dist:
         files:
-          'build/blog/assets/js/c-3.js': [
+          'build/blog/assets/js/c-4.js': [
             'src/blog/assets/_js/jquery.min.js'
             'src/blog/assets/_js/jquery.unveil.min.js'
             'src/blog/assets/_js/enquire.js'
