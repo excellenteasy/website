@@ -85,6 +85,11 @@ module.exports = (grunt) ->
       dist:
         files: [
           'excellenteasy.com/favicon.ico': 'build/favicon.ico'
+        ,
+          expand: on
+          cwd: 'build/'
+          src: ['**/*.html','**/*.xml','**/*.json', '**/*.txt']
+          dest: 'excellenteasy.com'
         ]
 
     cssmin:
@@ -226,9 +231,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'removegz', ->
     grunt.file.recurse 's3', (abspath, rootdir, subdir, filename) ->
-      grunt.file.copy abspath, abspath.replace '.gz', ''
-      grunt.file.delete abspath if abspath.match /\.gz$/
-    grunt.file.recurse 'excellenteasy.com', (abspath, rootdir, subdir, filename) ->
       grunt.file.copy abspath, abspath.replace '.gz', ''
       grunt.file.delete abspath if abspath.match /\.gz$/
 
