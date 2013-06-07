@@ -227,7 +227,10 @@ module.exports = (grunt) ->
   grunt.registerTask 'removegz', ->
     grunt.file.recurse 's3', (abspath, rootdir, subdir, filename) ->
       grunt.file.copy abspath, abspath.replace '.gz', ''
-      grunt.file.delete abspath
+      grunt.file.delete abspath if abspath.match /\.gz$/
+    grunt.file.recurse 'excellenteasy.com', (abspath, rootdir, subdir, filename) ->
+      grunt.file.copy abspath, abspath.replace '.gz', ''
+      grunt.file.delete abspath if abspath.match /\.gz$/
 
   grunt.registerTask '_build', [
     'copy:build'
