@@ -2,6 +2,5 @@
 var disqus_shortname='{{ site.JB.comments.disqus.short_name }}',
 disqus_identifier='{{ page.title }}',
 disqus_title='{{ page.title }}',
-{% if site.safe == false %}disqus_developer=1,{% endif %}
 disqus_url='{{ site.production_url }}{{ page.url }}';
 </script>
