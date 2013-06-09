@@ -4,8 +4,8 @@ append head
   meta(name='description', content="You published your app to iOS first? Now your app needs to move to the world's largest mobile platform and we will help you to convert it.")
 
 block style
-  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-1.css', rel='stylesheet', type='text/css')
-  //- link(href='/css/convert-1.css', rel='stylesheet', type='text/css')
+  //- link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-1.css', rel='stylesheet', type='text/css')
+  link(href='/css/convert-1.css', rel='stylesheet', type='text/css')
 
 
 block title
@@ -181,12 +181,51 @@ block content
           h1 UI Conversion
           | We'll convert common iOS user interface elements like tables, buttons, lists, tab- and navgiation bars to their Android counterparts.
 
+  section#reasons
+    .container
+      header.row
+        .span8.offset2
+          h1 Still not convinced?
+      .row.reasons
+        .reason.span8.offset2
+          :markdown
+            # 1. Android has a bigger market share than iOS
+            When it comes to mobile platforms, Google's Android and Apple's iOS are two of the largest players in the market. In a race of technology, where the prize is a large market share, Android and iOS have been running almost neck and neck. Recent statistics have shown that Android has taken the lead with over 900 million activations, while iOS came a distant second with 410 million activations. In the language of percentages, the Android mobile platform enjoys a staggering 70% of the global market, whereas, iOS has a 21% market share.
+            If you have a web based business, your success largely depends on the amount of interest which you can generate for your website or application. Greater number of people logging to your website or downloading your app translates into greater revenue for your product. It is important that you take all necessary steps to ensure that your app reaches the widest possible market.
+            If your app is compatible with iOS alone, you are excluding the large 900 million plus market which Android enjoys. It is a good business move on your part to convert iOS app into Android as it gives you access to a bigger customer base and increases long term profits.
+        .reason.span8.offset2
+          :markdown
+            # 2. Android enabled devices are cheaper than iOS devices
+            iOS is compatible with devices manufactured by Apple alone, namely, the iphone and the ipad series. These devices are quite expensive and are usually bought by customers who live on the upper end of the income bracket. In contrast, the Android mobile platform is compatible with a large number of devices which cut across different price ranges. The customer base for Android enabled devices is varied; everyone from students to working professionals can afford an Android device.
+            Many businesses purchase Android devices in bulk to give their employees. This not only acts as an incentive for them to improve their performance, but also helps employees with their work. For example, giving Android enabled smart phones to employees will help them in recording and verification of data, managing their location and finding out the shortest routes to destinations. This will save both time and money.
+            If you have an iOS app which is catered to help such offices improve their productivity, you are missing out on a great business opportunity. An iOS enabled device will mostly be purchased by end users for their personal utility; businesses will focus on cheaper Android devices. Bring iOS app to Android and watch your profits soar!
+        .reason.span8.offset2
+          :markdown
+            # 3. Android's Google Play is more developer friendly than the iOS App Store
+            App development is a lucrative business opportunity, but it requires an immense investment of effort, time and money. Once your app is developed, you would want it out on the market as soon as possible. However, if you have developed an app compatible with iOS alone, this might take a while. The worst case scenario is that your app may never see the light of day.
+            To get a listing on the iOS App Store, you have to send them the app, along with a list of words describing the app, three icons, a launch screen, screen shots and your contact information. Your app then goes through an extensive screening process which might take a week or longer. If you are lucky enough to survive this, you still have to wait for an official App Review before your app comes out on the App Store.
+            On Android's Google Play, all that you need to launch an app is a developer account and an account with Google Wallet. Once you register and pay the registration fees, you can upload your app in the APK (Android Application Package) format and either save it as draft or publish it when you are ready. Your app gets a listing on the Google Play store and you have a shot at recovering your costs. It is always prudent to move iOS app to Android; even if one market fails, you have a sure chance at the other.
+        .reason.span8.offset2
+          :markdown
+            # 4. All major apps cover both iOS and Android, why should you be different?
+            Most developers, both independent and corporate, do not focus on a single mobile platform. Almost all major apps in the market today have versions compatible with both iOS and Android. By doing so, developers are confident of having the largest share of the market at their disposal.
+            In such a scenario, limiting your app to the iOS App Store alone sets you apart from the rest of the developers in the market. This gamble is risky, on the one hand, it might give your app a sense of exclusivity which might make it popular, but on the other hand, you will lose out on a large chunk of the market. Also, to be popular in the already crowed iOS app market, your app needs to have something extra special or you need to increase your promotional and marketing costs. Keeping your app on a single mobile platform increases the chances of your app succumbing to an early death.
+            The large Android market provides an ideal business opportunity for app developers, especially the independent app developers. If your app is listed on the Google Play Store, you do not have to spend a lot on marketing and publicity campaigns. If you want to ease your promotional hassles, you should convert iOS app to Android.
+        .reason.span8.offset2
+          :markdown
+            # 5. Google Play increases discoverability of your app
+            Once you have uploaded your app to Google Play or to the App Store, it is your job to ensure that your app comes up regularly on search engine results. You can do this by finding relevant keywords and using them in the title and in the description, as well as, by uploading screenshots and videos for your app. However, this is a dynamic process; you need to observe your market carefully and then make the significant changes.
+            Once your app has a listing on the iOS App Store, making amends in the title or description is quite a hassle. Such changes take time to appear, often as long as two or three weeks. In contrast, changing the app title or description is a breeze if your app is listed with the Google Play Store on the Android mobile platform. You can edit your app, update the title or make any necessary changes and instantly publish it again. Also, the App Store does not recognize use of keywords in the app description, but the Play Store does. This gives your app a bigger chance to pop up on search engines. Move iOS app to Android not just to take advantage of a lucrative business opportunity but also to reduce stress and hassle involved in successful marketing of the app.
+      footer.row
+        .span8.offset2
+          h2#next Click here to read 5 reasons why you need to move to Android now!
+
 append js
   script(type="text/javascript")
     function downloadJSAtOnload() {
       var element = document.createElement("script");
-      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-1.js";
-      //- element.src = "/js/contact-1.js";
+      //- element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-1.js";
+      element.src = "/js/contact-1.js";
       document.body.appendChild(element);
     }
     if (window.addEventListener)

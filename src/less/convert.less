@@ -271,6 +271,42 @@
   }
 }
 
+#reasons {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #E7A048;
+  color: white;
+  header, footer {
+    h1, h2 {
+      display: block;
+      width: 100%;
+      text-align: center;
+      line-height: 1.2em;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    }
+  }
+  header h1 {
+    margin-top: 0;
+    font-size: 2em;
+  }
+  #next {
+    cursor: pointer;
+  }
+  .reason {
+    box-sizing: border-box;
+    background: #f2f2f2;
+    padding: 30px;
+    color: #333;
+    display: none;
+    h1 {
+      margin-top: 0;
+    }
+    &.active {
+      display: block;
+    }
+  }
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   #conversion {
