@@ -1,8 +1,11 @@
 (function() {
   var metrics,
       options,
+      $orderNow = $('.row.order .btn'),
       $button = $('button[type=submit]#submit-button'),
       $form   = $('form#contact-form');
+  $form.hide();
+  $orderNow.show();
   window.submitted = function() {
     $button
       .text('Thanks for your submission')
@@ -42,6 +45,10 @@
 (function() {
   var $next    = $('#reasons #next');
   var $reasons = $('#reasons .reason');
+
+  $reasons.removeClass('active');
+  $next.html('Click here to read 5 reasons why you need to move to Android now!');
+
   $next.click(function(){
     var $active = $('#reasons .reason.active');
     if ($active.length) {
