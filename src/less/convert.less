@@ -1,0 +1,287 @@
+@import 'main';
+
+#conversion {
+  background: #347093;
+  position: relative;
+  min-height: (295px + 2 * 40px);
+  .slider {
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    .featured {
+      position: absolute;
+      top: 40px;
+      pointer-events: none;
+      width: 50%;
+      height: (295px + 40px);
+      right: 0;
+      &.iphone-frame {
+        .animation(iphonerotate 6s infinite);
+        .transform-origin(bottom right);
+        .transform(rotate(0deg));
+        .image {
+          .image("iphone_frame");
+        }
+      }
+      &.iphone-screen {
+        opacity: 1;
+        .image {
+          .image("iphone_screen");
+        }
+      }
+      &.nexus-frame {
+        .animation(nexusrotate 6s infinite);
+        .transform-origin(top left);
+        .transform(rotate(-90deg));
+        .image {
+          .image("nexus_frame");
+        }
+      }
+      &.nexus-screen {
+        .animation(nexusfade 6s infinite);
+        opacity: 0;
+        .image {
+          .image("nexus_screen");
+        }
+      }
+      .image {
+        margin: (40px/2) auto;
+      }
+    }
+  }
+  .copy {
+    color: white;
+    padding: 40px 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    h1 {
+      font-size: 2.0em;
+      line-height: 1.2em;
+    }
+    h2 {
+      line-height: 1.2em;
+    }
+  }
+}
+
+#testimonials {
+  padding-bottom: 40px;
+  background-color: #E7A048;
+  color: white;
+  header h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.2em;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+  .row:not(header) {
+    margin-top: 40px;
+    &:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
+  blockquote {
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    font-size: 1.5em;
+    line-height: 36px;
+    letter-spacing: -1px;
+    &:before, &:after {
+      font-family: Georgia, serif;
+      font-weight: 800;
+    }
+    &:before {
+      content: '“';
+    }
+    &:after {
+      content: '”';
+    }
+  }
+  .author {
+    font-weight: 300;
+    font-size: 1.3em;
+    text-align: center;
+    line-height: 38px;
+    a, a:visited, a:hover, a:active, a:focus {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+}
+
+#product {
+  header h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.2em;
+  }
+  h1, h2 {
+    line-height: 1.2em;
+  }
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin-bottom: 40px;
+  }
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  padding-bottom: 40px;
+  background-color: #33A269;
+  .icon-quill, .icon-download, .icon-folder, .icon-wand, .icon-users {
+    display: block;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    width: 100%;
+    text-align: center;
+    font-size: 64px;
+    font-family: 'excellenteasy-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+  }
+  .icon-quill:before {
+    content: "\e000";
+  }
+  .icon-download:before {
+    content: "\e001";
+  }
+  .icon-folder:before {
+    content: "\e002";
+  }
+  .icon-wand:before {
+    content: "\e003";
+  }
+  .icon-users:before {
+    content: "\e004";
+  }
+}
+
+#pricing {
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #347093;
+  header h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.2em;
+    // margin-bottom: 60px;
+  }
+  .thanks {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    a {
+      color: white;
+    }
+  }
+  .row.pricing {
+    margin-left: 20px;
+    @media (min-width: 1200px) {
+      margin-left: 30px;
+    }
+    @media (max-width: 767px) {
+      margin-left: 0px;
+    }
+    .span4 {
+      margin: 0;
+    }
+    .span4 div {
+      text-align: center;
+      border-bottom: 1px solid white;
+      height: 20px;
+      line-height: 20px;
+      font-size: 1em;
+      padding: 8px;
+      &.price {
+        line-height: 20px;
+        border-bottom: none;
+        font-size: 1.2em;
+      }
+      &.headline {
+        font-size: 1.6em;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        line-height: 60px;
+      }
+      &.price, &.headline {
+        height: 40px;
+        &.highlight {
+          line-height: 40px;
+        }
+      }
+      &.highlight {
+        background-color: #164A69;
+      }
+    }
+  }
+  .row.order {
+    .btn {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  @import (less) '../../lib/css/bootstrap.forms.css';
+
+  form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  input, label, textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+  }
+  input {
+    height: 28px !important;
+    line-height: 28px !important;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  #testimonials, #product {
+    padding-top: 20px;
+    padding-bottom: 60px;
+  }
+  #testimonials {
+    blockquote {
+      font-size: 2.0em;
+    }
+    .author {
+      font-size: 1.5em;
+    }
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #conversion {
+    min-height: (2 * (295px + 2 * 40px));
+    .slider {
+      .featured {
+        width: 100%;
+      }
+    }
+    .copy {
+      padding-top: (295px + 2 * 40px);
+    }
+  }
+}

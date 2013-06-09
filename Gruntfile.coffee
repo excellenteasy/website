@@ -77,7 +77,7 @@ module.exports = (grunt) ->
     copy:
       build:
         files: [
-          { expand: on, cwd: 'src/img/', src: ['sprites.png', 'sprites@2x.png'], dest: 'build/img' }
+          { expand: on, cwd: 'src/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png'], dest: 'build/img' }
           'build/favicon.ico': 'src/favicon.ico'
           'build/robots.txt': 'src/robots.txt'
           'build/sitemap.xml': 'src/sitemap.xml'
@@ -165,7 +165,8 @@ module.exports = (grunt) ->
           yuicompress: on
           optimization: 1
         files: [
-          'build/css/main-1.css': 'src/less/main.less'
+          'build/css/index-1.css': 'src/less/index.less'
+          'build/css/convert-1.css': 'src/less/convert.less'
         ]
 
     jade:
@@ -173,6 +174,7 @@ module.exports = (grunt) ->
         files: [
           'build/index.html': 'src/jade/index.jade'
           'build/legal/index.html': 'src/jade/legal/index.jade'
+          'build/convert-your-ios-app-to-android/index.html': 'src/jade/convert-your-ios-app-to-android/index.jade'
         ]
 
     compress:
