@@ -1,4 +1,4 @@
-# 4. Make yourself independent
+### 4. Make yourself independent
 
 Most developers, both independent and corporate, do not focus on a single mobile platform. Almost all **major apps in the market today have versions compatible with both iOS and Android**. By doing so, developers are confident of having the largest share of the market at their disposal.
 

@@ -1,4 +1,4 @@
-# 2. Android devices are cheap
+### 2. Android devices are cheap
 
 iOS is compatible with devices manufactured by Apple alone, namely the **iPhone and the iPad series**. These devices are **quite expensive** and are usually bought by retail customers. In contrast, the **Android platform is compatible with a large number of devices** which cut across different price ranges.
 

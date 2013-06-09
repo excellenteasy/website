@@ -1,4 +1,4 @@
-# 1. Android has the biggest market share
+### 1. Android has the biggest market share
 
 When it comes to mobile platforms, Google's Android and Apple's iOS are the largest players in the market. Recent statistics have shown that ** Android has taken the lead with over 900 million activations**, while iOS came a distant second with 410 million. Depending on the source Android enjoys up to **70% of the global market**.
 

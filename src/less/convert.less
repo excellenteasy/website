@@ -57,11 +57,11 @@
     color: white;
     padding: 40px 20px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-    h1 {
+    h2 {
       font-size: 2.0em;
       line-height: 1.2em;
     }
-    h2 {
+    h3 {
       line-height: 1.2em;
     }
   }
@@ -71,7 +71,7 @@
   padding-bottom: 40px;
   background-color: #E7A048;
   color: white;
-  header h1 {
+  header h2 {
     display: block;
     width: 100%;
     text-align: center;
@@ -117,17 +117,17 @@
 }
 
 #product {
-  header h1 {
+  header h2 {
     display: block;
     width: 100%;
     text-align: center;
     font-size: 2em;
     line-height: 1.2em;
   }
-  h1, h2 {
+  .step {
+    font-weight: bold;
+    font-size: 1.2em;
     line-height: 1.2em;
-  }
-  h2 {
     text-align: center;
   }
   p {
@@ -174,7 +174,7 @@
   padding-top: 40px;
   padding-bottom: 20px;
   background-color: #347093;
-  header h1 {
+  header h2 {
     display: block;
     width: 100%;
     text-align: center;
@@ -277,7 +277,7 @@
   background-color: #E7A048;
   color: white;
   header, footer {
-    h1, h2 {
+    &, h2 {
       display: block;
       width: 100%;
       text-align: center;
@@ -285,11 +285,15 @@
       text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     }
   }
-  header h1 {
+  header h2 {
     margin-top: 0;
     font-size: 2em;
   }
   #next {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
     cursor: pointer;
   }
   .reason {
@@ -298,7 +302,7 @@
     padding: 30px;
     color: #333;
     display: none;
-    h1 {
+    h2 {
       margin-top: 0;
     }
     &.active {

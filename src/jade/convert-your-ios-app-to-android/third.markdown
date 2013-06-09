@@ -1,4 +1,4 @@
-# 3. Google Play is publisher friendly
+### 3. Google Play is publisher friendly
 
 iOS App development is a lucrative business opportunity, but it requires an immense upfront investment. Once your app is developed, you would want it out on the market as soon as possible. However, if you have developed an app compatible for iOS alone, this might take a while. The worst case scenario is that **your app might even get rejected by Apple**.
 
