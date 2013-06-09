@@ -1,4 +1,5 @@
-# 4. With iOS and Android you'll be covering over 90%
-Most developers, both independent and corporate, do not focus on a single mobile platform. Almost all major apps in the market today have versions compatible with both iOS and Android. By doing so, developers are confident of having the largest share of the market at their disposal.
-In such a scenario, limiting your app to the iOS App Store alone sets you apart from the rest of the developers in the market. This gamble is risky, on the one hand, it might give your app a sense of exclusivity which might make it popular, but on the other hand, you will lose out on a large chunk of the market. Also, to be popular in the already crowed iOS app market, your app needs to have something extra special or you need to increase your promotional and marketing costs. Keeping your app on a single mobile platform increases the chances of your app succumbing to an early death.
-The large Android market provides an ideal business opportunity for app developers, especially the independent app developers. If your app is listed on the Google Play Store, you do not have to spend a lot on marketing and publicity campaigns. If you want to ease your promotional hassles, you should convert iOS app to Android.
+# 4. Make yourself independent
+
+Most developers, both independent and corporate, do not focus on a single mobile platform. Almost all **major apps in the market today have versions compatible with both iOS and Android**. By doing so, developers are confident of having the largest share of the market at their disposal.
+
+Market share is not the only reason though. It is necessary to **split your income into several streams** so you can't be out of business overnight. While Apple might deprecate an iOS feature, or remove your app from the store you could still be available on Android, or vice-versa. Remove such uninfluenceable factors from your business to ensure healthy and steady growth.
