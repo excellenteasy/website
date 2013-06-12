@@ -218,17 +218,8 @@ module.exports = (grunt) ->
         failOnError: on
 
     watch:
-      img:
-        files: ['src/img/**/*']
-        tasks: ['build']
-      less:
-        files: ['src/less/**/*']
-        tasks: ['build']
-      jade:
-        files: ['src/jade/**/*']
-        tasks: ['build']
-      jekyll:
-        files: ['src/blog/**/*']
+      all:
+        files: ['src/**/*']
         tasks: ['build']
 
   grunt.registerTask 'removegz', ->
