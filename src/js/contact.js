@@ -1,8 +1,11 @@
 (function() {
   var metrics,
       options,
+      $orderNow = $('.row.order .btn'),
       $button = $('button[type=submit]#submit-button'),
       $form   = $('form#contact-form');
+  $form.hide();
+  $orderNow.show();
   window.submitted = function() {
     $button
       .text('Thanks for your submission')
@@ -37,4 +40,29 @@
   setTimeout(function() {
     $('#brand').removeClass('hover');
   }, 1000);
+}).call(this);
+
+(function() {
+  var $next    = $('#reasons #next');
+  var $reasons = $('#reasons .reason');
+
+  $reasons.removeClass('active');
+  $next.html('Click here to read 5 reasons why you need to move to Android now!');
+
+  $next.click(function(){
+    var $active = $('#reasons .reason.active');
+    if ($active.length) {
+      var $nextUp = $active.next();
+      $active.removeClass('active');
+      if ($nextUp.length) {
+        $nextUp.addClass('active');
+      } else {
+        $reasons.first().addClass('active');
+      }
+    } else {
+      $next.html('Click here to read the next reason');
+      $('#reasons header').hide();
+      $reasons.first().addClass('active');
+    }
+  });
 }).call(this);
