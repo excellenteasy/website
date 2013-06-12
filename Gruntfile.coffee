@@ -120,7 +120,7 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/search.js'
         ]
       contact:
-        dest: 'build/js/contact-1.js'
+        dest: 'build/js/contact-2.js'
         src: [
           'src/js/lib/jquery.min.js'
           'src/js/lib/nod.min.js'
@@ -144,7 +144,7 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/search.js'
           ]
       contact:
-        files: 'build/js/contact-1.js': [
+        files: 'build/js/contact-2.js': [
           'src/js/lib/jquery.min.js'
           'src/js/lib/nod.min.js'
           'src/js/contact.js'
@@ -166,7 +166,7 @@ module.exports = (grunt) ->
           optimization: 1
         files: [
           'build/css/index-1.css': 'src/less/index.less'
-          'build/css/convert-1.css': 'src/less/convert.less'
+          'build/css/convert-2.css': 'src/less/convert.less'
         ]
 
     jade:
