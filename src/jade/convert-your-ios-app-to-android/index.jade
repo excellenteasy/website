@@ -4,8 +4,8 @@ append head
   meta(name='description', content="You published your app to iOS first? Now your app needs to move to the world's largest mobile platform and we will help you to convert it.")
 
 block style
-  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-2.css', rel='stylesheet', type='text/css')
-  //- link(href='/css/convert-1.css', rel='stylesheet', type='text/css')
+  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-3.css', rel='stylesheet', type='text/css')
+  //- link(href='/css/convert-3.css', rel='stylesheet', type='text/css')
 
 
 block title
@@ -42,11 +42,32 @@ block content
           | Google's Android is the logical next step for your mobile strategy.
           | We will help you to bring your app to Android.
 
+  section#pricing
+    .container
+      header.row
+        .span8.offset2
+          h2 This is what we offer
+    .container.definitions
+      .row
+        .span3
+          h3 Content Migration
+          | Content is the most important part of your app, so you should have full control over it. We can either use the existing iOS content or integrate with your own backend solution.
+        .span3
+          h3 Social Integration
+          | It's crucial to integrate social media channels with your apps these days.
+          | In order to engage your users we'll make use of Facebook, Twitter and Google Plus, just like on iOS.
+        .span3
+          h3 Device APIs
+          | Your Android app will be able to take advantage of the same device APIs (GPS, camera, acceleration and orientation) your iOS app already uses.
+        .span3
+          h3 UI Conversion
+          | We'll convert iOS user interface elements like tables, buttons, lists, tab- and navgiation bars to their Android counterparts.
+
   section#testimonials
     .container
       header.row
         .span8.offset2
-          h2 What our customers say:
+          h2 What our customers say
       .row
         blockquote.span8.
           We invested 3 hours to move our<br /> existing iOS app to Android.
@@ -66,147 +87,80 @@ block content
     .container
       header.row
         .span8.offset2
-          h2 Five-Step iOS to Android process
-          p We bring your app to Android over the course of five steps. The entire process is focused on minimizing the time investment on your end and ensuring highest possible quality on our end.
-          p Our common time to market is 4 weeks, but for you personally it's less than three hours. We handle the entire process on our side, so you can sleep well at night. Just send us your current app and you'll hear from us when your Android app is ready for prime time.
-
+          h2 Be on Android with just five steps
+          p The entire process is focused on minimizing the time investment on your end and ensuring highest possible quality on our end. Our common time to market is 4 weeks, but for you personally it's less than three hours. We handle the entire process on our side, so you can sleep well at night.
       .row
         .span4
           i.icon-quill
-          .step 1. Make your app available to us and describe it
+          .step 1. You make your app available to us and describe its purpose
         .span4
           i.icon-download
-          .step 2. We analyze your app and give you an offer
+          .step 2. We thoroughly analyze your app and give you an offer
         .span4
           i.icon-folder
-          .step 3. Send us required assets and documentation
+          .step 3. You accept and send us required assets and documentation
         .span4.offset2
           i.icon-wand
-          .step 4. We confirm, ask for your payment and create your product anew
+          .step 4. We transform the iOS app to an Android app
         .span4
           i.icon-users
-          .step 5. Review your app and give it to your users
-  section#pricing
-    .container
-      header.row
-        .span8.offset2
-          h2#message Convert your App with our Packages
-      .row.pricing
-        .span4
-          .headline Professional
-          div Static Content
-          div Social Integration
-          div Device APIs
-          div UI Conversion
-          .price $ 7,900
-        .span4
-          .headline.highlight Enterprise
-          .highlight
-            strong Remote Content
-          .highlight Social Integration
-          .highlight Device APIs
-          .highlight UI Conversion
-          .price.highlight $ 11,490
-        .span4
-          .headline Basic
-          div Static Content
-          div -
-          div -
-          div UI Conversion
-          .price $ 5,900
+          .step 5. You review your app and and publish it to the stores
+      .row
+        .span4.offset4
+          h2#message
       .row.order
         .span4.offset4
           #order.btn.btn-large
-            | Order Now
-      form#contact-form.row(action='https://docs.google.com/forms/d/1H9xLKWx89qYAAquCcI4TruN6PraE4RBADDgQNN-Qpd4/formResponse', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
-        .control-group.span6.offset3
-          label.control-label(for='entry_30214035')
-            strong Your app's name *
+            | Let's take the first step
+      form#contact-form.row(action='https://docs.google.com/forms/d/1s-2slCj0WBN1OyywkhcHIXLqc7TlcuF5P5vuYgIWOP4/formResponse', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+        .control-group.span4.offset4
+          label.control-label(for='entry_1835425034')
+            strong Name
           .controls
-            input#entry_30214035(style='width: 100%', placeholder='App Name', type='text', name='entry.30214035', value='', dir='auto', aria-required='true', required)
-        .control-group.span6.offset3
-          label.control-label(for='entry_1272316739')
-            strong Link to your app in the Apple App Store
-            br
-            | Please continue if your app is currently not in the app store.
+            input#entry_1835425034(style='width: 100%', placeholder='John Doe', type='text', name='entry.1835425034', value='', dir='auto', aria-required='true', required)
+        .control-group.span4.offset4
+          label.control-label(for='entry_49035993')
+            strong E-Mail
           .controls
-            input#entry_1272316739(style='width: 100%', placeholder='https://itunes.apple.com/us/app/app-name', type='text', name='entry.1272316739', value='', dir='auto')
-        .control-group.span6.offset3
-          label.control-label(for='entry_1555319012')
-            strong Promotion Code (if your app is not free)
-            br
-            | Please continue if your app is currently not in the app store.
-          .controls
-            input#entry_1555319012(style='width: 100%', placeholder='XJK4L6A12SDG', type='text', name='entry.1555319012', value='', dir='auto')
-        .control-group.span6.offset3
-          label.control-label(for='entry_645247925')
-            strong Other method of retrieving your app
-            br
-            |  If your app isn't published on the App Store, how else can we get your app?
-          .controls
-            textarea#entry_645247925(style='width: 100%', placeholder='Testflight?', name='entry.645247925', rows='3', cols='0', dir='auto')
-        .control-group.span6.offset3
-          label.control-label(for='entry_2031663475')
-            strong What is the purpose of your app? *
-            br
-            |  Please write a short description of what your app does.
-          .controls
-            textarea#entry_2031663475(style='width: 100%', placeholder='It helps our customers to...', name='entry.2031663475', rows='3', cols='0', dir='auto', aria-required='true', required)
-        .control-group.span6.offset3
-          label.control-label(for='entry_2135121452')
-            strong Contact Information *
-            br
-            |  How may we get back to you?
-          .controls
-            textarea#entry_2135121452(style='width: 100%', placeholder='E-Mail, Skype, Phone?', name='entry.2135121452', rows='3', cols='0', dir='auto', aria-required='true', required)
+            input#entry_49035993(style='width: 100%', placeholder='john@appcompany.com', type='text', name='entry.49035993', value='', dir='auto')
         input(type='hidden', name='draftResponse', value='[]')
         input(type='hidden', name='pageHistory', value='0')
-        .span6.offset3
-          button#submit-button.btn(style='width: 100%', type='submit', name='submit', value='Submit') Submit
+        .span4.offset4
+          button#submit-button.btn.btn-large(style='width: 100%', type='submit', name='submit', value='Submit') Submit
       iframe#hidden_iframe(name='hidden_iframe', style='display: none;', onload='if(window.submit === true){window.submitted()}')
 
-    .container.definitions
-      .row
-        .span3
-          h3 Content
-          | Content is the most important part of your app, so you should have full control over it. We can either use the existing iOS content or integrate with your own backend solution.
-        .span3
-          h3 Social Integration
-          | It's crucial to integrate social media channels with your apps these days.
-          | In order to engage your users we'll make use of Facebook, Twitter and Google Plus, just like on iOS.
-        .span3
-          h3 Device APIs
-          | You Android app will be able to take advantage of the same device APIs (GPS, camera, acceleration and orientation) your iOS app already uses.
-        .span3
-          h3 UI Conversion
-          | We'll convert common iOS user interface elements like tables, buttons, lists, tab- and navgiation bars to their Android counterparts.
 
   section#reasons
     .container
       header.row
         .span8.offset2
           h2 Still not convinced?
+      footer.row
+        .span8.offset2
+          span Get some more information why you need to move to Android now!
       .row.reasons
         .reason.span8.offset2.active
           include first.markdown
+          div.next Give me more information
         .reason.span8.offset2.active
           include second.markdown
+          div.next Give me more information
         .reason.span8.offset2.active
           include third.markdown
+          div.next Give me more information
         .reason.span8.offset2.active
           include fourth.markdown
+          div.next Give me more information
         .reason.span8.offset2.active
           include fifth.markdown
-      footer.row
-        .span8.offset2
-          span#next
+          a(href='#product') Get started with step 1
 
 append js
   script(type="text/javascript")
     function downloadJSAtOnload() {
       var element = document.createElement("script");
-      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-2.js";
-      //- element.src = "/js/contact-1.js";
+      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-3.js";
+      //- element.src = "/js/contact-3.js";
       document.body.appendChild(element);
     }
     if (window.addEventListener)

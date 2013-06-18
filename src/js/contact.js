@@ -12,6 +12,7 @@
       .removeClass('btn-primary btn-danger')
       .addClass('btn-success')
       .attr('disabled','disabled');
+      _gaq.push(['_trackEvent', 'Form', 'Submit', 'The user submitted the form']);
       setTimeout(function(){
         $('#contact-form').hide();
         $('#message').text('Thanks for your submission');
@@ -23,15 +24,15 @@
       }, 600);
   };
   metrics = [
-    ['#entry_30214035', 'presence', 'This is a required field'],
-    ['#entry_2031663475', 'presence', 'This is a required field'],
-    ['#entry_2135121452', 'presence', 'This is a required field']
+    ['#entry_1835425034', 'presence', 'Please fill in your name'],
+    ['#entry_49035993', /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/, 'Please fill in a valid E-Mail Address'],
   ];
   options = {
     helpSpanDisplay: 'help-block'
   };
   $form.nod(metrics, options);
   $('#order').click(function(){
+    _gaq.push(['_trackEvent', 'Form', 'Show', 'The user opened the form']);
     $('.row.pricing, .row.order').hide();
     $('#contact-form').show();
     $('#entry_30214035').focus();
@@ -43,13 +44,13 @@
 }).call(this);
 
 (function() {
-  var $next    = $('#reasons #next');
+  var $next    = $('#reasons .next');
   var $reasons = $('#reasons .reason');
 
-  $reasons.removeClass('active');
-  $next.html('Click here to read 5 reasons why you need to move to Android now!');
+  $reasons.removeClass('active').first().addClass('active');
 
   $next.click(function(){
+    _gaq.push(['_trackEvent', 'Content', 'Read', 'The user read through a content block on the page']);
     var $active = $('#reasons .reason.active');
     if ($active.length) {
       var $nextUp = $active.next();
@@ -59,10 +60,6 @@
       } else {
         $reasons.first().addClass('active');
       }
-    } else {
-      $next.html('Click here to read the next reason');
-      $('#reasons header').hide();
-      $reasons.first().addClass('active');
     }
   });
 }).call(this);
