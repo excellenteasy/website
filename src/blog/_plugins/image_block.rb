@@ -49,8 +49,7 @@ module Jekyll
     end
 
     def image_src
-      # "https://d2b0jc4z1uybmh.cloudfront.net/website/blog/images"
-      "/blog/images"
+      "https://d2b0jc4z1uybmh.cloudfront.net/website/blog/images"
     end
 
     def image_url
