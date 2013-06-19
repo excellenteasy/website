@@ -31,6 +31,7 @@ module.exports = (grunt) ->
 
     clean:
       build: ['build', 'excellenteasy.com', 's3']
+      images: ['src/blog/_images']
 
     image_resize:
       full:
@@ -90,6 +91,13 @@ module.exports = (grunt) ->
           cwd: 'build/'
           src: ['**/*.html','**/*.xml','**/*.json', '**/*.txt']
           dest: 'excellenteasy.com'
+        ]
+      images:
+        files: [
+          expand: on
+          cwd: 'src/blog/_images'
+          src: ['**/*']
+          dest: 'src/blog/_images_uploaded'
         ]
 
     cssmin:
@@ -211,6 +219,11 @@ module.exports = (grunt) ->
         stdout: on
         stderr: on
         failOnError: on
+      images:
+        command: './images.sh'
+        stdout: on
+        stderr: on
+        failOnError: on
       scp:
         command: 'scp -i ec2.pem -r excellenteasy.com ubuntu@54.235.107.114:/var/www/'
         stdout: on
@@ -247,6 +260,9 @@ module.exports = (grunt) ->
     'imagemin:src'
     'image_resize'
     'imagemin:dist'
+    'shell:images'
+    'copy:images'
+    'clean:images'
   ]
 
   grunt.registerTask 'dist', [
