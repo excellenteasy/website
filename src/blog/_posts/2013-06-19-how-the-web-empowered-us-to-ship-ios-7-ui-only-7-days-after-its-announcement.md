@@ -30,7 +30,7 @@ On Monday, June 10th, when iOS 7 was announced and demonstrated at WWDC 2013, we
   title: Our updated UI library for iOS 7
 {% endimage %}
 
-Once this was done, *we started converting one of our clients’* apps called LaunchTracker to iOS 7. It took us 7-days from the moment that iOS 7 was announced on stage at WWDC by Apple’s VP of Engineering, Craig Federighi to the submission of the updated app to the AppStore (LaunchTracker is currently in Review and I will update this post as soon as it gets approved).
+Once this was done, *we started converting one of our clients’ apps* called LaunchTracker to iOS 7. It took us 7-days from the moment that iOS 7 was announced on stage at WWDC by Apple’s VP of Engineering, Craig Federighi to the submission of the updated app to the AppStore (LaunchTracker is currently in Review and I will update this post as soon as it gets approved).
 
 *So with a 7 day turn around time we created an app that runs on iOS 5 or 6 with the latest, unreleased iOS 7 UI today*. I want to see a native developer do that. Of course we could still deploy our iOS 6 UI, but our customers have the choice how their apps look and behave on different platforms and operating system versions. This is what the app looks like, before and after:
 
