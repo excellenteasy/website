@@ -15,6 +15,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-compress'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-htmlmin'
   grunt.loadNpmTasks 'grunt-contrib-jade'
@@ -32,6 +33,12 @@ module.exports = (grunt) ->
     clean:
       build: ['build', 'excellenteasy.com', 's3']
       images: ['src/blog/_images']
+
+    connect:
+      server:
+        options:
+          port: 1337,
+          base: 'build'
 
     image_resize:
       full:
@@ -281,5 +288,6 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', [
     'build'
+    'connect'
     'watch'
   ]
