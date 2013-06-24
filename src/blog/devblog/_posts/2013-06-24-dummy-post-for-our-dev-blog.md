@@ -15,7 +15,7 @@ else
 class Bar
   buddy: 'biznass'
   constructor: (yeah) ->
-    buddy
+    buddy.asd.asd.asdasd.asdasdasdas.asdasdasd.asdasdasd.asdasdasd()
 {% endhighlight %}
 
 {% highlight javascript linenos=table %}

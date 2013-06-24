@@ -7,11 +7,14 @@ body {
 }
 
 .highlighttable {
-  border-spacing: 0px
-}
-
-.code {
-  width: 100%;
+  display: block;
+  width: inherit;
+  border-spacing: 0;
+  background: #f5f5f5;
+  margin: 8px 0;
+  overflow: hidden;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .linenos, .code {
@@ -23,17 +26,16 @@ body {
     line-height: 22px;
     border: 0;
     border-radius: 0;
+    margin: 0;
   }
 }
 
 .linenos pre {
   color: rgba(0, 0, 0, 0.298039);
   border-right: 1px solid #e5e5e5;
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
 }
 
 .code pre {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  white-space: pre;
+  background: transparent;
 }
