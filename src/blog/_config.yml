@@ -14,6 +14,7 @@ devtitle : excellenteasy devblog
 tagline: Site Tagline
 
 css: style-5
+devcss: devstyle-1
 js: c-4
 
 authors:
@@ -85,8 +86,8 @@ JB :
   #   /assets
   #
 
-  ASSET_PATH : https://d2b0jc4z1uybmh.cloudfront.net/website/blog/assets
-  # ASSET_PATH : /assets
+  # ASSET_PATH : https://d2b0jc4z1uybmh.cloudfront.net/website/blog/assets
+  ASSET_PATH : /assets
   # ASSET_PATH : https://s3.amazonaws.com/excellenteasy.com/website/blog/assets
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.

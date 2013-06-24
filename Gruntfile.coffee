@@ -118,6 +118,7 @@ module.exports = (grunt) ->
       blog:
         files: [
           "build/assets/css/<%= jekyllConfig.css %>.css": 'build/assets/css/style.css'
+          "build/assets/css/<%= jekyllConfig.devcss %>.css": 'build/assets/css/devstyle.css'
           'build/assets/css/search-2.css': 'build/assets/css/search.css'
         ]
 

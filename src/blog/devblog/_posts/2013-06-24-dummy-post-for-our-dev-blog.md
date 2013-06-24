@@ -6,6 +6,41 @@ title: Dummy Post for our Dev Blog
 ---
 {% include JB/setup %}
 
+{% highlight coffeescript linenos=table %}
+if this is that
+  this
+else
+  that
+
+class Bar
+  buddy: 'biznass'
+  constructor: (yeah) ->
+    buddy
+{% endhighlight %}
+
+{% highlight javascript linenos=table %}
+if (this === that) {
+  return this;
+} else {
+  return that;
+}
+{% endhighlight %}
+
+{% highlight css linenos=table %}
+#yeahbuddy {
+  foo: bar;
+}
+{% endhighlight %}
+
+{% highlight css linenos=table %}
+#yeahbuddy {
+  foo: bar;
+  #bar {
+    bar: boo;
+  }
+}
+{% endhighlight %}
+
 *iOS* and *Android* are the **world's two largest mobile operating systems** [empowering over 90% of smartphones and tablets](http://en.wikipedia.org/wiki/Usage_share_of_operating_systems#Mobile_devices). However the differences in the user experience, distribution of the apps as well as the operating systems is quite distinct.
 
 Many people have a hard time transitioning from one platform to another. It is not unlike the experience of going from a Blackberry to an iPhone when the elegant iPhone touchscreen first emerged. When you ask a loyal *iOS* user to switch to an *Android*-powered device, you are more likely to come across a face filled with bafflement and disorientation rather than bliss.
