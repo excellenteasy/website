@@ -1,0 +1,27 @@
+---
+layout: nil
+title : Atom Feed
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  {% include JB/setup %}
+  <title>{{ site.devtitle }}</title>
+  <link href="{{ site.production_url }}{{ BASE_PATH_DEVBLOG }}{{ site.JB.atom_path }}" rel="self"/>
+  <link href="{{ site.production_url }}{{ BASE_PATH_DEVBLOG  }}/"/>
+  <id>{{ site.production_url }}{{ BASE_PATH_DEVBLOG  }}/</id>
+  <author>
+    <name>excellenteasy</name>
+    <email>devblog@excellenteasy.com</email>
+  </author>
+
+{% for post in site.posts %}
+{% if post.category == 'dev' %}
+  <entry>
+    <title>{{ post.title }}</title>
+    <link href="{{ site.production_url }}{{ post.url }}"/>
+    <id>{{ site.production_url }}{{ post.id }}/</id>
+    <content type="html">{{ post.content | xml_escape }}</content>
+  </entry>
+{% endif %}
+{% endfor %}
+</feed>

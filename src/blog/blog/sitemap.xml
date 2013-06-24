@@ -1,0 +1,25 @@
+---
+# Remember to set production_url in your _config.yml file!
+layout: nil
+title : Sitemap
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+{% include JB/setup %}
+  <url>
+    <loc>{{ site.production_url }}{{ BASE_PATH_BLOG  }}/</loc>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>{{ site.production_url }}{{ BASE_PATH_BLOG  }}/search/</loc>
+    <priority>0.60</priority>
+  </url>
+  {% for post in site.posts %}
+  {% if post.category == 'blog' %}
+    <url>
+      <loc>{{site.production_url}}{{ post.url }}</loc>
+      <priority>0.80</priority>
+    </url>
+  {% endif %}
+  {% endfor %}
+</urlset>

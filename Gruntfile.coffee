@@ -31,7 +31,7 @@ module.exports = (grunt) ->
     jekyllConfig: grunt.file.readYAML 'src/blog/_config.yml'
 
     clean:
-      build: ['build', 'excellenteasy.com', 's3']
+      build: ['build', 'excellenteasy.com', 's3', 'tmp']
       images: ['src/blog/_images']
 
     connect:
@@ -85,10 +85,10 @@ module.exports = (grunt) ->
     copy:
       build:
         files: [
-          { expand: on, cwd: 'src/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png'], dest: 'build/img' }
-          'build/favicon.ico': 'src/favicon.ico'
-          'build/robots.txt': 'src/robots.txt'
-          'build/sitemap.xml': 'src/sitemap.xml'
+          { expand: on, cwd: 'src/website/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png'], dest: 'build/img' }
+          'build/favicon.ico': 'src/website/favicon.ico'
+          'build/robots.txt': 'src/website/robots.txt'
+          'build/sitemap.xml': 'src/website/sitemap.xml'
         ]
       dist:
         files: [
@@ -106,19 +106,26 @@ module.exports = (grunt) ->
           src: ['**/*']
           dest: 'src/blog/_images_uploaded'
         ]
+      jekyll:
+        files: [
+          expand: on
+          cwd: 'tmp'
+          src: ['**/*']
+          dest: 'build'
+        ]
 
     cssmin:
       blog:
         files: [
-          "build/blog/assets/css/<%= jekyllConfig.css %>.css": 'build/blog/assets/css/style.css'
-          'build/blog/assets/css/search-2.css': 'build/blog/assets/css/search.css'
+          "build/assets/css/<%= jekyllConfig.css %>.css": 'build/assets/css/style.css'
+          'build/assets/css/search-2.css': 'build/assets/css/search.css'
         ]
 
     concat:
       options:
         separator: ';'
       build:
-        dest: "build/blog/assets/js/<%= jekyllConfig.js %>.js"
+        dest: "build/assets/js/<%= jekyllConfig.js %>.js"
         src: [
           'src/blog/assets/_js/jquery.min.js'
           'src/blog/assets/_js/jquery.unveil.min.js'
@@ -126,10 +133,10 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/custom.js'
         ]
       search:
-        dest: 'build/blog/assets/js/search-4.js'
+        dest: 'build/assets/js/search-4.js'
         src: [
           'src/blog/assets/_js/lodash.custom.js'
-          'src/js/lib/jquery.min.js'
+          'src/website/js/lib/jquery.min.js'
           'src/blog/assets/_js/jquery.autogrow.js'
           'src/blog/assets/_js/jquery.fuzzymatch.js'
           'src/blog/assets/_js/search.js'
@@ -137,32 +144,32 @@ module.exports = (grunt) ->
       contact:
         dest: 'build/js/contact-3.js'
         src: [
-          'src/js/lib/jquery.min.js'
-          'src/js/lib/nod.min.js'
-          'src/js/contact.js'
+          'src/website/js/lib/jquery.min.js'
+          'src/website/js/lib/nod.min.js'
+          'src/website/js/contact.js'
         ]
 
     uglify:
       dist:
         files:
-          "build/blog/assets/js/<%= jekyllConfig.js %>.js": [
+          "build/assets/js/<%= jekyllConfig.js %>.js": [
             'src/blog/assets/_js/jquery.min.js'
             'src/blog/assets/_js/jquery.unveil.min.js'
             'src/blog/assets/_js/enquire.js'
             'src/blog/assets/_js/custom.js'
           ]
-          'build/blog/assets/js/search-4.js': [
+          'build/assets/js/search-4.js': [
             'src/blog/assets/_js/lodash.custom.js'
-            'src/js/lib/jquery.min.js'
+            'src/website/js/lib/jquery.min.js'
             'src/blog/assets/_js/jquery.autogrow.js'
             'src/blog/assets/_js/jquery.fuzzymatch.js'
             'src/blog/assets/_js/search.js'
           ]
       contact:
         files: 'build/js/contact-3.js': [
-          'src/js/lib/jquery.min.js'
-          'src/js/lib/nod.min.js'
-          'src/js/contact.js'
+          'src/website/js/lib/jquery.min.js'
+          'src/website/js/lib/nod.min.js'
+          'src/website/js/contact.js'
         ]
 
     htmlmin:
@@ -180,16 +187,16 @@ module.exports = (grunt) ->
           yuicompress: on
           optimization: 1
         files: [
-          'build/css/index-1.css': 'src/less/index.less'
-          'build/css/convert-3.css': 'src/less/convert.less'
+          'build/css/index-1.css': 'src/website/less/index.less'
+          'build/css/convert-3.css': 'src/website/less/convert.less'
         ]
 
     jade:
       build:
         files: [
-          'build/index.html': 'src/jade/index.jade'
-          'build/legal/index.html': 'src/jade/legal/index.jade'
-          'build/convert-your-ios-app-to-android/index.html': 'src/jade/convert-your-ios-app-to-android/index.jade'
+          'build/index.html': 'src/website/jade/index.jade'
+          'build/legal/index.html': 'src/website/jade/legal/index.jade'
+          'build/convert-your-ios-app-to-android/index.html': 'src/website/jade/convert-your-ios-app-to-android/index.jade'
         ]
 
     compress:
@@ -217,7 +224,7 @@ module.exports = (grunt) ->
 
     shell:
       jekyll:
-        command: 'jekyll build -s src/blog -d build/blog'
+        command: 'jekyll build -s src/blog -d tmp'
         stdout: on
         stderr: on
         failOnError: on
@@ -253,6 +260,7 @@ module.exports = (grunt) ->
     'jade:build'
     'concat:contact'
     'shell:jekyll'
+    'copy:jekyll'
     'cssmin:blog'
     'htmlmin:blog'
   ]

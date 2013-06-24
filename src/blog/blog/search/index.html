@@ -1,0 +1,15 @@
+---
+category: blog
+layout: default
+title: Search
+css: search-2
+js: search-4
+---
+{% include JB/setup %}
+<div class="introduction"><span>You're searching <a href="{{ site.production_url }}/" title="excellenteasy home">excellenteasy</a> for </span><input type="text" id="search" placeholder="?" contenteditable="true" /><span id="info"></span></div>
+<section class="container post">
+  <article class="row">
+    <div id="results" class="span6 offset3"></div>
+  </article>
+</section>
+{% include themes/excellenteasy/footer.html %}

@@ -1,7 +1,8 @@
 ---
+category: dev
 layout: post
 author: stephan
-title: The difficulties of publishing an app for both iOS and Android
+title: Dummy Post for our Dev Blog
 ---
 {% include JB/setup %}
 

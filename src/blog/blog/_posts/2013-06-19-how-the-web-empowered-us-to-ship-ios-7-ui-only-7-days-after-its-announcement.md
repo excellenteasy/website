@@ -1,4 +1,5 @@
 ---
+category: blog
 layout: post
 author: david
 title: How the web empowered us to ship iOS 7 UI only 7 days after its announcement

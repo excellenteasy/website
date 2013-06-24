@@ -1,4 +1,5 @@
 ---
+category: blog
 layout: post
 author: cam
 title: "The Tangled Web of Android Devices: Hardware and Software Fragmentation"

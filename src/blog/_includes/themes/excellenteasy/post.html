@@ -1,5 +1,5 @@
 {% assign author = site.authors[page.author] %}
-<div class="introduction">You're reading the&nbsp;<a href="https://excellenteasy.com" title="excellenteasy home">excellenteasy</a>&nbsp;blog, a publication about the mobile web.</div>
+<div class="introduction">You're reading the&nbsp;<a href="https://excellenteasy.com" title="excellenteasy home">excellenteasy</a>&nbsp;{% if page.category == 'dev' %}development {% endif %}blog, a publication about the mobile web.</div>
 <section class="container post">
   {% if page.title %}
     <header class="row">

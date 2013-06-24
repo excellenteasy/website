@@ -1,4 +1,5 @@
 ---
+category: blog
 layout: post
 author: stephan
 title: User Interface Characteristics of Mobile Operating Systems
