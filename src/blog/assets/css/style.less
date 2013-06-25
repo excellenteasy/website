@@ -102,6 +102,19 @@ article, .post nav, .post .author {
   figcaption { text-align: center; font-size: 0.8em }
   img { display: block; margin: 20px auto }
   figure img { margin: 0 auto }
+  div > p {
+    & + p {
+      text-indent: 2em;
+    }
+    &:first-child:first-letter {
+      font-style: italic;
+      font-size: 3em;
+      line-height: 1;
+      float: left;
+      padding: 0 6px;
+      text-transform: capitalize;
+    }
+  }
 }
 
 .post nav ul {
