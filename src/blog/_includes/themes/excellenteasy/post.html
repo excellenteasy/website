@@ -1,4 +1,22 @@
 {% assign author = site.authors[page.author] %}
+
+{% for post in site.categories[page.category] %}
+ {% if post.url == page.url %}
+   {% assign post_index0 = forloop.index0 %}
+   {% assign post_index1 = forloop.index %}
+ {% endif %}
+{% endfor %}
+{% for post in site.categories[page.category] %}
+ {% if post_index0 == forloop.index %}
+   {% assign next_post = post.url %}
+   {% assign next_title = post.title %}
+ {% endif %}
+ {% if post_index1 == forloop.index0 %}
+   {% assign prev_post = post.url %}
+   {% assign prev_title = post.title %}
+ {% endif %}
+{% endfor %}
+
 <div class="introduction">You're reading the&nbsp;<a href="https://excellenteasy.com" title="excellenteasy home">excellenteasy</a>&nbsp;{% if page.category == 'dev' %}development {% endif %}blog, a publication about the mobile web.</div>
 <section class="container post">
   {% if page.title %}
@@ -21,8 +39,8 @@
   <nav class="row hidden-print">
     <ul class="span6 offset3">
       <li>
-        {% if page.previous %}
-          <a href="{{ BASE_PATH }}{{ page.previous.url }}/" title="{{ page.previous.title }}">&larr; older</a>
+        {% if prev_post %}
+          <a href="{{ prev_post }}" title="{{ prev_title }}">&larr; older</a>
         {% else %}
           oldest
         {% endif %}
@@ -31,8 +49,8 @@
         <a href="#logo" title="Back to top">back to top</a>
       </li>
       <li>
-      {% if page.next %}
-        <a href="{{ BASE_PATH }}{{ page.next.url }}/" title="{{ page.next.title }}">newer &rarr;</a>
+      {% if next_post %}
+        <a href="{{ next_post }}" title="{{ next_title }}">newer &rarr;</a>
       {% else %}
         newest
       {% endif %}
