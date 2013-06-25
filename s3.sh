@@ -11,7 +11,7 @@ s3cmd sync --acl-public  --guess-mime-type \
 s3cmd sync --acl-public  --guess-mime-type \
   --add-header "Cache-Control: private, max-age=31536000" \
   --add-header "Expires: 31536000" \
-  -r build/blog/assets/img s3://excellenteasy.com/website/blog/assets/
+  -r build/assets/img s3://excellenteasy.com/website/assets/
 
 # gzipped assets
 

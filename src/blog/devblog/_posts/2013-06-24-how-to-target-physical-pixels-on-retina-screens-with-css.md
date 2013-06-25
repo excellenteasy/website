@@ -36,4 +36,4 @@ After a moment's consideration I realized the only way to address real pixels we
 What I love about the solution is its flexibility and functional compliance to real borders. CSS3 allows you to define multiple background images, so it wouldn't be a problem to define top, left, right, bottom border all at the same time. There is a caveat though: Don't use this on low-res screens because it causes unpredictable results. Use media queries to activate it on retina screens only. Here is a full-fledged demo and I'd love to hear your thoughts and see your forks.
 
 <pre class="codepen" data-height="300" data-type="result" data-href="tvJkI" data-user="boennemann" data-safe="true"><code></code><a href="http://codepen.io/boennemann/pen/tvJkI">Check out this Pen!</a></pre>
-<script async src="http://codepen.io/assets/embed/ei.js"></script>
+<script async src="//codepen.io/assets/embed/ei.js"></script>
