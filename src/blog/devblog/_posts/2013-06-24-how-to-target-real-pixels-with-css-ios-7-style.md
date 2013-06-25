@@ -17,14 +17,11 @@ You might think that in the mean time handling retina is old news, but think aga
   alt: Upscaled screenshot of the Apple Clock app
   caption: The (upscaled) iOS 7 Clock.app. One physical pixel border at the bottom of the navigation bar.
 {% endimage %}
-
 > You can't simply specify a border of 0.5px
 
 Trying to do the same with CSS adds a whole new complexity level to the retina problem.<!-- more --><span id="more"></span> Not long ago we were so happy that we didn't have to handle different pixel ratios and now this. The abstraction is far advanced and there is no sub-pixel support in CSS, so you can't simply specify a border of 0.5px.
 
-The only way I could think of were downscaled images, but that would defeat the whole purpose of fast and responsive web design.
-
-What comes in handy here is that you can use gradients as images in CSS so without further ado here is my solution.
+The only way I could think of were downscaled images, but that would defeat the whole purpose of fast and responsive web design. What comes in handy here is that you can use gradients as images in CSS so without further ado here is my solution.
 
 {% highlight css linenos=table %}
 .physical-pixel-border {
