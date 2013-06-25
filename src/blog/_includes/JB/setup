@@ -13,6 +13,9 @@
       {% assign HOME_PATH = "/" %}
     {% endif %}
 
+    {% assign BASE_PATH_BLOG = site.JB.BASE_PATH_BLOG %}
+    {% assign BASE_PATH_DEVBLOG = site.JB.BASE_PATH_DEVBLOG %}
+
     {% if site.JB.ASSET_PATH %}
       {% assign ASSET_PATH = site.JB.ASSET_PATH %}
     {% else %}

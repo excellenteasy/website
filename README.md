@@ -12,6 +12,7 @@ sudo gem install jekyll
 sudo gem install therubyracer
 sudo gem install jekyll-less
 sudo gem install rdiscount
+sudo easy_install Pygments
 brew install s3cmd
 ```
 

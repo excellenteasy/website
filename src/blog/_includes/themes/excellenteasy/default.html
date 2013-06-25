@@ -2,14 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.title }}{% if page.title %} – {% endif %}excellenteasy blog</title>
+    {% if page.category == 'dev' %}
+      {% assign css = site.devcss %}
+    {% else %}
+      {% assign css = site.css %}
+    {% endif %}
+    <title>{{ page.title }}{% if page.title %} – {% endif %}{% if page.category == 'blog' %}excellenteasy blog{% else %}excellenteasy development blog{% endif %}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta charset="utf-8">
     {% if author.name %}
       <meta name="author" content="{{ author.name }}">
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ ASSET_PATH }}/css/{% if page.css %}{{ page.css }}{% else %}{{ site.css }}{% endif %}.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/{% if page.css %}{{ page.css }}{% else %}{{ css }}{% endif %}.css" rel="stylesheet" type="text/css" media="all">
     <link rel="shortcut icon" href="/favicon.ico">
     {% if author.gplus %}
       <link rel="author" href="{{ author.gplus }}">
@@ -21,7 +26,11 @@
   <body>
     <header class="top hidden-print">
       <div id="logo" alt="excellenteasy logo">
-        <a href="{{ BASE_PATH }}" title="Blog home"></a>
+        {% if page.category == 'blog' %}
+          <a href="{{ BASE_PATH_BLOG }}" title="Blog home"></a>
+        {% else %}
+          <a href="{{ BASE_PATH_DEVBLOG }}" title="Blog home"></a>
+        {% endif %}
       </div>
     </header>
     {{ content }}

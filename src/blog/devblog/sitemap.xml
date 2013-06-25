@@ -5,18 +5,17 @@ title : Sitemap
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+{% include JB/setup %}
   <url>
-    <loc>https://excellenteasy.com/blog/</loc>
+    <loc>{{ site.production_url }}{{ BASE_PATH_DEVBLOG  }}/</loc>
     <priority>0.95</priority>
   </url>
-  <url>
-    <loc>https://excellenteasy.com/blog/search/</loc>
-    <priority>0.60</priority>
-  </url>
   {% for post in site.posts %}
+  {% if post.category == 'dev' %}
     <url>
-      <loc>{{site.production_url}}{{ post.url }}/</loc>
+      <loc>{{site.production_url}}{{ post.url }}</loc>
       <priority>0.80</priority>
     </url>
+  {% endif %}
   {% endfor %}
 </urlset>

@@ -1,4 +1,5 @@
 ---
+category: blog
 layout: post
 author: stephan
 title: The difficulties of publishing an app for both iOS and Android
@@ -14,7 +15,6 @@ Many people have a hard time transitioning from one platform to another. It is n
   alt: different iOS devices lying on a table
   caption: Photo by [Blake Patterson](http://www.flickr.com/photos/35448539@N00/4773693893) [CC BY 2.0](http://creativecommons.org/licenses/by/2.0/)
 {% endimage %}
-
 This reaction is not surprising but it does not mean that we are trapped in a dead end. Simply understanding the differences between *iOS* and *Android* would certainly allow us to appreciate – and soon – conquer them both.
 
 ## The Skin-Deep Divide
@@ -36,7 +36,6 @@ The graphical user interface (GUI) experienced using *Android* devices utilizes 
   alt: unlocking an Android devices with a swipe gesture
   caption: Photo by [Robert Bejil](http://www.flickr.com/photos/28618109@N05/6783731870/) [CC BY 2.0](http://creativecommons.org/licenses/by/2.0/)
 {% endimage %}
-
 Like *Android*, *iOS* has a gesture recognition system, but it is fundamentally different. Instead of creating an image of a vertical line, you are prompted to create a horizontal line to unlock an *iPhone*. This is known as the "slide to unlock" gesture.
 
 These characteristics diverge further when you look at the millions of apps published for these devices. Apple has a very strict process of reviewing the apps that are sold in the *App Store*. Furthermore, the *App Store* is the only commercial distribution hub for *iOS* apps. On the other hand, Google distributes *Android* apps through *Google Play* and allows you to install them from any source you like. There are little to no restrictions on how *Android* apps are distributed and furthermore there is no review process.
@@ -46,7 +45,6 @@ These characteristics diverge further when you look at the millions of apps publ
   alt: different mobile devices
   caption: Photo by [Jeremy Keith](http://www.flickr.com/photos/74105777@N00/7753864240/) [CC BY 2.0](http://creativecommons.org/licenses/by/2.0/)
 {% endimage %}
-
 Both companies limit the distribution of their apps to certain devices but their are philosophical and distribution differences here too. *iOS* is limited to only Apple platforms such as the *iPhone*, *iPod Touch* & *iPad*. Only Apple makes *iOS* devices. However *Android* follows a similar line of reasoning that Microsoft adopted with Windows allowing numerous hardware suppliers to adopt their operating system. Therefore the *Android* market is larger because several leading manufacturers such as Samsung, HTC, Acer, Lenovo, LG, and such have adopted it as their mobile operating system. While you can reach much more devices and therefore people with Android, it's proportionally more difficult to support all the different screen sizes and hardware differences.
 
 ## Breaking the boundaries between Android and iOS

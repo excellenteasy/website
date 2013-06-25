@@ -1,0 +1,29 @@
+---
+category: blog
+layout: page
+---
+{% include JB/setup %}
+
+{% for post in site.posts %}
+  {% assign author = site.authors[post.author] %}
+  {% if post.category == 'blog' %}
+    {% if post.title %}
+      <header class="row">
+        <span class="span6 offset3">
+          <h1><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h1>
+        </span>
+        {% if author.name %}
+        <span class="span6 offset3">
+          <small>by {{ author.name }}</small>
+        </span>
+        {% endif %}
+      </header>
+    {% endif %}
+    <article class="row">
+      <div class="span6 offset3">
+        {{ post.content | split: '<!-- more -->' | first }}
+        <a href="{{ post.url }}#more" title="Continue Reading">Continue Reading …</a>
+      </div>
+    </article>
+  {% endif %}
+{% endfor %}
