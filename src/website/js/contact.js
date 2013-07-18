@@ -2,8 +2,8 @@
   var metrics,
       options,
       $orderNow = $('.row.order .btn'),
-      $button = $('button[type=submit]#submit-button'),
-      $form   = $('form#contact-form');
+      $button = $('button[type=submit]#mc-embedded-subscribe'),
+      $form   = $('form#mc-embedded-subscribe-form');
   $form.hide();
   $orderNow.show();
   window.submitted = function() {
@@ -14,7 +14,7 @@
       .attr('disabled','disabled');
       _gaq.push(['_trackEvent', 'Form', 'Submit', 'The user submitted the form']);
       setTimeout(function(){
-        $('#contact-form').hide();
+        $('#mc-embedded-subscribe-form').hide();
         $('#message').text('Thanks for your submission');
         var thanks = $('<div class="thanks">Thank you so much for interest in our Android conversion product. We will get back to you as soon as possible. ' +
           'If you have any question, please feel free to contact me at <a href="mailto:david@excellenteasy.com">david@excellenteasy.com</a>.<br/><br/>' +
@@ -24,8 +24,8 @@
       }, 600);
   };
   metrics = [
-    ['#entry_1835425034', 'presence', 'Please fill in your name'],
-    ['#entry_49035993', /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/, 'Please fill in a valid E-Mail Address'],
+    ['#mce-NAME', 'presence', 'Please fill in your name'],
+    ['#mce-EMAIL', /^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!\.)){0,61}[a-zA-Z0-9]?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9\-](?!$)){0,61}[a-zA-Z0-9]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/, 'Please fill in a valid E-Mail Address'],
   ];
   options = {
     helpSpanDisplay: 'help-block'
@@ -34,8 +34,8 @@
   $('#order').click(function(){
     _gaq.push(['_trackEvent', 'Form', 'Show', 'The user opened the form']);
     $('.row.pricing, .row.order').hide();
-    $('#contact-form').show();
-    $('#entry_30214035').focus();
+    $('#mc-embedded-subscribe-form').show();
+    $('#mce-NAME').focus();
   });
   //hide logo
   setTimeout(function() {

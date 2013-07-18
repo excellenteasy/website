@@ -4,8 +4,8 @@ append head
   meta(name='description', content="You published your app to iOS first? Now your app needs to move to the world's largest mobile platform and we will help you to convert it.")
 
 block style
-  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-3.css', rel='stylesheet', type='text/css')
-  //- link(href='/css/convert-3.css', rel='stylesheet', type='text/css')
+  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-5.css', rel='stylesheet', type='text/css')
+  //- link(href='/css/convert-5.css', rel='stylesheet', type='text/css')
 
 
 block title
@@ -109,24 +109,28 @@ block content
         .span4.offset4
           h2#message
       .row.order
-        .span4.offset4
-          #order.btn.btn-large
+        .span4.offset4#mc_embed_signup
+          #order.btn.btn-large.btn-warning
             | Let's take the first step
-      form#contact-form.row(action='https://docs.google.com/forms/d/1s-2slCj0WBN1OyywkhcHIXLqc7TlcuF5P5vuYgIWOP4/formResponse', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
-        .control-group.span4.offset4
-          label.control-label(for='entry_1835425034')
+
+      form#mc-embedded-subscribe-form.validate.row(action='http://excellenteasy.us2.list-manage1.com/subscribe/post?u=e2e54081fdbe00d501e6f9642&id=fbb00c6cbf', method='POST', target='hidden_iframe', onsubmit='window.submit=true;', name='mc-embedded-subscribe-form', novalidate='novalidate')
+        .mc-field-group.control-group.span4.offset4
+          label.control-label(for='mce-NAME')
             strong Name
           .controls
-            input#entry_1835425034(style='width: 100%', placeholder='John Doe', type='text', name='entry.1835425034', value='', dir='auto', aria-required='true', required)
-        .control-group.span4.offset4
-          label.control-label(for='entry_49035993')
+            input#mce-NAME.required(style='width: 100%', placeholder='John Doe', type='text', name='NAME', value='', aria-required='true', required)
+        .mc-field-group.control-group.span4.offset4
+          label.control-label(for='mce-EMAIL')
             strong E-Mail
           .controls
-            input#entry_49035993(style='width: 100%', placeholder='john@appcompany.com', type='text', name='entry.49035993', value='', dir='auto')
-        input(type='hidden', name='draftResponse', value='[]')
-        input(type='hidden', name='pageHistory', value='0')
-        .span4.offset4
-          button#submit-button.btn.btn-large(style='width: 100%', type='submit', name='submit', value='Submit') Submit
+            input#mce-EMAIL.required(style='width: 100%', placeholder='john@appcompany.com', type='text', name='EMAIL', value='', aria-required='true', required)
+        .span4.offset4.clear(style='text-align: center; line-height: 40px')
+          | We'll never share your data
+          #mce-responses.clear
+            #mce-error-response.response(style='display: none;')
+            #mce-success-response.response(style='display: none;')
+          button#mc-embedded-subscribe.btn.btn-large.btn-warning(style='width: 100%', type='submit', name='subscribe', value='subscribe') Submit
+
       iframe#hidden_iframe(name='hidden_iframe', style='display: none;', onload='if(window.submit === true){window.submitted()}')
 
 
@@ -159,8 +163,8 @@ append js
   script(type="text/javascript")
     function downloadJSAtOnload() {
       var element = document.createElement("script");
-      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-3.js";
-      //- element.src = "/js/contact-3.js";
+      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-6.js";
+      //- element.src = "/js/contact-6.js";
       document.body.appendChild(element);
     }
     if (window.addEventListener)
