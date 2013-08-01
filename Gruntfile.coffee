@@ -143,7 +143,7 @@ module.exports = (grunt) ->
           'src/blog/assets/_js/search.js'
         ]
       contact:
-        dest: 'build/js/contact-7.js'
+        dest: 'build/js/contact-8.js'
         src: [
           'src/website/js/lib/jquery.min.js'
           'src/website/js/lib/nod.min.js'
@@ -167,7 +167,7 @@ module.exports = (grunt) ->
             'src/blog/assets/_js/search.js'
           ]
       contact:
-        files: 'build/js/contact-7.js': [
+        files: 'build/js/contact-8.js': [
           'src/website/js/lib/jquery.min.js'
           'src/website/js/lib/nod.min.js'
           'src/website/js/contact.js'

@@ -113,21 +113,19 @@ block content
         .span4.offset4
           #order.btn.btn-large.btn-warning
             | Let's take the first step
-      form#contact-form.row(action='https://docs.google.com/forms/d/1s-2slCj0WBN1OyywkhcHIXLqc7TlcuF5P5vuYgIWOP4/formResponse', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+      form#contact-form.row(action='http://services.excellenteasy.com/androidconversion/step1', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
         .control-group.span4.offset4
-          label.control-label(for='entry_1835425034')
+          label.control-label(for='name')
             strong Name
           .controls
-            input#entry_1835425034(style='width: 100%', placeholder='John Doe', type='text', name='entry.1835425034', value='', dir='auto', aria-required='true', required)
+            input#name(style='width: 100%', placeholder='John Doe', type='text', name='name', value='', dir='auto', aria-required='true', required)
         .control-group.span4.offset4
-          label.control-label(for='entry_49035993')
+          label.control-label(for='email')
             strong E-Mail
           .controls
-            input#entry_49035993(style='width: 100%', placeholder='john@appcompany.com', type='text', name='entry.49035993', value='', dir='auto')
-        input(type='hidden', name='draftResponse', value='[]')
-        input(type='hidden', name='pageHistory', value='0')
+            input#email(style='width: 100%', placeholder='john@appcompany.com', type='text', name='email', value='', dir='auto')
         .span4.offset4.clear(style='text-align: center; line-height: 40px')
-          | We hate spam and respect your privacy.
+          | Everyone hates spam, so we'll respect your privacy.
           button#submit-button.btn.btn-large.btn-warning(style='width: 100%', type='submit', name='submit', value='Submit') Submit
       iframe#hidden_iframe(name='hidden_iframe', style='display: none;', onload='if(window.submit === true){window.submitted()}')
 
@@ -161,8 +159,8 @@ append js
   script(type="text/javascript")
     function downloadJSAtOnload() {
       var element = document.createElement("script");
-      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-7.js";
-      // element.src = "/js/contact-7.js";
+      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-8.js";
+      //- element.src = "/js/contact-8.js";
       document.body.appendChild(element);
     }
     if (window.addEventListener)
