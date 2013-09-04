@@ -240,7 +240,7 @@ module.exports = (grunt) ->
         stderr: on
         failOnError: on
       scp:
-        command: 'scp -i ec2.pem -r excellenteasy.com ubuntu@54.235.107.114:/var/www/'
+        command: 'scp -i ec2.pem -r excellenteasy.com ubuntu@54.221.237.104:/var/www/'
         stdout: on
         stderr: on
         failOnError: on
