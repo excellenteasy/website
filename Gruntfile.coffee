@@ -85,7 +85,8 @@ module.exports = (grunt) ->
     copy:
       build:
         files: [
-          { expand: on, cwd: 'src/website/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png'], dest: 'build/img' }
+          { expand: on, cwd: 'src/website/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png'], dest: 'build/img' },
+          { expand: on, cwd: 'src/website/img/avatars', src: ['*'], dest: 'build/img/avatars'},
           'build/favicon.ico': 'src/website/favicon.ico'
           'build/robots.txt': 'src/website/robots.txt'
           'build/sitemap.xml': 'src/website/sitemap.xml'

@@ -102,6 +102,7 @@
     }
   }
   blockquote {
+    margin-top: 20px;
     text-align: center;
     font-weight: 300;
     font-style: italic;
@@ -122,9 +123,14 @@
   }
   .author {
     font-weight: 300;
-    font-size: 1.3em;
+    font-size: 1em;
     text-align: center;
     line-height: 38px;
+
+    p {
+      margin: 0;
+    }
+
     a, a:visited, a:hover, a:active, a:focus {
       color: inherit;
       text-decoration: underline;
@@ -282,6 +288,18 @@
       display: block;
     }
   }
+}
+
+// Rounded avatars
+img.avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
 }
 
 /* Landscape phone to portrait tablet */
