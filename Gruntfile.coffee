@@ -190,7 +190,7 @@ module.exports = (grunt) ->
           optimization: 1
         files: [
           'build/css/index-3.css': 'src/website/less/index.less'
-          'build/css/convert-6.css': 'src/website/less/convert.less'
+          'build/css/convert-7.css': 'src/website/less/convert.less'
         ]
 
     jade:
