@@ -90,6 +90,7 @@ module.exports = (grunt) ->
           'build/favicon.ico': 'src/website/favicon.ico'
           'build/robots.txt': 'src/website/robots.txt'
           'build/sitemap.xml': 'src/website/sitemap.xml'
+          'build/google90ce62b7f18d4018.html': 'src/website/google90ce62b7f18d4018.html'
         ]
       dist:
         files: [
