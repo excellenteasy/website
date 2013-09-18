@@ -108,8 +108,10 @@ block content
       .row.order
         .span4.offset4
           #order.btn.btn-large.btn-warning
-            | Let's take the first step
-      form#contact-form.row(action='http://services.excellenteasy.com/androidconversion/step1', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+            | Let's take the first step now
+          .text-center It literally takes 5 seconds.
+      form#contact-form.row(action='http://services.excellenteasy.com/maillandingpage/iosconversion', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+      //- form#contact-form.row(action='http://localhost:5000/maillandingpage/iosconversion', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
         .span4.offset4.clear(style='text-align: center; margin-bottom: 15px;')
           | We'll get back to you soon and are looking forward to starting a conversation about bringing your app to iOS soon.
         .control-group.span4.offset4
@@ -128,30 +130,30 @@ block content
       iframe#hidden_iframe(name='hidden_iframe', style='display: none;', onload='if(window.submit === true){window.submitted()}')
 
 
-  //- section#reasons
-  //-   .container
-  //-     header.row
-  //-       .span8.offset2
-  //-         h2 Still not convinced?
-  //-     footer.row
-  //-       .span8.offset2
-  //-         span Read more information why you should move to iOS with us.
-  //-     .row.reasons
-  //-       .reason.span8.offset2.active
-  //-         include first.markdown
-  //-         div.next Give me more information
-  //-       .reason.span8.offset2.active
-  //-         include second.markdown
-  //-         div.next Give me more information
-  //-       .reason.span8.offset2.active
-  //-         include third.markdown
-  //-         div.next Give me more information
-  //-       .reason.span8.offset2.active
-  //-         include fourth.markdown
-  //-         div.next Give me more information
-  //-       .reason.span8.offset2.active
-  //-         include fifth.markdown
-  //-         a(href='#product') Get started with step 1
+  section#reasons
+    .container
+      header.row
+        .span8.offset2
+          h2 Still not convinced?
+      footer.row
+        .span8.offset2
+          span Read more information why you should move to iOS with us.
+      .row.reasons
+        .reason.span8.offset2.active
+          include first.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include second.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include third.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include fourth.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include fifth.markdown
+          a(href='#product') Get started with step 1
 
 append js
   script(type="text/javascript")
