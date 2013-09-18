@@ -198,7 +198,7 @@ module.exports = (grunt) ->
         files: [
           'build/index.html': 'src/website/jade/index.jade'
           'build/legal/index.html': 'src/website/jade/legal/index.jade'
-          {expand: on, cwd: 'src/website/jade', src: '*/*.jade', dest: 'build/', ext: '.html'}
+          {expand: on, cwd: 'src/website/jade', src: '**/*.jade', dest: 'build/', ext: '.html'}
         ]
 
     compress:
