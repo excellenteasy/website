@@ -85,7 +85,7 @@ module.exports = (grunt) ->
     copy:
       build:
         files: [
-          { expand: on, cwd: 'src/website/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png'], dest: 'build/img' }
+          { expand: on, cwd: 'src/website/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png', 'ng_logo.png', 'ee_logo.png'], dest: 'build/img' }
           'build/favicon.ico': 'src/website/favicon.ico'
           'build/robots.txt': 'src/website/robots.txt'
           'build/sitemap.xml': 'src/website/sitemap.xml'
@@ -93,6 +93,7 @@ module.exports = (grunt) ->
       dist:
         files: [
           'excellenteasy.com/favicon.ico': 'build/favicon.ico'
+          'excellenteasy.com/angular.ico': 'build/angular-mobile-newsletter/favicon.ico'
         ,
           expand: on
           cwd: 'build/'
@@ -149,6 +150,15 @@ module.exports = (grunt) ->
           'src/website/js/lib/nod.min.js'
           'src/website/js/contact.js'
         ]
+      newsletter:
+        dest: 'build/js/newsletter-2.js'
+        src: [
+          'src/website/js/lib/jquery.2.0.3.min.js'
+          'src/website/js/lib/jquery.fitvids.min.js'
+          'src/website/js/lib/bootstrap.min.js'
+          'src/website/js/lib/nod.min.js'
+          'src/website/js/newsletter.js'
+        ]
 
     uglify:
       dist:
@@ -190,6 +200,8 @@ module.exports = (grunt) ->
         files: [
           'build/css/index-3.css': 'src/website/less/index.less'
           'build/css/convert-5.css': 'src/website/less/convert.less'
+          'build/css/newsletter-1.css':
+            'src/website/less/newsletter/index.less'
         ]
 
     jade:
@@ -198,6 +210,7 @@ module.exports = (grunt) ->
           'build/index.html': 'src/website/jade/index.jade'
           'build/legal/index.html': 'src/website/jade/legal/index.jade'
           'build/convert-your-ios-app-to-android/index.html': 'src/website/jade/convert-your-ios-app-to-android/index.jade'
+          'build/angular-mobile-newsletter/index.html': 'src/website/jade/angular-mobile-newsletter/index.jade'
         ]
 
     compress:
@@ -260,6 +273,7 @@ module.exports = (grunt) ->
     'less:build'
     'jade:build'
     'concat:contact'
+    'concat:newsletter'
     'shell:jekyll'
     'copy:jekyll'
     'cssmin:blog'
