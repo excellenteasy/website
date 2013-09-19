@@ -1,12 +1,12 @@
-extends ../layout
+extends ../../layout
 
 append head
   meta(name='description', content="You published your app to iOS first? Now your app needs to move to the world's largest mobile platform and we will help you to convert it.")
   link(rel='author', href='https://plus.google.com/105998495854622724338')
 
 block style
-  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-5.css', rel='stylesheet', type='text/css')
-  //- link(href='/css/convert-5.css', rel='stylesheet', type='text/css')
+  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-7.css', rel='stylesheet', type='text/css')
+  // link(href='/css/convert-7.css', rel='stylesheet', type='text/css')
 
 
 block title
@@ -72,18 +72,30 @@ block content
       .row
         blockquote.span8.
           We invested 3 hours to move our<br /> existing iOS app to Android.
-        .author.span4 Dr. Albrecht Pfahler<br /> CEO of&nbsp;
-          a(href='http://www.remark-pharma.de') REMARK GmbH
+        .author.span4
+          img.avatar(src="https://d2b0jc4z1uybmh.cloudfront.net/website/img/avatars/albrecht.png", alt="Dr. Albrecht Pfahler, CEO of REMARK GmbH",width="80px",height="80px")
+          // img.avatar(src="../img/avatars/albrecht.png",alt="Dr. Albrecht Pfahler, CEO of REMARK GmbH")
+          p
+            | Dr. Albrecht Pfahler<br /> CEO of&nbsp;
+            a(href='http://www.remark-pharma.de') REMARK GmbH
       .row
         blockquote.span8.
           They are the leading experts<br /> in the Android conversion market.
-        .author.span4 Patrice Archer<br /> Founder of&nbsp;
-          a(href='https://www.facebook.com/PrimalPaleo') Primal Paleo App
+        .author.span4
+          img.avatar(src="https://d2b0jc4z1uybmh.cloudfront.net/website/img/avatars/patrice.png", alt="Patrice Archer, Founder of Primal Paleo App",width="80px",height="80px")
+          // img.avatar(src="../img/avatars/patrice.png",alt="Patrice Archer, Founder of Primal Paleo App")
+          p
+            | Patrice Archer<br /> Founder of&nbsp;
+            a(href='https://www.facebook.com/PrimalPaleo') Primal Paleo App
       .row
         blockquote.span8.
           Half of our customers use Android devices. For business related apps like ours supporting the devices our customers use was a critical factor. It was a no brainer to convert our apps.
-        .author.span4 Cam Collins<br /> CEO of&nbsp;
-          a(href='http://www.exumatech.com') Exuma Technologies Inc.
+        .author.span4
+          img.avatar(src="https://d2b0jc4z1uybmh.cloudfront.net/website/img/avatars/cam.png", alt="Cam Collins, CEO of Exuma Technologies Inc.",width="80px",height="80px")
+          // img.avatar(src="../img/avatars/cam.png",alt="Cam Collins, CEO of Exuma Technologies Inc.")
+          p
+            | Cam Collins<br /> CEO of&nbsp;
+            a(href='http://www.exumatech.com') Exuma Technologies Inc.
   section#product
     .container
       header.row
@@ -101,8 +113,8 @@ block content
           i.icon-folder
           .step 3. You accept and send us required assets and documentation
         .span4.offset2
-          i.icon-wand
-          .step 4. We transform the iOS app to an Android app
+          i.icon-keyboard
+          .step 4. Our team of developers programs your Android app based on your current iOS app.
         .span4
           i.icon-users
           .step 5. You review your app and and publish it to the stores
@@ -112,10 +124,11 @@ block content
       .row.order
         .span4.offset4
           #order.btn.btn-large.btn-warning
-            | Let's take the first step
-      form#contact-form.row(action='http://services.excellenteasy.com/androidconversion/step1', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+            | Let's take the first step now
+          .text-center It literally takes 5 seconds.
+      form#contact-form.row(action='http://services.excellenteasy.com/maillandingpage/androidconversion', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
         .span4.offset4.clear(style='text-align: center; margin-bottom: 15px;')
-          | We are looking forward to starting a conversion about bringing your app to android soon.
+          | We are looking forward to starting a conversation about bringing your app to android soon.
         .control-group.span4.offset4
           label.control-label(for='name')
             strong Name

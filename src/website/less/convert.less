@@ -102,6 +102,7 @@
     }
   }
   blockquote {
+    margin-top: 20px;
     text-align: center;
     font-weight: 300;
     font-style: italic;
@@ -122,9 +123,14 @@
   }
   .author {
     font-weight: 300;
-    font-size: 1.3em;
+    font-size: 1em;
     text-align: center;
     line-height: 38px;
+
+    p {
+      margin: 0;
+    }
+
     a, a:visited, a:hover, a:active, a:focus {
       color: inherit;
       text-decoration: underline;
@@ -154,7 +160,7 @@
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
   padding-bottom: 40px;
   background-color: #347093;
-  .icon-quill, .icon-download, .icon-folder, .icon-wand, .icon-users {
+  .icon-quill, .icon-download, .icon-folder, .icon-keyboard, .icon-users {
     display: block;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
     width: 100%;
@@ -178,7 +184,7 @@
   .icon-folder:before {
     content: "\e002";
   }
-  .icon-wand:before {
+  .icon-keyboard:before {
     content: "\e003";
   }
   .icon-users:before {
@@ -284,6 +290,18 @@
   }
 }
 
+// Rounded avatars
+img.avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   #conversion {
@@ -297,4 +315,8 @@
       padding-top: (295px + 2 * 40px);
     }
   }
+}
+
+.text-center {
+  text-align: center;
 }

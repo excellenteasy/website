@@ -85,10 +85,12 @@ module.exports = (grunt) ->
     copy:
       build:
         files: [
-          { expand: on, cwd: 'src/website/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png', 'ng_logo.png', 'ee_logo.png'], dest: 'build/img' }
+          { expand: on, cwd: 'src/website/img/', src: ['sprites.png', 'sprites@2x.png', 'mobile_devices.png', 'ng_logo.png', 'ee_logo.png'], dest: 'build/img' },
+          { expand: on, cwd: 'src/website/img/avatars', src: ['*'], dest: 'build/img/avatars'},
           'build/favicon.ico': 'src/website/favicon.ico'
           'build/robots.txt': 'src/website/robots.txt'
           'build/sitemap.xml': 'src/website/sitemap.xml'
+          'build/google90ce62b7f18d4018.html': 'src/website/google90ce62b7f18d4018.html'
         ]
       dist:
         files: [
@@ -199,7 +201,7 @@ module.exports = (grunt) ->
           optimization: 1
         files: [
           'build/css/index-3.css': 'src/website/less/index.less'
-          'build/css/convert-5.css': 'src/website/less/convert.less'
+          'build/css/convert-7.css': 'src/website/less/convert.less'
           'build/css/newsletter-1.css':
             'src/website/less/newsletter/index.less'
         ]
@@ -209,8 +211,7 @@ module.exports = (grunt) ->
         files: [
           'build/index.html': 'src/website/jade/index.jade'
           'build/legal/index.html': 'src/website/jade/legal/index.jade'
-          'build/convert-your-ios-app-to-android/index.html': 'src/website/jade/convert-your-ios-app-to-android/index.jade'
-          'build/angular-mobile-newsletter/index.html': 'src/website/jade/angular-mobile-newsletter/index.jade'
+          {expand: on, cwd: 'src/website/jade', src: '**/*.jade', dest: 'build/', ext: '.html'}
         ]
 
     compress:

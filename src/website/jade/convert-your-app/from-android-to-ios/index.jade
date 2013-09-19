@@ -1,0 +1,170 @@
+extends ../../layout
+
+append head
+  meta(name='description', content="Are you keen on publishing your app on iOS? Move to the premium segment of the market today.")
+  link(rel='author', href='https://plus.google.com/105998495854622724338')
+
+block style
+  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/convert-7.css', rel='stylesheet', type='text/css')
+  // link(href='/css/convert-7.css', rel='stylesheet', type='text/css')
+
+
+block title
+  | We port your Android app to iOS – excellenteasy
+
+block slogan
+  .span12.slogan
+    | We port your Android app to iOS
+
+block content
+  section#pricing
+    .container.copy
+      .row
+        .span6
+          h2 You want to publish your app to the premium platform?
+          h3 Get on the iPhone and iPad ecosystem – ready for iOS 7!
+          | With iOS 7 coming out, the Apple universe will get a whole new boost.
+          | Are you going to the be riding this wave? We can help you be present
+          | on the premium app platform.
+
+  //- section#pricing
+  //-   .container
+  //-     header.row
+  //-       .span8.offset2
+  //-         h2 This is what we offer
+  //-   .container.definitions
+  //-     .row
+  //-       .span3
+  //-         h3 Content Migration
+  //-         | Content is the most important part of your app, so you should have full control over it. We can either use the existing iOS content or integrate with your own backend solution.
+  //-       .span3
+  //-         h3 Social Integration
+  //-         | It's crucial to integrate social media channels with your apps these days.
+  //-         | In order to engage your users we'll make use of Facebook, Twitter and Google Plus, just like on iOS.
+  //-       .span3
+  //-         h3 Device APIs
+  //-         | Your Android app will be able to take advantage of the same device APIs (GPS, camera, acceleration and orientation) your iOS app already uses.
+  //-       .span3
+  //-         h3 UI Conversion
+  //-         | We'll convert iOS user interface elements like tables, buttons, lists, tab- and navgiation bars to their Android counterparts.
+
+  //- section#testimonials
+  //-   .container
+  //-     header.row
+  //-       .span8.offset2
+  //-         h2 What our customers say
+  //-     .row
+  //-       blockquote.span8.
+  //-         We invested 3 hours to move our<br /> existing iOS app to Android.
+  //-       .author.span4
+  //-         img.avatar(src="https://d2b0jc4z1uybmh.cloudfront.net/website/img/avatars/albrecht.png", alt="Dr. Albrecht Pfahler, CEO of REMARK GmbH")
+  //-         // img.avatar(src="../img/avatars/albrecht.png",alt="Dr. Albrecht Pfahler, CEO of REMARK GmbH")
+  //-         p
+  //-           | Dr. Albrecht Pfahler<br /> CEO of&nbsp;
+  //-           a(href='http://www.remark-pharma.de') REMARK GmbH
+  //-     .row
+  //-       blockquote.span8.
+  //-         They are the leading experts<br /> in the Android conversion market.
+  //-       .author.span4
+  //-         img.avatar(src="https://d2b0jc4z1uybmh.cloudfront.net/website/img/avatars/patrice.png", alt="Patrice Archer, Founder of Primal Paleo App")
+  //-         // img.avatar(src="../img/avatars/patrice.png",alt="Patrice Archer, Founder of Primal Paleo App")
+  //-         p
+  //-           | Patrice Archer<br /> Founder of&nbsp;
+  //-           a(href='https://www.facebook.com/PrimalPaleo') Primal Paleo App
+  //-     .row
+  //-       blockquote.span8.
+  //-         Half of our customers use Android devices. For business related apps like ours supporting the devices our customers use was a critical factor. It was a no brainer to convert our apps.
+  //-       .author.span4
+  //-         img.avatar(src="https://d2b0jc4z1uybmh.cloudfront.net/website/img/avatars/cam.png", alt="Cam Collins, CEO of Exuma Technologies Inc.")
+  //-         // img.avatar(src="../img/avatars/cam.png",alt="Cam Collins, CEO of Exuma Technologies Inc.")
+  //-         p
+  //-           | Cam Collins<br /> CEO of&nbsp;
+  //-           a(href='http://www.exumatech.com') Exuma Technologies Inc.
+  section#product
+    .container
+      header.row
+        .span8.offset2
+          h2 The Rock-Solid Five-Step Conversion Process
+          p Our working procedure is optimized for maximum quality, fast delivery and minimum time investment on your end. The work goes through quality gates at each step of the process.
+      .row
+        .span4
+          i.icon-quill
+          .step 1. You send us your app.
+        .span4
+          i.icon-download
+          .step 2. We analyze it and come back to you with a quote & statement of work
+        .span4
+          i.icon-folder
+          .step 3. You sign the quote and SOW and we go to work immediately.
+        .span4.offset2
+          i.icon-keyboard
+          .step 4. Our team of developers programs your iOS app based on your current Android app.
+        .span4
+          i.icon-users
+          .step 5. You review your app.
+      .row
+        .span4.offset4
+          h2#message
+      .row.order
+        .span4.offset4
+          #order.btn.btn-large.btn-warning
+            | Let's take the first step now
+          .text-center It literally takes 5 seconds.
+      form#contact-form.row(action='http://services.excellenteasy.com/maillandingpage/iosconversion', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+      //- form#contact-form.row(action='http://localhost:5000/maillandingpage/iosconversion', method='POST', target='hidden_iframe', onsubmit='window.submit=true;')
+        .span4.offset4.clear(style='text-align: center; margin-bottom: 15px;')
+          | We'll get back to you soon and are looking forward to starting a conversation about bringing your app to iOS soon.
+        .control-group.span4.offset4
+          label.control-label(for='name')
+            strong Name
+          .controls
+            input#name(style='width: 100%', placeholder='John Doe', type='text', name='name', value='', dir='auto', aria-required='true', required)
+        .control-group.span4.offset4
+          label.control-label(for='email')
+            strong E-Mail
+          .controls
+            input#email(style='width: 100%', placeholder='john@appcompany.com', type='text', name='email', value='', dir='auto')
+        .span4.offset4.clear(style='text-align: center; line-height: 40px')
+          | Everyone hates spam, so we'll respect your privacy.
+          button#submit-button.btn.btn-large.btn-warning(style='width: 100%', type='submit', name='submit', value='Submit') Submit
+      iframe#hidden_iframe(name='hidden_iframe', style='display: none;', onload='if(window.submit === true){window.submitted()}')
+
+
+  section#reasons
+    .container
+      header.row
+        .span8.offset2
+          h2 Still not convinced?
+      footer.row
+        .span8.offset2
+          span Read more information why you should move to iOS with us.
+      .row.reasons
+        .reason.span8.offset2.active
+          include first.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include second.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include third.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include fourth.markdown
+          div.next Give me more information
+        .reason.span8.offset2.active
+          include fifth.markdown
+          a(href='#product') Get started with step 1
+
+append js
+  script(type="text/javascript")
+    function downloadJSAtOnload() {
+      var element = document.createElement("script");
+      element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/contact-8.js";
+      //- element.src = "/js/contact-8.js";
+      document.body.appendChild(element);
+    }
+    if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+    else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+    else window.onload = downloadJSAtOnload;
