@@ -1,0 +1,87 @@
+@import (less) '../../../../lib/css/bootstrap.3.min.css';
+
+body {
+  background-color: #eeeeee;
+}
+
+.ng-nav {
+  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
+  background-color: #c4473a;
+  border-color: #ab2f29;
+  box-shadow: 0 1px 0 rgba(255,255,255,.1);
+  .navbar-brand {
+    font-family: "HelveticaNeue-Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    color: white;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+#main {
+  background-color: #ffffff;
+  border: 1px solid #d0d5cb;
+  box-shadow: 0 0 0 4px #e4e8e0;
+  border-radius: 5px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#content {
+  margin-bottom: 20px;
+}
+
+#secondary {
+  background-color: #eeeeee;
+  padding: 15px;
+  > h2 {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+
+#pledges, #about {
+  margin-top: 20px;
+  background-color: #eeeeee;
+  padding: 15px;
+  > h4 {
+    margin-top: 0;
+  }
+}
+
+#pledges {
+  .share {
+    float: left;
+    width: 33%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    // &:last-child {
+    //   padding-right: 0;
+    // }
+  }
+  a.btn {
+    width: 100%;
+  }
+}
+
+#about {
+  min-height: 110px;
+  img {
+    width: 80px;
+    margin-right: 15px;
+  }
+  .lead {
+    margin-bottom: 0;
+  }
+}
+
+#comments {
+  margin-top: 20px;
+}
+
+#progressbar {
+  -webkit-transition: width 0.3s linear;
+}
