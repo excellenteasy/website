@@ -183,6 +183,13 @@ module.exports = (grunt) ->
           'src/website/js/lib/nod.min.js'
           'src/website/js/contact.js'
         ]
+      newsletter:
+        files: 'build/js/newsletter-2.js': [
+          'src/website/js/lib/jquery.2.0.3.min.js'
+          'src/website/js/lib/bootstrap.min.js'
+          'src/website/js/lib/nod.min.js'
+          'src/website/js/newsletter.js'
+        ]
 
     htmlmin:
       blog:
@@ -299,6 +306,7 @@ module.exports = (grunt) ->
     'clean:build'
     '_build'
     'uglify:contact'
+    'uglify:newsletter'
     'uglify:dist'
     'compress:dist'
     'compress:s3'
