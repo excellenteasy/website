@@ -1,6 +1,4 @@
 (function() {
-  $('#content').fitVids();
-
   var setSubCount = (function() {
     var REQUIRED_SUBSCRIBERS = 1000;
     var $subcount = $('#subcount');

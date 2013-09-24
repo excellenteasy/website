@@ -156,7 +156,6 @@ module.exports = (grunt) ->
         dest: 'build/js/newsletter-2.js'
         src: [
           'src/website/js/lib/jquery.2.0.3.min.js'
-          'src/website/js/lib/jquery.fitvids.min.js'
           'src/website/js/lib/bootstrap.min.js'
           'src/website/js/lib/nod.min.js'
           'src/website/js/newsletter.js'

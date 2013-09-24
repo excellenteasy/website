@@ -25,10 +25,13 @@ html
     #main.container
       .row
         #content.col-md-8
-          iframe(src='//www.youtube.com/embed/s1Li0jI2HzE?rel=0&amp;vq=hd720', width='749', height='421', frameborder='0', allowfullscreen='allowfullscreen')
-
-          p
-            h1 Make the Angular Mobile Newsletter a reality
+          span(itemscope='itemscope', itemtype='http://schema.org/VideoObject')
+            //- meta(itemprop='thumbnailURL', content='thumbnailurl.png')
+            meta(itemprop='embedURL', content='http://www.youtube.com/watch?v=s1Li0jI2HzE')
+            .fluid-width-video-wrapper
+              iframe(src='//www.youtube.com/embed/s1Li0jI2HzE?rel=0&amp;vq=hd720', width='749', height='421', frameborder='0', allowfullscreen='allowfullscreen')
+            h1(itemprop='name') Make the Angular Mobile Newsletter a reality
+            p(itemprop='description')
             | There is a trend for AngularJS and – most certainly – a trend for mobile lately.
             br
             | Nonetheless&nbsp;
