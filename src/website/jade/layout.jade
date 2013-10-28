@@ -7,25 +7,26 @@ html
           | excellenteasy
       meta(name='viewport', content='width=device-width, initial-scale=1.0')
       block style
-        link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/index-3.css', rel='stylesheet', type='text/css')
+        //- link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/index-3.css', rel='stylesheet', type='text/css')
         //- link(href='/css/index-3.css', rel='stylesheet', type='text/css')
   body
-    header
-      block header
-        include header.jade
+    block page
+      header
+        block header
+          include header.jade
 
-    block content
-      #content
-        .container
-          .row
-            article.span8
-              block article
-            aside.span4
-              block sidebar
+      block content
+        #content
+          .container
+            .row
+              article.span8
+                block article
+              aside.span4
+                block sidebar
 
-    footer
-      block footer
-        include footer.jade
+      footer
+        block footer
+          include footer.jade
     block js
       script(type="text/javascript")
         var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-29219818-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();

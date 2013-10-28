@@ -1,0 +1,44 @@
+!!! 5
+html
+  head
+    block head
+      title
+        block title
+          | excellenteasy
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      block style
+        link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/index-4.css', rel='stylesheet', type='text/css')
+        //- link(href='/css/index-4.css', rel='stylesheet', type='text/css')
+  body
+    block page
+      header
+        .container
+          .row
+            block header
+              .col-md-2.col-sm-2.col-xs-3
+                a#logo(href='/', title='excellenteasy')
+                  img(src="https://d2b0jc4z1uybmh.cloudfront.net/website/assets/img/excellenteasy_logo.png", alt="excellenteasy logo", width="80", height="80")
+              h1.col-md-8.col-sm-8.col-xs-6.light
+                block header_title
+                  a(href='#main', title='excellenteasy') excellenteasy
+              a.sr-only(href='#main') Skip to content
+              block header_actions
+
+      section#main
+        .container
+          block content
+
+      footer
+        block footer
+          .container
+            .row
+              p.col-md-12
+                | © 2013 excellenteasy GbR, Stephan Bönnemann und David Pfahler |&nbsp;
+                a(href='/blog/', title='excellenteasy blog') Blog
+                |  |&nbsp;
+                a(href='/devblog/', title='excellenteasy development blog') Devblog
+                |  |&nbsp;
+                a(href='/legal/', title='excellenteasy legal statement') Legal
+    block js
+      script(type="text/javascript")
+        var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-29219818-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();

@@ -1,37 +1,45 @@
-extends layout
+extends layout_new
 
 append head
   link(rel='publisher', href='https://plus.google.com/105998495854622724338')
 
-block style
-  link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/index-3.css', rel='stylesheet', type='text/css')
-  //- link(href='/css/index-3.css', rel='stylesheet', type='text/css')
-
 block title
   | excellenteasy – a mobile app consultancy
 
-block slogan
-  div.span12
-    img.featured(src='https://d2b0jc4z1uybmh.cloudfront.net/website/img/mobile_devices.png', alt='Silhouettes of different mobile devices')
-    //- img.featured(src='img/mobile_devices.png', alt='Silhouettes of different mobile devices')
+block header_actions
+  .col-md-1.col-sm-1.col-xs-1.col-xs-offset-1
+    a#mail-button(href='mailto:contact@excellenteasy.com', title='Let\'s get in touch')
+  .col-md-1.col-sm-1.col-xs-1
+    a#phone-button(href='skype:djpfahler?call', title='Give us a call on Skype')
 
 block content
-  section#copy
-    .container.copy
-      .row
-        .span8.offset2
-          h1 We are a mobile app consultancy
-          h2 and bring your business applications to iOS, Android and the mobile web.
-          | From Munich, Germany we have helped international customers to embrace the mobile revolution.
-          | Currently we offer&nbsp;
-          a(href='/convert-your-app/from-ios-to-android/', title='convert your iOS app to Android') Android conversions for existing iOS applications&nbsp;
-          | as well as&nbsp;
-          a(href='/convert-your-app/from-android-to-ios/', title='convert your iOS app to Android') the other way around.
-          | &nbsp;We publish blogposts for both&nbsp;
-          a(href='/blog/', title='excellenteasy company blog') businesses
-          | &nbsp;and&nbsp;
-          a(href='/devblog/', title='excellenteasy development blog') developers
-          | &nbsp;about all things mobile and contribute to several&nbsp;
-          a(href='http://opensource.excellenteasy.com', title='excellenteasy open source contributions') open source projects.
-          h2
-            a(href='mailto:contact@excellenteasy.com', title='contact excellenteasy') Let's get in touch
+  .row
+    #copy.col-md-10.col-md-offset-1
+      h2.h1.ultra-light Let us create mobile apps for your business.
+      h3.h4.light We push mobile web technology towards becoming a first class citizen in the mobile app development space. With us you get post-platform mobile web technology that feels just like a native app – on iOS and Android.
+
+  #services.row
+    #html5.col-md-4.col-sm-12.col-xs-12
+      div
+        h4.light PhoneGap and HTML5 based apps
+        p Get highest quality native-hybrid apps by the JavaScript experts. No compromises regarding the user experience, full native-like interface and post-platform customization. Sounds impossible? Ask us.
+        a(href='mailto:html5@excellenteasy.com', title='Contact us for your HTML5 app') Let's get in touch
+    //- #custom.col-md-3.col-sm-6.col-xs-12
+    //-   div
+    //-     h4.light Custom app development for iOS and Android
+    //-     p Need a new app built from scratch or just mock-ups? Our Objective-C and Java developers together with project managers and the quality assurance team will get it off the ground.
+    //-     a Tell me more
+    #conversion.col-md-4.col-sm-6.col-xs-12
+      div
+        h4.light Platform conversions
+        p Do you have an iOS app and want to cover Android as well, or vice-versa? Our specialized 5-Step process will get you there fast and without much time investment on your side.
+        a(href='/convert-your-app/from-ios-to-android/') Tell me more
+    #hour.col-md-4.col-sm-6.col-xs-12
+      div
+        h4.light Hourly
+        p We are specialized in AngularJS, Chaplin, grunt and CoffeeScript development. When you need some extra coding to tweak your app you can use our services by the hour.
+        a(href='mailto:hourly@excellenteasy.com', title='Contact us for hourly work') Book now
+
+  //- #portfolio.row
+  //-   p.lead.col-md-12
+  //-     a See our Portfolio
