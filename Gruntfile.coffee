@@ -191,7 +191,7 @@ module.exports = (grunt) ->
           yuicompress: on
           optimization: 1
         files: [
-          'build/css/index-3.css': 'src/website/less/index.less'
+          'build/css/index-4.css': 'src/website/less/index.less'
           'build/css/convert-7.css': 'src/website/less/convert.less'
         ]
 
