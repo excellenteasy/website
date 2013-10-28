@@ -37,7 +37,8 @@ module.exports = (grunt) ->
     connect:
       server:
         options:
-          port: 1337,
+          hostname: '*'
+          port: 1337
           base: 'build'
 
     image_resize:
