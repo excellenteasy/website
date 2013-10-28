@@ -1,0 +1,141 @@
+!!! 5
+html
+  head
+    block head
+      title
+        block title
+          | Angular Mobile Newsletter
+      meta(name="author", content="David Pfahler")
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      meta(name="description", content="You can't satisfy your sincere desire for mobile AngularJS development? Then help us to make the Angular Mobile Newsletter a reality.")
+      link(rel="author", href="https://plus.google.com/111052005362469453451")
+      link(rel='shortcut icon', href='favicon.ico')
+      block style
+        link(href='https://d2b0jc4z1uybmh.cloudfront.net/website/css/newsletter-1.css', rel='stylesheet', type='text/css')
+        //- link(href='/css/newsletter-1.css', rel='stylesheet', type='text/css')
+  body
+    header#navbar.navbar.navbar-fixed-top.ng-nav(role='banner')
+      .container
+        .navbar-header
+          a.navbar-brand(href='#main', title='Angular Mobile Newsletter - Home')
+            img#logo(src='https://d2b0jc4z1uybmh.cloudfront.net/website/img/ng_logo.png', width='50', height='50', alt='Angular Mobile Newsletter Logo')
+            //- img#logo(src='../img/ng_logo.png', width='50', height='50', alt='Angular Mobile Newsletter Logo')
+            | Angular Mobile Newsletter
+
+    #main.container
+      .row
+        #content.col-md-8
+          span(itemscope='itemscope', itemtype='http://schema.org/VideoObject')
+            //- meta(itemprop='thumbnailURL', content='thumbnailurl.png')
+            meta(itemprop='embedURL', content='http://www.youtube.com/watch?v=s1Li0jI2HzE')
+            .fluid-width-video-wrapper
+              iframe(src='//www.youtube.com/embed/s1Li0jI2HzE?rel=0&amp;vq=hd720', width='749', height='421', frameborder='0', allowfullscreen='allowfullscreen')
+            h1(itemprop='name') Make the Angular Mobile Newsletter a reality
+            p(itemprop='description')
+            | There is a trend for AngularJS and – most certainly – a trend for mobile lately.
+            br
+            | Nonetheless&nbsp;
+            strong you can't satisfy your sincere desire for knowledge for the still nichy, but promising, field of mobile AngularJS development.
+            |  The first&nbsp;
+            a(href='https://github.com/ajoslin/angular-mobile-nav', title='Angular Mobile Nav') projects on GitHub
+            |  are popping up and even the AngularJS team is building&nbsp;
+            a(href='https://github.com/angular/angular.js/tree/master/src/ngTouch', title='AngularJS ngTouch') tools specifically for mobile
+            | , but that's not enough – at least for us.
+
+            h2 What we want
+            strong We want to build a strong community
+            | , provide it with relevant news, exclusive content and encourage fair and detailed discussions, which will&nbsp;
+            strong move angular on mobile devices forward.
+
+            h2 What we don't want
+            strong We don't want to waste our energy on marketing for the newsletter
+            | , but publishing well-curated issues month by month for a small audience is a frustrating experience, too.
+
+            h2 Here is our deal:
+            | You'll have to give us a credit of trust – a newsletter subscription – and&nbsp;
+            strong we'll start to publish high-quality newsletter issues once we have 1000 subscribers.
+            br
+            | That way we can verify the interest for the topic without frustration, while&nbsp;
+            strong you may expect curated content with only relevant news and projects, diverse discussions and a competent audience for your articles we'll spread – all this for free of course.
+
+            br
+            br
+            | We are looking forward to your feedback and of course subscription.
+
+        aside.col-md-4
+          #secondary
+            h2
+              span#subcount &nbsp;
+              | &nbsp;subscribers
+              br
+              small of 1000 subscribers goal
+
+            .progress
+              .progress-bar.progress-bar-success#progressbar(role="progressbar", aria-valuenow="0", aria-valuemin="0", aria-valuemax="100", style="width: 0%")
+                span.sr-only 0% Complete
+
+            form#mc-embedded-subscribe-form.validate(action='http://excellenteasy.us2.list-manage1.com/subscribe/post?u=e2e54081fdbe00d501e6f9642&id=171644903b', method='POST', target='hidden_iframe', onsubmit='window.submit=true;', name='mc-embedded-subscribe-form', novalidate='novalidate', role='form')
+              .mc-field-group.control-group
+                .controls
+                  input#mce-EMAIL.form-control.required.email(style='width: 100%', placeholder='john@doe.com', type='email', name='EMAIL', value='', aria-required='true', required)
+                #mce-responses.clear
+                  #mce-error-response.response(style='display: none;')
+                  #mce-success-response.response(style='display: none;')
+                br
+                button#mc-embedded-subscribe.btn.btn-lg.btn-success.btn-block(style='width: 100%', type='submit', name='subscribe', value='subscribe') Subscribe Now
+
+            iframe#hidden_iframe(name='hidden_iframe', style='display: none;', onload='if(window.submit === true){window.submitted()}')
+            br
+            | This newsletter will only be started if at least 1000 people subscribe.
+
+          #about
+            img.pull-left(src='https://d2b0jc4z1uybmh.cloudfront.net/website/img/ee_logo.png', width='80', height='80', alt='excellenteasy logo')
+            //- img.pull-left(src='../img/ee_logo.png', width='80', height='80', alt='excellenteasy logo')
+            p.pull-right
+              .lead Project by&nbsp;
+                strong
+                  a(href='https://excellenteasy.com', title='excellenteasy homepage') excellenteasy
+              em Munich, Germany
+              br
+              a(href='mailto:angularmobile@excellenteasy.com', title='contact excellenteasy via e-mail') Contact us
+
+          #pledges
+            p
+              h3.h4 Pledge one subscribtion
+              | Thank you for helping us. You'll receive the monthly Angular Mobile Newsletter for free.
+            hr
+            p
+              h3.h4 Pledge two or more subscribtions
+              | Oh snap! One can't subscribe more than once, but we would be very happy if you could help us out by sharing this with your friends and colleagues.
+              br
+              br
+              span.share
+                a.btn.btn-info.btn-sm(title='Share on Facebook', type="button", href='http://www.facebook.com/sharer/sharer.php?s=100&p[url]=https://excellenteasy.com/angular-mobile-newsletter/&p[images][0]=&p[title]=Help%20make%20the%20Angular%20Mobile%20Newsletter%20a%20reality&p[summary]=')
+                  | Facebook
+              span.share
+                a.btn.btn-info.btn-sm(title='Share on Twitter', type="button", href='http://twitter.com/home?status=Help%20make%20the%20Angular%20Mobile%20Newsletter%20a%20reality%20with%20just%20a%20subscription%20https://excellenteasy.com/angular-mobile-newsletter/')
+                  | Twitter
+              span.share
+                a.btn.btn-danger.btn-sm(title='Share on Google+', type="button", href='https://plus.google.com/share?url=https://excellenteasy.com/angular-mobile-newsletter/')
+                  | Google+
+              br
+              br
+
+        #comments.col-md-8
+          #disqus_thread
+
+
+    block js
+      script(type="text/javascript")
+        function downloadJSAtOnload() {
+          var element = document.createElement("script");
+          element.src = "https://d2b0jc4z1uybmh.cloudfront.net/website/js/newsletter-2.js";
+          //- element.src = "/js/newsletter-2.js";
+          document.body.appendChild(element);
+        }
+        if (window.addEventListener)
+        window.addEventListener("load", downloadJSAtOnload, false);
+        else if (window.attachEvent)
+        window.attachEvent("onload", downloadJSAtOnload);
+        else window.onload = downloadJSAtOnload;
+        var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-29219818-1"]),_gaq.push(["_trackPageview"]),function(){var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}();
