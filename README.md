@@ -7,11 +7,7 @@
 ```bash
 npm install -g grunt-cli
 npm install
-sudo gem install rake
-sudo gem install jekyll
-sudo gem install therubyracer
-sudo gem install jekyll-less
-sudo gem install rdiscount
+bundle install
 sudo easy_install Pygments
 brew install s3cmd
 ```
