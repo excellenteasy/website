@@ -35,6 +35,12 @@ I want the team that’s responsible for curating featured apps on the AppStore 
 
 Seems unrealistic? It certainly was unrealistic to think that anything could be done to the big music labels in the 90s. If we don’t even dare to try, wouldn’t it be more honest to stop talking about the web as the future? We could simply accept our role as the content supplier, because looking at what we currently have – a pseudo open source framework like Sencha Touch, or a butt ugly jQuery mobile – are you really surprised that native developers laugh at web evangelists? The current attitude is to give up on mimicking native user interfaces. “Don’t even try, you’ll never be as smooth and fancy as a native animation”. Sure, somehow that’s right, but we need to change our attitude before we can change theirs.
 
+{% image uicing_ios7_plainTableView.png %}
+  title: A screen rendered with our framework
+  alt: A screen rendered with our framework
+  caption: A screen rendered with our framework
+{% endimage %}
+
 We developed web based applications from day one and we know the pains. Yes, it is way easier today to just pick up a native SDK and run with it than to try creating something beautiful and awesome with web technologies. But it’s a choice that you make. Freedom or restraint. Uncertainty or establishment. We have made our choice and we urge you to try, maybe not exclusively, but at least seriously try the web, too. You are not alone. All our past project stand on the shoulders of giants. All open source and all driven by the same passion. Everything we have learned we put into a powerful framework and tool belt. It allows us, today, to build data-driven apps in no time. But we are aiming for to make interaction-heavy, rich interfaces that supersede what is possible today, independent from the platform you are targeting. Of course, we can’t do this on our own. So, if you are an AngularJS developer and like to create mobile apps, please sign-up for your private beta below. This will help us iron out the bugs and add important features to the framework before we will open-source it for everyone.
 
 
