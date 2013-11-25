@@ -2,7 +2,7 @@
 category: blog
 layout: post
 author: stephan
-title: The privatization of the mobile revolution
+title: Stop talking about the web as the future
 ---
 {% include JB/setup %}
 
@@ -33,7 +33,7 @@ To change this – learning from history – the big players won’t be of help 
 
 I want the team that’s responsible for curating featured apps on the AppStore to have sleepless nights, as they can’t find cool native apps anymore. For the web to win we have to enter this seemingly hopeless fight, but there is no way we can continue to watch them privatizing the mobile revolution any longer.
 
-Seems unrealistic? It certainly was unrealistic to think that anything could be done to the big music labels in the 90s. If we don’t even dare to try, wouldn’t it be more honest to stop talking about the web as the future? We could simply accept our role as the content supplier, because looking at what we currently have – a pseudo open source framework like Sencha Touch, or a butt ugly jQuery mobile – are you really surprised that native developers laugh at web evangelists? The current attitude is to give up on mimicking native user interfaces. “Don’t even try, you’ll never be as smooth and fancy as a native animation”. Sure, somehow that’s right, but we need to change our attitude before we can change theirs.
+Seems unrealistic? It certainly was unrealistic to think that anything could be done to the big music labels in the 90s. If we don’t even dare to try, wouldn’t it be more honest to **stop talking about the web as the future**? We could simply accept our role as the content supplier, because looking at what we currently have – a pseudo open source framework like Sencha Touch, or a butt ugly jQuery mobile – are you really surprised that native developers laugh at web evangelists? The current attitude is to give up on mimicking native user interfaces. “Don’t even try, you’ll never be as smooth and fancy as a native animation”. Sure, somehow that’s right, but we need to change our attitude before we can change theirs.
 
 {% image uicing_ios7_plainTableView.png %}
   title: A screen rendered with our framework
