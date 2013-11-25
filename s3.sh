@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x verbose
+set -ex verbose
 
 # site images
 s3cmd sync --acl-public  --guess-mime-type \
