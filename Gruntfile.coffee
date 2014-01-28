@@ -313,9 +313,9 @@ module.exports = (grunt) ->
     'compress:s3'
     'removegz'
     'copy:dist'
-    'images'
+    # 'images'
     'shell:scp'
-    'shell:s3'
+    # 'shell:s3'
   ]
 
   grunt.registerTask 'default', [
