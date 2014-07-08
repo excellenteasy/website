@@ -40,6 +40,7 @@ module.exports = (grunt) ->
           hostname: '*'
           port: 1337
           base: 'build'
+          open: yes
 
     image_resize:
       full:
@@ -318,8 +319,10 @@ module.exports = (grunt) ->
     'shell:s3'
   ]
 
-  grunt.registerTask 'default', [
+  grunt.registerTask 'serve', [
     'build'
     'connect'
     'watch'
   ]
+
+  grunt.registerTask 'default', ['serve']
